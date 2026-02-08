@@ -1,0 +1,456 @@
+/*
+Theme Name: LaurenTsai
+Theme URL: 
+Author: TemplatesJungle
+Author URL: https://templatesjungle.com/
+Description: LaurenTsai is a Free Bootstrap Website Template for Portfolio Template by TemplatesJungle.
+Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+
+/** Base Styles
+--------------------------------------------------------------*/
+:root {
+  --primary-color: #66FD0F;
+  --secondary-color: ;
+  --dark-color: #2D2D2D;
+  --white-color: #FFFFFF;
+  --grey-color: #777777;
+  --body-text-color: #333333;
+  --light-text-color: #929292;
+  --link-color: #B7C177;
+  --background-color: #FAFAFA;
+
+  /* bootstrap color-scheme */
+  --bs-dark-rgb: 80, 80, 80;
+  --bs-gray-100: #EAE5DD;
+  --bs-gray-300: #DCDCDC;
+  --bs-body-color-rgb: 53, 53, 53;
+  --bs-primary-rgb: 102, 253, 15;
+  --bs-secondary-rgb: 249, 246, 243;
+}
+
+/* Fonts */
+:root {
+  --heading-font: "Space Grotesk", serif;
+  --body-font: "Space Grotesk", serif;
+}
+
+
+/*  General Styles
+      /*----------------------------------------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+/** Typography
+  --------------------------------------------------------------*/
+
+body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.688rem;
+  background-color: #0F0E10;
+  background-image: url('../assets/images/blue-background-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--white-color);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  color: var(--white-color);
+  text-transform: capitalize;
+}
+
+a {
+  color: var(--white-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.letter-space {
+  letter-spacing: 5px;
+}
+
+
+/* Section Padding
+    --------------------------------------------------------------*/
+
+.padding-small {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padding-medium {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.padding-large {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+
+.padding-side {
+  padding-right: 10rem;
+  padding-left: 10rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .padding-side {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/* Section Margin
+    --------------------------------------------------------------*/
+
+.margin-small {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.margin-medium {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.margin-large {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+
+
+/* svg override
+    --------------------------------------------------------------*/
+svg.social-icon {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+svg.social-icon:hover {
+  color: rgba(255, 255, 255);
+}
+
+
+/* bootstrap button override
+    --------------------------------------------------------------*/
+.btn {
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-padding-y: 1rem;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 600;
+  border-radius: 60px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  transition: all 0.5s;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-hover-color: var(--dark-color);
+  --bs-btn-hover-bg: var(--primary-color);
+  --bs-btn-hover-border-color: var(--primary-color);
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--primary-color);
+  --bs-btn-active-border-color: var(--primary-color);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--primary-color);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--primary-color);
+  --bs-gradient: none;
+}
+
+.btn svg.arrow-right {
+  transition: all 0.5s;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #fff;
+}
+
+.btn:hover svg.arrow-right {
+  transform: rotate(360deg);
+  color: var(--dark-color);
+}
+
+
+/* bootstrap Dropdown override
+    --------------------------------------------------------------*/
+.dropdown-item.active,
+.dropdown-item:active {
+  --bs-dropdown-link-active-color: var(--white-color);
+  --bs-dropdown-link-active-bg: var(--light-text-color);
+}
+
+
+/* bootstrap Pagination override
+    --------------------------------------------------------------*/
+.pagination {
+  --bs-pagination-bg: transparent;
+  --bs-pagination-border-color: rgba(255, 255, 255, 0.25);
+  --bs-pagination-color: #fff;
+  --bs-pagination-hover-color: var(--primary-color);
+  --bs-pagination-hover-bg: transparent;
+  --bs-pagination-hover-border-color: var(--primary-color);
+  --bs-pagination-focus-color: #fff;
+  --bs-pagination-focus-bg: transparent;
+  --bs-pagination-focus-box-shadow: none;
+  --bs-pagination-active-bg: transparent;
+  --bs-pagination-active-border-color: var(--primary-color);
+}
+
+
+/* bootstrap accordion override
+    --------------------------------------------------------------*/
+.accordion-button:not(.collapsed) {
+  color: var(--body-text-color);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion {
+  font-weight: 400;
+  --bs-accordion-color: var(--light-text-color);
+  --bs-accordion-bg: none;
+  --bs-accordion-btn-color: var(--body-text-color);
+}
+
+.accordion-item {
+  border: solid rgba(255, 255, 255, 0.226) 1px;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062'/%3E%3C/svg%3E");
+  ;
+}
+
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062'/%3E%3C/svg%3E");
+  ;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: none;
+  box-shadow: none;
+}
+
+
+/* bootstrap form override
+    --------------------------------------------------------------*/
+input.form-control::placeholder {
+  color: var(--white-color);
+}
+
+textarea.form-control::placeholder {
+  color: var(--white-color);
+}
+
+
+/* swiper style override
+    --------------------------------------------------------------*/
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--primary-color);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #4D434D;
+  opacity: 1;
+}
+
+
+/* chocolat */
+.chocolat-wrapper {
+  transition: opacity 0.4s ease, visibility 0s 0.4s ease;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  color: #fff;
+  visibility: hidden;
+}
+
+
+/* preloader */
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #0F0E10;
+  background-image: url('../assets/images/blue-background-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.8s ease-in-out;
+}
+
+.preloader.loaded {
+  transform: translateY(-100%);
+}
+
+
+/* Section Styles
+/*----------------------------------------------*/
+
+
+/*---- navigation section style start ----*/
+nav.navbar {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.navbar-nav .nav-link {
+  color: var(--white-color);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: var(--primary-color);
+}
+
+a.nav-link:focus,
+a.nav-link:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 991px) {
+  nav.navbar {
+    font-size: 25px;
+    border-bottom: #2D2D2D;
+  }
+}
+
+
+/*---- hero style start ----*/
+.animated-border {
+  animation: rotate-border 90s linear infinite;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*---- about style start ----*/
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  font-weight: 500;
+  color: var(--dark-color);
+  background-color: var(--primary-color);
+}
+
+.nav-pills .nav-link,
+.nav-pills .show>.nav-link {
+  font-weight: 500;
+  color: var(--white-color);
+  border: solid var(--primary-color) 1px;
+}
+
+
+/*---- portfolio style start ----*/
+
+/* Image zoom effect on hover */
+.image-zoom {
+  overflow: hidden;
+}
+
+.image-zoom img {
+  transition: transform 0.3s ease-out;
+}
+
+.image-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* scrollbar */
+#style-1::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  background-color: rgba(245, 245, 245, 0.157);
+}
+
+#style-1::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #2C1B2B;
+  border: 2px solid rgba(245, 245, 245, 0.157);
+}
+
+
+/*---- portfolio-masonary page style start ----*/
+button.filter-button {
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--white-color);
+  border-radius: 30px;
+  transition: all 0.5s;
+}
+
+button.filter-button.active {
+  background-color: var(--primary-color);
+  color: var(--body-text-color);
+}
+
+button.filter-button:hover {
+  background-color: var(--primary-color);
+  color: var(--body-text-color);
+}
