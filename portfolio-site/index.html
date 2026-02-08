@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaurenTsai</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--Bootstrap ================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="quote-left" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.9 2.9 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789M20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.9 2.9 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2" />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </symbol>
+        <symbol id="arrow-left" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M15.12 5.32H17V2.14A26 26 0 0 0 14.26 2c-2.72 0-4.58 1.66-4.58 4.7v2.62H6.61v3.56h3.07V22h3.68v-9.12h3.06l.46-3.56h-3.52V7.05c0-1.05.28-1.73 1.76-1.73" />
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M17.34 5.46a1.2 1.2 0 1 0 1.2 1.2a1.2 1.2 0 0 0-1.2-1.2m4.6 2.42a7.6 7.6 0 0 0-.46-2.43a4.9 4.9 0 0 0-1.16-1.77a4.7 4.7 0 0 0-1.77-1.15a7.3 7.3 0 0 0-2.43-.47C15.06 2 14.72 2 12 2s-3.06 0-4.12.06a7.3 7.3 0 0 0-2.43.47a4.8 4.8 0 0 0-1.77 1.15a4.7 4.7 0 0 0-1.15 1.77a7.3 7.3 0 0 0-.47 2.43C2 8.94 2 9.28 2 12s0 3.06.06 4.12a7.3 7.3 0 0 0 .47 2.43a4.7 4.7 0 0 0 1.15 1.77a4.8 4.8 0 0 0 1.77 1.15a7.3 7.3 0 0 0 2.43.47C8.94 22 9.28 22 12 22s3.06 0 4.12-.06a7.3 7.3 0 0 0 2.43-.47a4.7 4.7 0 0 0 1.77-1.15a4.85 4.85 0 0 0 1.16-1.77a7.6 7.6 0 0 0 .46-2.43c0-1.06.06-1.4.06-4.12s0-3.06-.06-4.12M20.14 16a5.6 5.6 0 0 1-.34 1.86a3.06 3.06 0 0 1-.75 1.15a3.2 3.2 0 0 1-1.15.75a5.6 5.6 0 0 1-1.86.34c-1 .05-1.37.06-4 .06s-3 0-4-.06a5.7 5.7 0 0 1-1.94-.3a3.3 3.3 0 0 1-1.1-.75a3 3 0 0 1-.74-1.15a5.5 5.5 0 0 1-.4-1.9c0-1-.06-1.37-.06-4s0-3 .06-4a5.5 5.5 0 0 1 .35-1.9A3 3 0 0 1 5 5a3.1 3.1 0 0 1 1.1-.8A5.7 5.7 0 0 1 8 3.86c1 0 1.37-.06 4-.06s3 0 4 .06a5.6 5.6 0 0 1 1.86.34a3.06 3.06 0 0 1 1.19.8a3.1 3.1 0 0 1 .75 1.1a5.6 5.6 0 0 1 .34 1.9c.05 1 .06 1.37.06 4s-.01 3-.06 4M12 6.87A5.13 5.13 0 1 0 17.14 12A5.12 5.12 0 0 0 12 6.87m0 8.46A3.33 3.33 0 1 1 15.33 12A3.33 3.33 0 0 1 12 15.33" />
+        </symbol>
+        <symbol id="twitter" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M22.991 3.95a1 1 0 0 0-1.51-.86a7.5 7.5 0 0 1-1.874.794a5.15 5.15 0 0 0-3.374-1.242a5.23 5.23 0 0 0-5.223 5.063a11.03 11.03 0 0 1-6.814-3.924a1.01 1.01 0 0 0-.857-.365a1 1 0 0 0-.785.5a5.28 5.28 0 0 0-.242 4.769l-.002.001a1.04 1.04 0 0 0-.496.89a3 3 0 0 0 .027.439a5.2 5.2 0 0 0 1.568 3.312a1 1 0 0 0-.066.77a5.2 5.2 0 0 0 2.362 2.922a7.5 7.5 0 0 1-3.59.448A1 1 0 0 0 1.45 19.3a12.94 12.94 0 0 0 7.01 2.061a12.79 12.79 0 0 0 12.465-9.363a12.8 12.8 0 0 0 .535-3.646l-.001-.2a5.77 5.77 0 0 0 1.532-4.202m-3.306 3.212a1 1 0 0 0-.234.702c.01.165.009.331.009.488a10.8 10.8 0 0 1-.454 3.08a10.685 10.685 0 0 1-10.546 7.93a11 11 0 0 1-2.55-.301a9.5 9.5 0 0 0 2.942-1.564a1 1 0 0 0-.602-1.786a3.2 3.2 0 0 1-2.214-.935q.224-.042.445-.105a1 1 0 0 0-.08-1.943a3.2 3.2 0 0 1-2.25-1.726a5 5 0 0 0 .545.046a1.02 1.02 0 0 0 .984-.696a1 1 0 0 0-.4-1.137a3.2 3.2 0 0 1-1.425-2.673q0-.1.006-.198a13 13 0 0 0 8.21 3.48a1.02 1.02 0 0 0 .817-.36a1 1 0 0 0 .206-.867a3.2 3.2 0 0 1-.087-.729a3.23 3.23 0 0 1 3.226-3.226a3.18 3.18 0 0 1 2.345 1.02a.99.99 0 0 0 .921.298a9 9 0 0 0 1.212-.322a6.7 6.7 0 0 1-1.026 1.524" />
+        </symbol>
+        <symbol id="skype" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M15.14 11.813a5 5 0 0 0-1.292-.593c-.28-.085-.59-.168-.91-.247c-.28-.078-.612-.158-1.022-.248a9.3 9.3 0 0 1-1.436-.424a1.5 1.5 0 0 1-.616-.447a.84.84 0 0 1-.16-.566a.97.97 0 0 1 .205-.597a1.6 1.6 0 0 1 .7-.475A4 4 0 0 1 12.031 8a3.8 3.8 0 0 1 1.106.146a2.1 2.1 0 0 1 .663.322a1.2 1.2 0 0 1 .325.343a1 1 0 1 0 1.761-.948a3.15 3.15 0 0 0-.837-.958a4 4 0 0 0-1.319-.669A5.8 5.8 0 0 0 12.032 6a6 6 0 0 0-2.145.35A3.55 3.55 0 0 0 8.31 7.492a2.98 2.98 0 0 0-.604 1.797a2.84 2.84 0 0 0 .58 1.792a3.5 3.5 0 0 0 1.438 1.072a11 11 0 0 0 1.307.408c.008.003.014.01.022.012c.192.058.498.135.94.23c.173.038.335.079.497.12c.016.004.039.009.054.014l.018.002c.248.064.487.129.706.196a3 3 0 0 1 .763.344a1.1 1.1 0 0 1 .363.368a1.2 1.2 0 0 1 .118.585a1.15 1.15 0 0 1-.214.732a1.76 1.76 0 0 1-.802.585a3.8 3.8 0 0 1-1.487.252a3.7 3.7 0 0 1-1.703-.344a1.76 1.76 0 0 1-.616-.547a1 1 0 0 1-.202-.503a1 1 0 0 0-2 0a2.94 2.94 0 0 0 .556 1.64a3.8 3.8 0 0 0 1.342 1.187a5.6 5.6 0 0 0 2.623.567a5.7 5.7 0 0 0 2.254-.405a3.7 3.7 0 0 0 1.665-1.273a3.15 3.15 0 0 0 .584-1.926a3.1 3.1 0 0 0-.375-1.53a3.2 3.2 0 0 0-.997-1.053m7.221 1.878A10.49 10.49 0 0 0 10.31 1.64a6.499 6.499 0 0 0-8.67 8.67a10.49 10.49 0 0 0 12.05 12.05a6.499 6.499 0 0 0 8.67-8.67M16.5 21a4.5 4.5 0 0 1-2.17-.558a1 1 0 0 0-.677-.106A8.492 8.492 0 0 1 3.5 12a8.6 8.6 0 0 1 .164-1.654a1 1 0 0 0-.106-.677A4.5 4.5 0 0 1 9.67 3.558a1 1 0 0 0 .678.106A8.492 8.492 0 0 1 20.5 12a8.6 8.6 0 0 1-.164 1.654a1 1 0 0 0 .106.677A4.5 4.5 0 0 1 16.5 21" />
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M17.5 8.999a5.4 5.4 0 0 0-2.565.645A1 1 0 0 0 14 8.999h-4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-5.5a1 1 0 1 1 2 0v5.5a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-7.5a5.507 5.507 0 0 0-5.5-5.5m3.5 12h-2v-4.5a3 3 0 1 0-6 0v4.5h-2v-10h2v.703a1 1 0 0 0 1.781.625A3.483 3.483 0 0 1 21 14.5Zm-14-12H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-12a1 1 0 0 0-1-1m-1 12H4v-10h2ZM5.015 1.542a3.233 3.233 0 1 0-.057 6.457h.028a3.233 3.233 0 1 0 .029-6.457m-.029 4.457h-.028a1.222 1.222 0 0 1-1.37-1.228c0-.747.56-1.229 1.427-1.229A1.234 1.234 0 0 1 6.41 4.771c0 .746-.56 1.228-1.425 1.228" />
+        </symbol>
+        <symbol id="dribbble" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 2a7.94 7.94 0 0 1 5.51 2.22a25 25 0 0 1-4.83 2.18a29 29 0 0 0-2.87-4.09A8 8 0 0 1 12 4M7.89 5.15A27 27 0 0 1 10.7 9a25 25 0 0 1-6 .74h-.36a8 8 0 0 1 3.55-4.59M6 17.31A7.9 7.9 0 0 1 4 12v-.29h.68a26.7 26.7 0 0 0 7-1c.32.61.62 1.24.91 1.89a14.3 14.3 0 0 0-4.29 2.41l-.3.24a21 21 0 0 0-2 2.06M12 20a7.9 7.9 0 0 1-4.47-1.37a18 18 0 0 1 1.56-1.58l.32-.27a12.6 12.6 0 0 1 4-2.27a32 32 0 0 1 1.4 5A8.1 8.1 0 0 1 12 20m4.63-1.49a35 35 0 0 0-1.28-4.46h.34a.25.25 0 0 1 .12 0h.69a9.4 9.4 0 0 1 3.09.53a7.94 7.94 0 0 1-2.96 3.93M16.5 12h-.62a1.6 1.6 0 0 0-.39 0a7 7 0 0 0-.81.1h-.1c-.29-.67-.59-1.32-.92-2a26.6 26.6 0 0 0 5.13-2.4A8 8 0 0 1 20 12v.51a11.5 11.5 0 0 0-3.5-.51" />
+        </symbol>
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path fill="currentColor"
+                d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </symbol>
+    </svg>
+
+    <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
+
+    <nav id="header-nav" class="navbar navbar-expand-lg py-4" data-bs-theme="dark">
+        <div class="container-fluid padding-side">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav text-center align-items-center justify-content-end flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link active pe-lg-5" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="reviews.html">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="contact.html">Contact Me</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pe-lg-5 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-expanded="false"> Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html" class="dropdown-item">Blog <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="single-post.html" class="dropdown-item">Single-Post
+                                        <span class="badge bg-dark">Pro</span></a>
+                                </li>
+                                <li><a href="services.html" class="dropdown-item">Services <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="service-details.html" class="dropdown-item">Services-Details
+                                        <span class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="portfolio-masonary.html" class="dropdown-item">Portfolio-Masonary <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="portfolio-details.html" class="dropdown-item">Portfolio-Details
+                                        <span class="badge bg-dark">Pro</span></a></li>
+
+                                <li><a href="faqs.html" class="dropdown-item">FAQs <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                                <li><a href="team.html" class="dropdown-item">Team <span
+                                            class="badge bg-dark">Pro</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5 text-decoration-underline fw-bold"
+                                href="https://templatesjungle.gumroad.com/l/lauren-personal-portfolio-bootstrap-html-css-website-template"
+                                target="_blank">Get PRO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold border-bottom border-2 border-primary" href="#">Let’s talk</a>
+                        </li>
+
+                    </ul>
+                    <ul class="d-flex d-lg-none list-unstyled justify-content-center mt-4">
+                        <li>
+                            <a class="nav-link mx-2" href="#">
+                                <svg class="social-icon" width="24" height="24">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link mx-2" href="#">
+                                <svg class="social-icon" width="24" height="24">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link mx-2" href="#">
+                                <svg class="social-icon" width="24" height="24">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link mx-2" href="#">
+                                <svg class="social-icon" width="24" height="24">
+                                    <use xlink:href="#skype"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link mx-2" href="#">
+                                <svg class="social-icon" width="24" height="24">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link mx-2" href="#">
+                                <svg class="social-icon" width="24" height="24">
+                                    <use xlink:href="#dribbble"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="padding-medium position-relative">
+        <div class="container text-white">
+            <div class="row flex-row-reverse justify-content-center align-items-center">
+                <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="position-relative">
+                        <img src="assets/images/banner-img.jpg" alt="img" class="img-fluid rounded-circle w-100 p-5">
+                        <div class="position-absolute top-0">
+                            <img src="assets/images/banner-img-border.png" alt="img"
+                                class="img-fluid rounded-circle animated-border">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 ">
+                    <p class="letter-space text-primary fw-semibold fs-3" data-aos="fade-up" data-aos-duration="1000">
+                        Hi, I’m Lauren
+                    </p>
+                    <h2 class="banner-size fw-medium display-3 my-4" data-aos="fade-up" data-aos-duration="1200">
+                        Designing Dreams, Developing Realities
+                    </h2>
+                    <p data-aos="fade-up" data-aos-duration="1400">
+                        Welcome to my creative space. I’m Lauren Tsai, a passionate designer and developer dedicated to
+                        crafting digital experiences that captivate and inspire.
+                    </p>
+                    <a href="portfolio.html" class="btn btn-outline-primary mt-4 position-relative pe-5"
+                        data-aos="fade-up" data-aos-duration="1600">
+                        view all works
+                        <div class="position-absolute top-50 end-0 translate-middle-y me-3">
+                            <svg class="arrow-right p-1" width="28" height="28">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="socials" class="position-fixed bottom-0 start-0 ms-5 mb-5">
+        <ul class="d-none d-lg-block list-unstyled justify-content-center">
+            <li>
+                <a class="nav-link mb-3" href="#">
+                    <svg class="social-icon" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="#">
+                    <svg class="social-icon" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="#">
+                    <svg class="social-icon" width="24" height="24">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="#">
+                    <svg class="social-icon" width="24" height="24">
+                        <use xlink:href="#skype"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="#">
+                    <svg class="social-icon" width="24" height="24">
+                        <use xlink:href="#linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="#">
+                    <svg class="social-icon" width="24" height="24">
+                        <use xlink:href="#dribbble"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- script ================================================== -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstarp script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--iconify script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
