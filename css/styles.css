@@ -19,7 +19,7 @@ This is main CSS file that contains custom style rules used in this template
 /** Base Styles
 --------------------------------------------------------------*/
 :root {
-  --primary-color: #66FD0F;
+  --primary-color: #1a2124 !important;
   --secondary-color: ;
   --dark-color: #2D2D2D;
   --white-color: #FFFFFF;
@@ -28,6 +28,8 @@ This is main CSS file that contains custom style rules used in this template
   --light-text-color: #929292;
   --link-color: #B7C177;
   --background-color: #FAFAFA;
+
+   --intro-color: #31424a;
 
   /* bootstrap color-scheme */
   --bs-dark-rgb: 80, 80, 80;
@@ -341,6 +343,12 @@ textarea.form-control::placeholder {
 
 
 /*---- navigation section style start ----*/
+#logo-small {
+  margin-left: 30px;
+  width: 315px;
+  height: 50px;
+}
+
 nav.navbar {
   text-transform: capitalize;
   font-size: 18px;
@@ -454,3 +462,12 @@ button.filter-button:hover {
   background-color: var(--primary-color);
   color: var(--body-text-color);
 }
+
+
+/*---- new portfolio stylings ----*/
+/* Force intro color to your desired value */
+#hero .intro {
+    font-size: 21px;
+}
+
+
