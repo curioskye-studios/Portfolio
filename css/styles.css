@@ -503,7 +503,7 @@ button.filter-button:hover {
 #current::after {
     content: "";
     position: absolute;
-    left: 20%;
+    left: 17%;
     bottom: 0px;             /* Adjust distance from text */
     width: 30%;
     height: 3px;              /* Thickness of underline */
