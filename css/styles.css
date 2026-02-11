@@ -200,6 +200,7 @@ svg.social-icon:hover {
   --bs-gradient: none;
 
     border-width: 2px;
+    font-style: bold;
 }
 
 .btn svg.arrow-right {
@@ -462,14 +463,17 @@ button.filter-button:hover {
 
 /*---- new portfolio stylings ----*/
 /* Force intro color to your desired value */
+.highlight {
+  color: var(--secondary-color);
+  font-weight: 800;
+}
+
 #logo-small {
   width: 315px;
   height: 50px;
 }
 
 #hero #intro {
-    color: var(--primary-color) !important; /* Force color */
-    color: var(--secondary-color) !important; /* Force color */
     font-weight: 800;
 }
 
@@ -491,7 +495,7 @@ button.filter-button:hover {
 
 .navbar-nav .nav-link#current,
 .navbar-nav .nav-link#current[aria-current="page"] {
-    color: var(--primary-color) !important; /* Force color */
+    color: var(--secondary-color);
     font-weight: 800;
     position: relative;
 }
@@ -499,10 +503,10 @@ button.filter-button:hover {
 #current::after {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: -1px;             /* Adjust distance from text */
-    width: 70%;
+    left: 20%;
+    bottom: 0px;             /* Adjust distance from text */
+    width: 30%;
     height: 3px;              /* Thickness of underline */
-    background-color: var(--primary-color); /* Underline color */
+    background-color: var(--secondary-color); /* Underline color */
     border-radius: 2px;       /* Optional: rounded edges */
 }
