@@ -526,6 +526,11 @@ button.filter-button:hover {
     backdrop-filter: blur();
 }
 
+.p-3-5 {
+    padding: 1.17rem; /* halfway between 1rem (p-3) and 1.5rem (p-4) */
+}
+
+
 .project-type {
   border: 2px solid var(--white-color);
   padding: 8px 27px 7px 27px;
