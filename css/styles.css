@@ -493,6 +493,12 @@ button.filter-button:hover {
     font-weight: 500;
 }
 
+.navbar-nav .nav-link:visited,
+.navbar-nav .nav-link:visited {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
 .navbar-nav .nav-link#current,
 .navbar-nav .nav-link#current[aria-current="page"] {
     color: var(--secondary-color);
@@ -509,4 +515,9 @@ button.filter-button:hover {
     height: 3px;              /* Thickness of underline */
     background-color: var(--secondary-color); /* Underline color */
     border-radius: 2px;       /* Optional: rounded edges */
+}
+
+
+#portfolio-div {
+    border-width: 2px !important;
 }
