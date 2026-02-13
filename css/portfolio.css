@@ -1,0 +1,109 @@
+
+@import "../css/root.css";
+
+
+/*---- portfolio style start ----*/
+
+/* Image zoom effect on hover */
+.zoom-hover {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-hover:hover{
+  transform: scale(1.03);
+}
+
+.img-zoom-hover img{
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.img-zoom-hover img:hover {
+  transform: scale(1.04);
+}
+
+/* scrollbar */
+#style-1::-webkit-scrollbar-track {
+  border-radius: 50px;
+  background-color: rgba(245, 245, 245, 0.157);
+}
+
+#style-1::-webkit-scrollbar {
+  width: 15px;
+  background-color: transparent;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: var(--secondary-color);
+}
+
+
+/*---- new custom stylings ----*/
+
+#portfolio-main .greeting-text {
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+
+.project-filter-div {
+  margin-bottom: 55px;
+  font-size: 23px;
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+.project-filter:hover {
+  color: var(--primary-variant);
+  font-weight: 700;
+}
+
+.project-filter-active {
+  color: var(--secondary-color);
+  font-weight: 700;
+  position: relative;
+}
+
+.project-filter-active::after {
+  content: "";
+  position: absolute;
+  left: 50px;
+  bottom: -14px;             /* Adjust distance from text */
+  width: 110px;
+  height: 3px;              /* Thickness of underline */
+  background-color: var(--secondary-color); /* Underline color */
+  border-radius: 2px;       /* Optional: rounded edges */
+}
+
+
+.portfolio-div {
+    border-width: 2.1px !important;
+    background-color: #ffffff17 !important;
+    border-color: #ffffff9f !important;
+    backdrop-filter: blur();
+    margin-bottom: 25px;
+}
+
+
+.project-type {
+  border: 2px solid var(--white-color);
+  color: var(--white-color);
+  padding: 9px 27px 8px 27px;
+  border-radius: 30px;
+  font-weight: 500;
+  display: inline-flex;
+}
+
+.project-info {
+  margin-left: 10px;
+  margin-top: 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 25px;
+  color: var(--white-color);
+}
+

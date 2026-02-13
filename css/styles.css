@@ -18,32 +18,7 @@ This is main CSS file that contains custom style rules used in this template
 
 /** Base Styles
 --------------------------------------------------------------*/
-:root {
-  --primary-color: #102129;
-  --secondary-color: #87eb4d;
-  --dark-color: #2D2D2D;
-  --white-color: #FFFFFF;
-  --grey-color: #777777;
-  --body-text-color: #333333;
-  --light-text-color: #929292;
-  --link-color: #B7C177;
-  --background-color: #FAFAFA;
-
-  
-  /* bootstrap color-scheme */
-  --bs-dark-rgb: 80, 80, 80;
-  --bs-gray-100: #EAE5DD;
-  --bs-gray-300: #DCDCDC;
-  --bs-body-color-rgb: 53, 53, 53;
-  --bs-primary-rgb: 102, 253, 15;
-  --bs-secondary-rgb: 249, 246, 243;
-}
-
-/* Fonts */
-:root {
-  --heading-font: "Space Grotesk", serif;
-  --body-font: "Space Grotesk", serif;
-}
+@import "../css/root.css";
 
 
 /*  General Styles
@@ -69,7 +44,7 @@ body {
   font-size: 16px;
   line-height: 1.688rem;
   background-color: #0F0E10;
-  background-image: url('../assets/images/blue-background-image.jpg');
+  background-image: url('../assets/images/blue-background-image.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -166,7 +141,7 @@ svg.social-icon {
 }
 
 svg.social-icon:hover {
-  color: var(--secondary-color);
+  color: var(--primary-variant);
 }
 
 
@@ -187,9 +162,9 @@ svg.social-icon:hover {
   --bs-btn-color: var(--primary-color);
   --bs-btn-bg: var(--secondary-color);
   --bs-btn-border-color: transparent;
-  --bs-btn-hover-color: var(--white-color);
+  --bs-btn-hover-color: var(--primary-color);
   --bs-btn-hover-bg: var(--secondary-color);
-  --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-border-color: var(--primary-variant);
   --bs-btn-focus-shadow-rgb: 13, 110, 253;
   --bs-btn-active-color: var(--primary-color);
   --bs-btn-active-bg: var(--secondary-color);
@@ -200,8 +175,9 @@ svg.social-icon:hover {
   --bs-btn-disabled-border-color: var(--primary-color);
   --bs-gradient: none;
 
-    border-width: 2.2px;
+    border-width: 2.1px;
     font-weight: 900 !important;
+    font-size: 16px;
 }
 
 .btn svg.arrow-right {
@@ -212,7 +188,7 @@ svg.social-icon:hover {
 
 .btn:hover svg.arrow-right {
   transform: rotate(360deg);
-  color: var(--white-color);
+  color: var(--primary-color);
 }
 
 
@@ -375,20 +351,7 @@ a.nav-link:hover {
 }
 
 
-/*---- hero style start ----*/
-.animated-border {
-  animation: rotate-border 90s linear infinite;
-}
 
-@keyframes rotate-border {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 
 /*---- about style start ----*/
@@ -407,39 +370,9 @@ a.nav-link:hover {
 }
 
 
-/*---- portfolio style start ----*/
 
-/* Image zoom effect on hover */
-.image-zoom {
-  overflow: hidden;
-}
 
-.image-zoom img {
-  transition: transform 0.3s ease-out;
-}
 
-.image-zoom:hover img {
-  transform: scale(1.1);
-}
-
-/* scrollbar */
-#style-1::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 50px;
-  background-color: rgba(245, 245, 245, 0.157);
-}
-
-#style-1::-webkit-scrollbar {
-  width: 15px;
-  background-color: transparent;
-}
-
-#style-1::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-  background-color: #2C1B2B;
-  border: 2px solid rgba(245, 245, 245, 0.157);
-}
 
 
 /*---- portfolio-masonary page style start ----*/
@@ -462,24 +395,25 @@ button.filter-button:hover {
 }
 
 
-/*---- new portfolio stylings ----*/
-/* Force intro color to your desired value */
+
+
+
+/*---- new custom stylings ----*/
+
+/* Apply a custom image cursor with a 'auto' fallback */
+html {
+  cursor: url('../assets/images/logo-large.png'), auto;
+}
+
+
 .highlight {
   color: var(--secondary-color);
   font-weight: 800;
 }
 
 #logo-small {
-  width: 315px;
-  height: 50px;
-}
-
-#hero #intro {
-    font-weight: 800;
-}
-
-#hero .intro-text {
-    font-size: 19px;
+  width: 275px;
+  height: 45px;
 }
 
 .navbar-nav .nav-link,
@@ -490,14 +424,20 @@ button.filter-button:hover {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link:hover {
-    color: var(--secondary-color);
-    font-weight: 500;
+    color: var(--primary-variant);
+    font-weight: 800;
 }
 
 .navbar-nav .nav-link:visited,
 .navbar-nav .nav-link:visited {
     color: var(--white-color);
     font-weight: 500;
+}
+
+.navbar-nav .nav-link:visited:hover,
+.navbar-nav .nav-link:visited:hover {
+    color: var(--primary-variant);
+    font-weight: 800;
 }
 
 .navbar-nav .nav-link#current,
@@ -519,22 +459,19 @@ button.filter-button:hover {
 }
 
 
-#portfolio-div {
-    border-width: 2.2px !important;
-    background-color: #ffffff0d !important;
-    border-color: #ffffffa4 !important;
-    backdrop-filter: blur();
-}
-
-.p-3-5 {
-    padding: 1.17rem; /* halfway between 1rem (p-3) and 1.5rem (p-4) */
+/* Make the hamburger icon (three bars) white */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.77)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 
-.project-type {
-  border: 2px solid var(--white-color);
-  padding: 8px 27px 7px 27px;
-  border-radius: 30px;
-  font-weight: 450;
-  display: inline-flex;
+/* Optional: adjust the button border if needed */
+.navbar-toggler {
+    border: 2px solid rgba(255,255,255,0.5);
 }
+
+.offcanvas {
+    background-color: transparent;
+}
+
+

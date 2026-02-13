@@ -1,0 +1,30 @@
+
+/** Base Styles
+--------------------------------------------------------------*/
+:root {
+  --primary-color: #102129;
+  --primary-variant: #293F4A;
+  --secondary-color: #8cf84e;
+  --dark-color: #2D2D2D;
+  --white-color: #FFFFFF;
+  --grey-color: #777777;
+  --body-text-color: #333333;
+  --light-text-color: #929292;
+  --link-color: #B7C177;
+  --background-color: #FAFAFA;
+
+  
+  /* bootstrap color-scheme */
+  --bs-dark-rgb: 80, 80, 80;
+  --bs-gray-100: #EAE5DD;
+  --bs-gray-300: #DCDCDC;
+  --bs-body-color-rgb: 53, 53, 53;
+  --bs-primary-rgb: 102, 253, 15;
+  --bs-secondary-rgb: 249, 246, 243;
+}
+
+/* Fonts */
+:root {
+  --heading-font: "Space Grotesk", serif;
+  --body-font: "Space Grotesk", serif;
+}
