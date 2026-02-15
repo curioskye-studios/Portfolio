@@ -1,0 +1,35 @@
+
+@import "../css/root.css";
+
+
+/*---- project details style start ----*/
+
+.project-div {
+    border-width: 2.1px !important;
+    background-color: #ffffff17 !important;
+    border-color: #ffffff9f !important;
+    backdrop-filter: blur();
+    margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.project-details {
+    font-weight: 600;
+    color: var(--secondary-color) !important;
+}
+
+.project-img-border {
+    border: 0.8px solid #ffffff9f !important;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.section-title {
+    font-weight: 500;
+    color: var(--secondary-color) !important;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+}
+
+.section-subtitle {
+    font-weight: 700;
+    color: var(--white-color)!important;
+}
