@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!--Bootstrap ================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="../css/vendor.css">
+
+     <!-- script ================================================== -->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstarp script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--iconify script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+
+    <script src="../js/plugins.js"></script>
+    <script src="../js/script.js"></script>    
+
+    
+    <!-- Custom ================================================== -->
+
+    <title>About</title>
+
+    <link rel="icon" type="image/png" href="../assets/images/logo-large.png">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
+
+    <nav id="header-nav" class="navbar navbar-expand-lg py-4" >
+        
+        <div class="container-fluid padding-side">
+
+            <a class="navbar-brand" href="index.html"><img id="logo-small" src="../assets/images/logo-small-variant.png" alt="logo"></a>
+
+            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+
+                <div class="offcanvas-header">
+
+                    <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                    </button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav text-center align-items-center justify-content-end flex-grow-1">
+
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-lg-5" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="current" class="nav-link active pe-lg-5" aria-current="page" href="about.html">About</a>
+                        </li>
+
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="padding-medium position-relative">
+        <div class="container text-white">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8 text-center">
+                    <p class="letter-space text-primary fw-semibold fs-3" data-aos="fade-up" data-aos-duration="1000">
+                        About Me
+                    </p>
+                    <h3 class="banner-size fw-medium display-6 my-4" data-aos="fade-up" data-aos-duration="1200">
+                        a multifaceted designer and developer with a knack for blending creativity & technical
+                        precision.
+                    </h3>
+                </div>
+            </div>
+            <div class="d-block d-lg-flex align-items-start border border-white border-opacity-25 p-5 rounded-4 mt-5"
+                data-aos="fade-up" data-aos-duration="1400">
+                <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link text-capitalize mb-3 active" id="v-pills-skill-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-skill" type="button" role="tab" aria-controls="v-pills-skill"
+                        aria-selected="true">skill</button>
+                    <button class="nav-link text-capitalize mb-3" id="v-pills-experience-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-experience" type="button" role="tab" aria-controls="v-pills-experience"
+                        aria-selected="false">experience</button>
+                    <button class="nav-link text-capitalize mb-3" id="v-pills-education-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-education" type="button" role="tab" aria-controls="v-pills-education"
+                        aria-selected="false">education</button>
+                    <button class="nav-link text-capitalize mb-3" id="v-pills-interest-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-interest" type="button" role="tab" aria-controls="v-pills-interest"
+                        aria-selected="false">interest</button>
+                </div>
+                <div class="tab-content border-start border-white border-opacity-25 p-4 pb-0" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-skill" role="tabpanel"
+                        aria-labelledby="v-pills-skill-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-4 mb-3">
+                                <h5 class="text-primary">UI/UX Design</h5>
+                                <p>Creating intuitive and engaging user interfaces.</p>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <h5 class="text-primary">UI/UX Design</h5>
+                                <p>Creating intuitive and engaging user interfaces.</p>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <h5 class="text-primary">UI/UX Design</h5>
+                                <p>Creating intuitive and engaging user interfaces.</p>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <h5 class="text-primary">UI/UX Design</h5>
+                                <p>Creating intuitive and engaging user interfaces.</p>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <h5 class="text-primary">UI/UX Design</h5>
+                                <p>Creating intuitive and engaging user interfaces.</p>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <h5 class="text-primary">UI/UX Design</h5>
+                                <p>Creating intuitive and engaging user interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-experience" role="tabpanel"
+                        aria-labelledby="v-pills-experience-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Creative Agency Inc.: Design head</h5>
+                                <p class="text-primary mb-1">2007 - 2012</p>
+                                <p>Vitae aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam nesciunt
+                                    facilis!</p>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Studio Alpha.: Project Manager</h5>
+                                <p class="text-primary mb-1">2013 - present</p>
+                                <p>Vitae aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam nesciunt
+                                    facilis!</p>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Creative Agency Inc.: Design head</h5>
+                                <p class="text-primary mb-1">2007 - 2012</p>
+                                <p>Vitae aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam nesciunt
+                                    facilis!</p>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Studio Alpha.: Project Manager</h5>
+                                <p class="text-primary mb-1">2013 - present</p>
+                                <p>Vitae aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam nesciunt
+                                    facilis!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-education" role="tabpanel"
+                        aria-labelledby="v-pills-education-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Bachelors in Engineering in Information Technology</h5>
+                                <p class="text-primary mb-1">1990 - 1994</p>
+                                <p>Vitae aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam nesciunt
+                                    facilis!</p>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Masters in Data Analysis</h5>
+                                <p class="text-primary mb-1">1994 - 1996</p>
+                                <p>Vitae aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam nesciunt
+                                    facilis!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-interest" role="tabpanel"
+                        aria-labelledby="v-pills-interest-tab" tabindex="0">
+                        <div class="row">
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Photography</h5>
+                                <p>Capturing moments that inspire creativity.</p>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Sketching</h5>
+                                <p>Pen and paper concepts before digital execution.</p>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <h5 class="text-primary">Traveling</h5>
+                                <p>Exploring cultures and landscapes to fuel design ideas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="socials" class="position-fixed bottom-0 start-0 ms-5 mb-5">
+        
+        <ul class="d-none d-lg-block list-unstyled justify-content-center">
+            <li>
+                <a class="nav-link mb-3" href="https://github.com/curioskye-studios" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" width="36" height="36">
+                        <use href="../assets/icons/social-media-icons.svg#github"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="https://medium.com/@curioskye.studios" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" width="36" height="36">
+                        <use href="../assets/icons/social-media-icons.svg#medium"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="https://bsky.app/profile/curioskye-studios.bsky.social" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" width="32" height="32">
+                        <use href="../assets/icons/social-media-icons.svg#bluesky"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="https://x.com/cke_studios" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" width="36" height="36">
+                        <use href="../assets/icons/social-media-icons.svg#twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link mb-3" href="https://www.linkedin.com/in/dayna-clare-itux" target="_blank" rel="noopener noreferrer">
+                    <svg class="social-icon" width="36" height="36">
+                        <use href="../assets/icons/social-media-icons.svg#linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        
+    </section>
+
+</body>
+
+</html>
