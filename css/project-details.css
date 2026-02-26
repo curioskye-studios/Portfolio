@@ -13,6 +13,10 @@
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
+.img-caption {
+    font-size: 20.5px;
+}
+
 .project-details {
     font-weight: 600;
     color: var(--secondary-color) !important;
@@ -24,12 +28,49 @@
 }
 
 .section-title {
-    font-weight: 500;
+    font-weight: 800 !important;
     color: var(--secondary-color) !important;
-    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);    
+    position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -14px;             /* Adjust distance from text */
+  width: 180px;
+  height: 3px;              /* Thickness of underline */
+  background-color: var(--secondary-color); /* Underline color */
+  border-radius: 2px;       /* Optional: rounded edges */
 }
 
 .section-subtitle {
-    font-weight: 700;
-    color: var(--white-color)!important;
+    color: var(--white-color) !important;
+}
+
+.details-text {
+    font-size: 24px;
+}
+
+.details-text-big {
+    font-size: 25.5px;
+}
+
+.role-section {    
+    margin-bottom: 10px;
+}
+
+.role-section h3 {
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.role-section svg {
+    fill: var(--white-color);
+}
+
+.role-section-content {
+    
 }

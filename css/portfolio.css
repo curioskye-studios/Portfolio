@@ -71,7 +71,8 @@
 .project-filter-active::after {
   content: "";
   position: absolute;
-  left: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -14px;             /* Adjust distance from text */
   width: 110px;
   height: 3px;              /* Thickness of underline */
