@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="../../../css/project-details.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script src="../../../js/project-details.js"></script>
 </head>
 
 <body style="background-image: url('../../../assets/images/global/blue-background-image-2.png');">
@@ -136,30 +137,76 @@
                     </li>
                     <li>
                         <h5 class="project-details text-primary">Tools</h5>
-                        <p>Kotlin</p>
+                        <p>Kotlin, XML Layouts, Draw.io, Pencil & Paper</p>
                     </li>
                     <li>
-                        <h5 class="project-details text-primary">Project Link</h5>
-                        <p><a href="https://github.com/curioskye-studios/LumoNote" target="_blank">
+                        <h5 id="project-link" class="project-details text-primary">Project Link</h5>
+                        <p><a class="real-link" href="https://github.com/curioskye-studios/LumoNote" target="_blank">
                             https://github.com/curioskye-studios/LumoNote</a>
                         </p>
                     </li>
                 </ul>
                 
-            </div>           
+            </div>       
+            
+
+            <div id="section-nav-div" class="section-navigator rounded-5 p-3 invisible">
+
+                <a href="#" id="about-section-btn" 
+                    class="btn btn-outline-primary section-navigator-btn">
+                    About 
+                </a>
+
+                <a href="#" id="problem-section-btn" 
+                    class="btn btn-outline-primary section-navigator-btn">
+                    Problem
+                </a>
+
+                <a href="#" id="research-section-btn" 
+                    class="btn btn-outline-primary section-navigator-btn">
+                    Research
+                </a>
+
+                <a href="#" id="design-section-btn" 
+                    class="btn btn-outline-primary section-navigator-btn">
+                    Design
+                </a>
+
+                <a href="#" id="reflection-section-btn" 
+                    class="btn btn-outline-primary section-navigator-btn">
+                    Reflection
+                </a>
+
+            </div>
+
             
             <div class="pt-3"></div>
             
-            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">
+            <div class="project-div border p-5 my-5 mt-4 rounded-4" 
+                data-aos="fade-up" data-aos-duration="1200">
                 
-                <h4 class="mx-auto section-title letter-space text-center fw-medium mb-5" 
+                <h4 id="about-section" class="mx-auto section-title letter-space text-center fw-medium mb-5" 
                     data-aos="fade-up" data-aos-duration="1400">
                     About This Project
                 </h4>  
 
                 <p class="details-text display-6" data-aos="fade-up" data-aos-duration="1400">
-                    LumoNote
-                </p>               
+                    <span class="highlight">LumoNote</span> is a 
+                    <span class="highlight">feature rich note-taking mobile app</span>. 
+                    It sits in that sweet spot between a simple note-taking app and one that 
+                    borders on a word processor like Microsoft Word.
+                </p>     
+                
+                <p class="details-text display-6" data-aos="fade-up" data-aos-duration="1400">                    
+                    This was an 
+                    <span class="highlight">exploratory project</span> 
+                    undertaken with a focus on 
+                    <span class="highlight">refining my process</span> and 
+                    <span class="highlight">expanding my knowledge and skill </span>
+                    as both a 
+                    <span class="highlight">UI/UX Designer</span> and 
+                    <span class="highlight">Software Developer</span>.
+                </p>    
 
             </div>
             
@@ -170,33 +217,44 @@
             </div>
             
             
-            <h4 class="mx-auto section-title letter-space text-center fw-medium mb-5 mt-4" 
+            <h4 id="problem-section" class="mx-auto section-title letter-space text-center fw-medium mb-5 mt-4" 
                 data-aos="fade-up" data-aos-duration="1200">
                 The Problem.
             </h4>              
-            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">    
+            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1200">    
                 
-                <p class="details-text-big mb-4" data-aos="fade-up" data-aos-duration="1400">         
-                    Note apps are essential tools everyone uses in their day to day.
+                <p class="details-text-big mb-4 highlight" data-aos="fade-up" data-aos-duration="1400">         
+                    A note app is an essential tool everyone uses in their day to day.
                 </p>   
 
-                <ul class="lgap-2 gap-md-5">
-                    <li class="details-text mb-4 display-6" data-aos="fade-up" data-aos-duration="1400">
-                        I use it mostly for organization and planning. 
+                <ul class="lgap-2 gap-md-5" data-aos="fade-up" data-aos-duration="1400">
+                    <li class="details-text mb-4 display-6" >
+                        Many people like myself use it mostly for 
+                        <span class="highlight">thought organization</span> and 
+                        <span class="highlight">planning</span>. 
                     </li>
                     <li class="details-text mb-4 display-6" data-aos="fade-up" data-aos-duration="1400">
-                        I highly value the ability to customize how my plans and tasks (checklists) are 
-                        presented without having to navigate through unnecessarily complex features.
+                        For some of those people, the ability to
+                        <span class="highlight">freely combine and customize how note elements are presented</span>
+                        is a must, without <span class="highlight">unnecessarily complex features</span>
+                        getting in the way.
                     </li>
                     <li class="details-text mb-4 display-6" data-aos="fade-up" data-aos-duration="1400">
-                        However, many note apps are either too simple or too complex, sometimes choosing 
-                        to separate the checklist feature into a separate note type altogether.
+                        However, many note apps are either 
+                        <span class="highlight">too simple </span>
+                        or 
+                        <span class="highlight">too complex</span>, 
+                        sometimes choosing to 
+                        <span class="highlight">separate certain note elements </span>
+                        into a separate note type altogether.
                     </li>
                 </ul>
 
                 <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">                    
-                    I used this issue as a jumping off point to practice my UX design process as well as 
-                    develop my first prototype of the product for testing.
+                    I used this issue as a jumping off point to 
+                    <span class="highlight">practice my UX design process</span> as well as
+                    <span class="highlight">develop my first prototype</span> 
+                    of the product for testing.
                 </p>        
                 
 
@@ -206,17 +264,18 @@
                 </h4> 
 
                 <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">                    
-                    As both the designer and Developer, the outcome was limited by:
-                </p>                   
-                <ul class="lgap-2 gap-md-5">
-                    <li class="details-text mb-4 display-6" data-aos="fade-up" data-aos-duration="1400">
-                        Time - scope had to be adjusted, and high impact features had to be prioritized
-                    </li>
+                    As both the 
+                    <span class="highlight">Designer</span> and 
+                    <span class="highlight">Developer</span>, 
+                    the outcome was limited by 
+                    <span class="highlight">time</span> & 
+                    <span class="highlight">my current skill level</span>.
+                </p> 
 
-                    <li class="details-text mb-4 display-6" data-aos="fade-up" data-aos-duration="1400">
-                        Current Skill Level - ideas had be scrapped for time, new to mobile dev
-                    </li>
-                </ul>   
+                <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">    
+                    Some potential features had to be shelved, and high impact features were 
+                    prioritized to be developed and tested in a short time frame.
+                </p> 
 
             </div> 
             
@@ -225,27 +284,31 @@
                 data-aos="fade-up" data-aos-duration="1200" style="width: 40%;">
                 Crafting My Experience Into The Target User
             </h4>  
-            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">
+            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1200">
 
-                <p class="details-text" data-aos="fade-up" data-aos-duration="1400">
+                <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">
                     The project was built on these key assumptions about the user: 
                 </p>  
 
                 <ul class="details-text display-6 lgap-2 gap-md-5" data-aos="fade-up" data-aos-duration="1400">
                     <li class="mb-3">
-                        Organization, simplicity, approachability and speed is highly valued
+                        <span class="highlight">Organization, simplicity, approachability</span> and 
+                        <span class="highlight">speed</span>
+                        is highly valued
                     </li>
 
                     <li class="mb-3">
-                        The combination of checklists and other key note features is highly valued 
+                        The <span class="highlight">combination of checklists and other key note elements</span> 
+                        is highly valued 
                     </li>
 
                     <li class="mb-3">
-                        Simple, in text images is highly valued
+                        <span class="highlight">Simple, in text images</span> is highly valued
                     </li>
 
                     <li class="mb-3">
-                        Undo and redo are high frequency actions
+                        <span class="highlight">Undo and redo </span>are 
+                        <span class="highlight">high frequency</span> actions
                     </li>
                 </ul>
 
@@ -272,14 +335,16 @@
                 
             </div>  
             
-            <h4 class="mx-auto section-title letter-space text-center fw-medium mb-5" 
+            <h4 id="research-section" class="mx-auto section-title letter-space text-center fw-medium mb-5" 
                 data-aos="fade-up" data-aos-duration="1200">
                 Research
             </h4>  
-            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">  
+            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1200">  
                 
                 <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">
-                    I sought references for simple note app designs and analyzed note apps like 
+                    I sought references for 
+                    <span class="highlight">simple note app designs</span> and 
+                    <span class="highlight">analyzed note apps</span> like 
                     Google Keep Notes to note their strengths in the context of the problem.
                 </p>     
                 
@@ -287,9 +352,9 @@
                     I had these key takeaways from Google Keep Notes:
                 </p>    
 
-                <ul class="lgap-2 gap-md-5">
+                <ul class="lgap-2 gap-md-5" data-aos="fade-up" data-aos-duration="1400">
 
-                    <li class="details-text mb-4 display-6" data-aos="fade-up" data-aos-duration="1400">
+                    <li class="details-text mb-4 display-6">
                         While it was sufficiently 
                         <span class="highlight">simple, approachable, </span>
                         had 
@@ -298,7 +363,7 @@
                         <span class="highlight">(rich text editing, undo & redo system, etc)</span>,
                     </li>
 
-                    <li class="details-text mb-4 display-6" data-aos="fade-up" data-aos-duration="1400">
+                    <li class="details-text mb-4 display-6">
                         It had 
                         <span class="highlight">clear separation between text and other features </span>
                         such as 
@@ -310,11 +375,11 @@
 
             </div>
 
-            <h4 class="mx-auto section-title letter-space text-center fw-medium mb-5 mt-4" 
+            <h4 id="design-section" class="mx-auto section-title letter-space text-center fw-medium mb-5 mt-4" 
                 data-aos="fade-up" data-aos-duration="1200" >
                 Crafting LumoNote's Design
             </h4>              
-            <div class="project-div border my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">    
+            <div class="project-div border my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1200">    
 
                 <div class="pt-5"></div>
                 <div class="pt-2"></div>
@@ -334,7 +399,7 @@
 
                 <p class="details-text-big mb-5 mx-5" data-aos="fade-up" data-aos-duration="1400">    
                     With the app's theme and concept in place, I got to work on some low fidelity wireframes 
-                    targeted at the core problem. 
+                    tailored to the user's needs. 
                 </p>   
                 
 
@@ -345,45 +410,70 @@
 
                 <div class="project-img-border mb-5 mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
                     <img class="img-fluid d-block w-100 rounded-3"
-                        src="../../../assets/images/ux-projects/lumonote/early-screen-sketches.png" alt="project-img">
+                        src="../../../assets/images/ux-projects/lumonote/main-screen-sketches.png" alt="project-img">
                 </div>
 
-                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">                    
-                    I wanted to limit the clutter on screen and make something simple and straightfoward. 
-                    <span class="highlight"> 
-                        As the first thing the users saw when opening the app, it couldn't be overwhelming.
-                    </span>
+                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">    
+                    This is the first thing the users see when opening the app.
+                </p>   
+
+                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">    
+                    My priority here was to
+                    <span class="highlight"> limit the clutter on screen </span>
+                    and create a
+                    <span class="highlight"> simple and approachable experience </span>
+                    to avoid overwhelm.
                 </p>   
                 <p class="details-text-big mt-5 mx-5" data-aos="fade-up" data-aos-duration="1400">                    
-                    Key Features:
+                    Key Ideas:
                 </p>  
-                <ul class="lgap-2 gap-md-5 mx-5 mb-5">
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        <span class="highlight"> Pinning </span> 
-                        would allow note prioritization (organization)
+                <ul class="lgap-2 gap-md-5 mx-5 mb-5" data-aos="fade-up" data-aos-duration="1400">
+                    <li class="details-text-big mb-4 display-4">
+                        <span class="highlight">Notes </span>
+                        capture the user's eye first as the app's core functionality
                     </li>
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        The <span class="highlight"> Calendar </span> & 
-                        <span class="highlight"> View Notes </span> 
-                        views would allow multiple ways of quickly accessing existing notes (speed)
-                    </li>
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        <span class="highlight"> Search </span> 
-                        is another way of quickly finding & accessing existing notes (speed)
-                    </li>
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        The home screen had everything that would be needed visible, so 
-                        <span class="highlight"> most things can be done in 1-2 taps </span>                        
-                        (speed)
-                    </li>
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
+                    <li class="details-text-big mb-4 display-4">
                         The 
                         <span class="highlight">add notes button </span>
-                        jumps out at you as something to interact with
+                        jumps out at you as something to interact with, prompting the user to interact
+                    </li>
+                    <li class="details-text-big mb-4 display-4">
+                        <span class="highlight">All possible features are visible </span>
+                        without feeling crowded and 
+                        <span class="highlight"> can be accessed in a simple 1-2 taps </span>   
+                    </li>
+                    <li class="details-text-big mb-4 display-4">
+                        Viewing any main screen is done by simply 
+                        <span class="highlight"> clicking the icon at the bottom </span>
                     </li>
                 </ul>
 
+                <p class="details-text-big mt-5 mx-5" data-aos="fade-up" data-aos-duration="1400">                    
+                    Visible Features:
+                </p>  
+                <ul class="lgap-2 gap-md-5 mx-5 mb-5" data-aos="fade-up" data-aos-duration="1400">
+
+                    <li class="details-text-big mb-4 display-4">
+                        <span class="highlight"> Pinning </span> 
+                        allows note prioritization (organization)
+                    </li>
+                    <li class="details-text-big mb-4 display-4">
+                        The <span class="highlight"> Calendar </span> & 
+                        <span class="highlight"> View Notes </span> 
+                        main screens would allow multiple ways of quickly accessing existing notes (speed)
+                    </li>
+                    <li class="details-text-big mb-4 display-4">
+                        <span class="highlight"> Search </span> 
+                        is another way of quickly finding & accessing existing notes (speed)
+                    </li>
+                    
+                </ul>
+
                 <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">             
+                    The design went through some more changes during the development of the app, 
+                    applying colors and the like. 
+                </p>   
+                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">  
                     The most recent design had a couple key changes.
                 </p>   
 
@@ -392,44 +482,57 @@
                         src="../../../assets/images/ux-projects/lumonote/lumonote-main-screens.png" alt="project-img">
                 </div>
 
-
+                
+                <div class="pt-2"></div>
                 <h4 class="mx-auto section-title letter-space text-center fw-medium mb-5" 
                     data-aos="fade-up" data-aos-duration="1400">
-                    The Note Screen
+                    The Note Taking Experience
                 </h4>  
 
-                <div class="project-img-border my-5 mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
-                    <img class="img-fluid d-block w-100 rounded-3"
-                        src="../../../assets/images/ux-projects/lumonote/note-screen-sketch.png" alt="project-img">
-                </div>               
-
-                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">             
-                    This is where the user spends most of their time.
+                <p class="details-text-big mx-5 mt-2" data-aos="fade-up" data-aos-duration="1400">             
+                    The Note Screen is where the user spends most of their time.
                 </p>   
-                <ul class="lgap-2 gap-md-5 mx-5 mb-5">
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        As the note is the most important element, the note display takes up the majority of 
-                        the screen
-                    </li>
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        The note supports the easy intermingling of different note elements, images, checklists, etc.
-                    </li>
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        Undo & Redo supported
-                    </li>
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        The text formatting is constrainted to what is needed for easy text editing, but is not 
-                        bogged down by complex features. decent organization of note content can be acvompleished 
-                        with just
-                        title and subtitle, bold, italics, bullet, clear font styles and underline 
-                    </li>
-                </ul>
                 
                 <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">                    
                     Due to it's importance, I spent a lot of time with this screen with a key focus on 
                     <span class="highlight">simplicity</span> 
                     and 
                     <span class="highlight">approachability</span>.
+                </p>   
+
+                <div class="project-img-border my-5 mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
+                    <img class="img-fluid d-block w-100 rounded-3"
+                        src="../../../assets/images/ux-projects/lumonote/note-screen-sketch.png" alt="project-img">
+                </div>               
+                 
+                <p class="details-text-big mt-5 mx-5" data-aos="fade-up" data-aos-duration="1400">                    
+                    Key Ideas:
+                </p>  
+                <ul class="lgap-2 gap-md-5 mx-5 mb-5">
+                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
+                        As the note content is the most important element, the 
+                        <span class="highlight">note display takes up most of the screen</span>
+                    </li>
+                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
+                        The note 
+                        <span class="highlight">supports combinations of different note elements </span>
+                        (text, images, checklists, etc)
+                    </li>
+                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
+                        <span class="highlight">Undo & Redo supported</span>
+                    </li>
+                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
+                        <span class="highlight">Text formatting is narrowed down to basic text editing tools,</span>
+                        but isn't lacking key 
+                        note-taking features. Decent organization of note content can be accomplished with just 
+                        title and subtitle text sizes, bold, italics, underline, clearing font styles and bullets 
+                    </li>
+                </ul>
+
+                
+                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">  
+                    After some testing and overcoming development issues, the design had undergone a 
+                    few more changes.
                 </p>   
                 
                 <div class="project-img-border my-5 mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
@@ -444,8 +547,57 @@
                 </h4>  
                                
                 <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">                    
-                    This was a later addition
+                    This was a later addition, and is accessible from both the 
+                    <span class="highlight">View Notes </span>&
+                    <span class="highlight">Edit Notes</span>
+                    Screens.
                 </p>   
+                <p class="details-text-big mt-5 mx-5" data-aos="fade-up" data-aos-duration="1400">                    
+                    Key Idea:
+                </p>  
+                <ul class="lgap-2 gap-md-5 mx-5 mb-5">
+                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
+                        To 
+                        <span class="highlight">avoid clutter</span>, the
+                        tag management functionality is 
+                        <span class="highlight">separated into its own independent screen</span>
+                    </li>
+                </ul>  
+                <p class="details-text-big mt-5 mx-5" data-aos="fade-up" data-aos-duration="1400">                    
+                    Visible Features:
+                </p>  
+                <ul class="lgap-2 gap-md-5 mx-5 mb-5">
+                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
+                        The user can easily 
+                        <span class="highlight">delete, rename</span> or 
+                        <span class="highlight">add new tags</span> 
+                        for their notes to 
+                        <span class="highlight">help with note organization</span>
+                    </li>
+                </ul>   
+
+                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">                    
+                    At first I wanted to 
+                    <span class="highlight">follow a similar display style </span>
+                    to how tags were displayed on the 
+                    <span class="highlight">View Notes Screen</span>.
+                </p>  
+
+                <div class="project-img-border my-5 mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
+                    <img class="img-fluid d-block w-100 rounded-3"
+                        src="../../../assets/images/ux-projects/lumonote/tag-screen-sketch.png" alt="project-img">
+                </div> 
+                <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">                    
+                    But after further contemplation and analyzing how similar apps designed this type of screen,
+                    I went with a 
+                    <span class="highlight">simple list structure</span> instead, 
+                    keeping things straightforward. 
+                </p>   
+
+                <div class="project-img-border my-5 mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
+                    <img class="img-fluid d-block w-100 rounded-3"
+                        src="../../../assets/images/ux-projects/lumonote/lumonote-tag-screens.png" alt="project-img">
+                </div>
 
                 <div class="pt-5"></div>
 
@@ -455,30 +607,35 @@
                 data-aos="fade-up" data-aos-duration="1200">
                 Visual Design Decisions
             </h4>  
-            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">     
+            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1200">     
 
                 <div class="pt-1"></div> 
                 
                 <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">
-                    The concept of illuminating the user's thoughts was combined with
-                    a sleek, modern look and high contrast so everything jumps out at you.
+                    The concept of 
+                    <span class="highlight">illuminating the user's thoughts</span> 
+                    was combined with a 
+                    <span class="highlight">sleek, modern look and high contrast </span>
+                    so everything jumps out at you.
 
                 <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">
-                    Conceptually, it's like important things shine or glow (are luminous) against 
+                    Conceptually, it can be seen as 
+                    <span class="highlight">elements shining or glowing (are luminous) </span>
+                    against 
                     the dark background. 
                 </p>          
 
                 <div class="row gx-4 mt-4">
 
                     <!-- Column 1 -->
-                    <div class="col-lg-6 d-flex flex-column">
+                    <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-duration="1400">
 
-                        <div class="project-img-border mb-4 mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="project-img-border mb-4 mx-4 rounded-3" >
                             <img class="img-fluid d-block w-100 rounded-3"
                                 src="../../../assets/images/ux-projects/lumonote/lumonote-design-colors.png" alt="project-img">
                         </div>  
 
-                        <div class="project-img-border mx-4 rounded-3" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="project-img-border mx-4 rounded-3 mb-5" data-aos="fade-up" data-aos-duration="1400">
                             <img class="img-fluid d-block w-100 rounded-3"
                                 src="../../../assets/images/ux-projects/lumonote/lumonote-design-font.png" alt="project-img">
                         </div>  
@@ -486,29 +643,42 @@
                     </div>
 
                     <!-- Column 2 -->
-                    <div class="col-lg-6 d-flex flex-column">
-                        <p class="details-text-big mb-4" data-aos="fade-up" data-aos-duration="1400">
-                            The golden yellow gives off a warm feeling and is striking against a cooler, 
-                            blue-black background.
+                    <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-duration="1400">
+                        <p class="details-text-big mb-4">
+                            The 
+                            <span class="highlight">golden yellow gives off a warm feeling </span>
+                            and is striking against a 
+                            <span class="highlight">cooler, blue-black background.</span>
                         </p>  
-                        <p class="details-text-big mb-4" data-aos="fade-up" data-aos-duration="1400">
-                            The light on a dark background also reduces eye strain. Note-taking can be a 
+                        <p class="details-text-big mb-4" >
+                            The 
+                            <span class="highlight">light elements on a dark background </span>also 
+                            <span class="highlight">reduces eye strain.</span> 
+                            Note-taking can be a 
                             screen intensive task.
                         </p>  
-                        <p class="details-text-big" data-aos="fade-up" data-aos-duration="1400">
-                            The Inter font was chosen because it: 
-                        </p>      
-                        <ul class="lgap-2 gap-md-5 mx-5 mb-5">
-                            <li class="details-text-big mb-3 display-4" data-aos="fade-up" data-aos-duration="1400">
-                                is very easy to read,
-                            </li>
-                            <li class="details-text-big mb-3 display-4" data-aos="fade-up" data-aos-duration="1400">
-                                supports bold, italics, underline & different types of capitalization, 
-                            </li>
-                            <li class="details-text-big display-4" data-aos="fade-up" data-aos-duration="1400">
-                                and gives a clean, modern tech feel.
-                            </li>
-                        </ul>    
+
+                        <div data-aos="fade-up" data-aos-duration="1400">                            
+                            <p class="details-text-big" >
+                                The <span class="highlight">Inter</span> font: 
+                            </p>      
+                            <ul class="lgap-2 gap-md-5 mx-5 mb-5">
+                                <li class="details-text-big mb-3 display-4">
+                                    is very 
+                                    <span class="highlight">easy to read</span>,
+                                </li>
+                                <li class="details-text-big mb-3 display-4">
+                                    supports 
+                                    <span class="highlight">bold, italics, underline</span> 
+                                    & different types of 
+                                    <span class="highlight">capitalization</span>, 
+                                </li>
+                                <li class="details-text-big display-4">
+                                    and gives a 
+                                    <span class="highlight">clean, modern tech feel</span>.
+                                </li>
+                            </ul>    
+                        </div>
                     </div>
 
                 </div>          
@@ -519,30 +689,179 @@
                 data-aos="fade-up" data-aos-duration="1200">
                 Development
             </h4>  
-            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">    
+            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1200">    
                 
-                <p class="details-text display-6" data-aos="fade-up" data-aos-duration="1400">
-                    Note apps are essential and are mainly used for the organization and coordination of 
-                    people's lives. 
-                </p>               
+                <p class="details-text-big display-6" data-aos="fade-up" data-aos-duration="1400">
+                    I built the project using 
+                    <span class="highlight">Kotlin </span>
+                    for the functionality and 
+                    <span class="highlight">XML Layouts </span>
+                    for the UI.
+                    I was 
+                    <span class="highlight">new to mobile design and development </span>
+                    when I started, and being both the designer 
+                    and developer had a real effect on my design decisions. 
+                </p>    
+                
+                
+                <ul class="lgap-2 gap-md-5 mx-5 mb-5">
+                    <li class="details-text-big mb-4 display-4">
+                        My 
+                        <span class="highlight">lack of experience with the platform </span>
+                        made it difficult to 
+                        <span class="highlight">accurately assess</span> how 
+                        possible it would be implement certain features in the way I had designed them. 
+                    </li>
+                    <li class="details-text-big mb-4 display-4">
+                        I found myself going back to 
+                        <span class="highlight">simplify elements of the design </span>
+                        so they could be implemented and tested within the time frame.
+
+                        However, I see this as a 
+                        <span class="highlight">constraint that pushed me toward simpler solutions</span>
+                        rather than a failure. 
+                    </li>
+                    <li class="details-text-big mb-4 display-4">
+                        Many times this turned out well for the project and 
+                        <span class="highlight">forced me to get more creative</span>. 
+                        I believe building this skill only serves me well for future projects.
+                    </li>
+                </ul>   
+
+                <p class="details-text-big display-6" data-aos="fade-up" data-aos-duration="1400">
+                    The project can be found here: 
+                    <a class="real-link" href="https://github.com/curioskye-studios/LumoNote" target="_blank">
+                        LumoNote on Github</a>
+                </p>  
+                <p class="details-text-big display-6" data-aos="fade-up" data-aos-duration="1400">
+                    My medium article goes into the developer perspective more: 
+                    <a class="real-link" 
+                        href="https://medium.com/@curioskye.studios/building-my-all-in-one-note-app-what-i-learned-f3b7094a92d0" 
+                        target="_blank">
+                        Building My All-in-one Note App: What I Learned
+                    </a>
+                </p>  
 
             </div>
            
 
-            <h4 class="mx-auto section-title letter-space text-center fw-medium mb-5" 
+            <h4 id="reflection-section" class="mx-auto section-title letter-space text-center fw-medium mb-5" 
                 data-aos="fade-up" data-aos-duration="1200">
                 Outcome & Reflection
             </h4>  
-            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1400">  
-
+            <div class="project-div border p-5 my-5 mt-4 rounded-4" data-aos="fade-up" data-aos-duration="1200">
+                
+                <p class="details-text-big display-6 highlight">
+                    I attempted to use the prototype in my day to day to test its long term usability.
+                </p>  
+                <p class="details-text-big display-6">
+                    Some things stood out to me in particular:
+                </p>  
                 <ul class="lgap-2 gap-md-5 mx-5 mb-5">
-                    <li class="details-text-big mb-4 display-4" data-aos="fade-up" data-aos-duration="1400">
-                        I barely used the Calendar screen, so it wasn't ultimately contributing to the note organization
-                        as much as was assumed and can be removed
+                    <li class="details-text mb-4 display-4">
+                        Due to the complexities of text editing in android, a lot more work needs to be put in to 
+                        <span class="highlight">stabilize the note elements</span>
+                        so they behave more predictibly when used with each other.
                     </li>
-                </ul>       
+                    <li class="details-text mb-4 display-4">
+                        There needs to be 
+                        <span class="highlight">more error messages and other forms of feedback </span>
+                        so the user is well informed of the state of things within the app to lower confusion.
+                    </li>
+                    <li class="details-text mb-4 display-4">
+                        I 
+                        <span class="highlight">barely used the Calendar screen </span>,
+                        so it wasn't ultimately contributing to the goals of the app
+                        as much as I hoped it would. It can be replaced with a more useful feature.
+                    </li>
+                </ul>   
+                
+                <p class="details-text-big display-6">
+                    My biggest takeaways from working on LumoNote would be that:
+                </p>  
+                <ul class="lgap-2 gap-md-5 mx-5 mb-5">
+                    <li class="details-text mb-4 display-4">
+                        Further research into the target user would have allowed for a 
+                        <span class="highlight">more accurate mapping of problem to solution</span>, 
+                        something I highly value.
+                    </li>
+                    <li class="details-text mb-4 display-4">
+                        Building what I designed gave me a much more 
+                        <span class="highlight">grounded sense of what is actually practical in UI and UX decisions. </span>
+                        I'll carry that into future projects even when I'm not the developer.
+                    </li>
+                    <li class="details-text mb-4 display-4">
+                        I also learned that 
+                        <span class="highlight">documenting as I go would have made writing on LumoNote much easier</span>,
+                        especially regarding collecting design iterations and tracking my decisions and reasoning.
+                        I'll be sure to be more diligent with this.
+                    </li>
+                    
+                </ul>   
 
             </div>
+
+
+            <div class="pt-5"></div>
+            <div class="pt-1"></div>
+            <div class="row gx-4 mt-4 mx-auto" style="width: 80%;">
+
+                <!-- Column 1 -->
+                <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-duration="1400">
+
+                    <h2 class="banner-size fw-medium display-4 my-5" >                        
+                        Explore Another Project:
+                    </h2> 
+                    
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-duration="1400">   
+
+                    <div class="portfolio-div d-flex align-items-start border pb-0 rounded-4">
+
+                        <div class="" id="style-1">
+                            <div class="container">
+                                <div class="col">
+
+                                    <div class="col mb-4 mt-3 mx-2">
+                                        <div class="rounded-3">
+                                            <a href="quickwash.html">
+                                                <img src="../../../assets/images/ux-projects/quickwash/quickwash-project.png" alt="project-img"
+                                                    class="img-fluid rounded-3">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col mb-5 mx-3">
+                                        <div class="project-type">
+                                            Desktop Application
+                                        </div>
+
+                                        <h3 class="project-info banner-size fw-medium">
+                                            Project Info
+                                        </h3>
+
+                                        <a href="quickwash.html" 
+                                        class="btn btn-outline-primary mt-4 position-relative pe-5">
+                                            Dive Into Design                              
+                                            <div class="position-absolute top-50 end-0 translate-middle-y me-3">
+                                                <svg class="arrow-right p-1" width="28" height="28">
+                                                    <use href="../../../assets/icons/ui-icons.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>       
 
         </div>
     </section>

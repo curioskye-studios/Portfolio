@@ -480,4 +480,7 @@ body {
     text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
 }
 
-
+.real-link {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
