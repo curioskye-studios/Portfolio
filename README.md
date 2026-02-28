@@ -1,6 +1,7 @@
-# 🗂️ Personal Portfolio Website
+# Personal Portfolio Website
 
-A personal portfolio website showcasing featured UI/UX design projects and software development work.
+A personal portfolio website showcasing the featured UI/UX design projects and software development work of
+**CurioSkye Studios**.
 
 ---
 
