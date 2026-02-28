@@ -6,7 +6,7 @@ A personal portfolio website showcasing featured UI/UX design projects and softw
 
 ## 🔗 Live Site
 
-> _Add your deployed link here (e.g. GitHub Pages, Netlify, Vercel)_
+> [curioskye-studios.github.io/Portfolio](https://curioskye-studios.github.io/Portfolio/)
 
 ---
 
