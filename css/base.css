@@ -484,3 +484,14 @@ body {
   color: var(--secondary-color);
   text-decoration: underline;
 }
+
+.btn-float {
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease;
+}
+
+.btn-float:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 32px -8px rgba(0, 0, 0, 0.049);
+}

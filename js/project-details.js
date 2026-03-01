@@ -83,6 +83,4 @@ document.addEventListener("DOMContentLoaded", () => {
         jumpToSection('#reflection-section');
     });   
 
-    
-
 })

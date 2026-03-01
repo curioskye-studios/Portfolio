@@ -126,42 +126,39 @@
             <div class="container" data-aos="fade-up" data-aos-duration="1400">
 
                 <div class="row project-filter-div">
-                    <div class="col text-end" >
-                        <a class="project-filter-active" href="about.html">
+                    <div class="col text-center" >
+                        <a id="ux-filter-btn" class="project-filter-active" href="#">
                             UI/UX Design Work
                         </a>
                     </div>
-
-                    <div class="col text-start">
-                        <a class="project-filter" href="about.html">
-                            Software Dev Work
-                        </a>
-                    </div>
                 </div>
+
             </div>
 
+            
+            <div class="project-display">
+                <div class="row gx-4 mt-4">
 
-            <div class="row gx-4 mt-4">
+                    <!-- Column 1 -->
+                    <div class="project-col-1 col-lg-6 d-flex flex-column">
+                        <div id="ux-lumonote" class="mb-1" data-aos="fade-up" data-aos-duration="1600"></div>
+                    </div>
 
-                <!-- Column 1 -->
-                <div class="col-lg-6 d-flex flex-column">
-                    <div id="lumonote-preview" class="mb-1" data-aos="fade-up" data-aos-duration="1600"></div>
-                </div>
+                    <!-- Column 2 -->
+                    <div class="project-col-2 col-lg-6 d-flex flex-column">
+                        <div id="ux-quickwash" class="mb-1" data-aos="fade-up" data-aos-duration="1600"></div>
+                    </div>
 
-                <!-- Column 2 -->
-                <div class="col-lg-6 d-flex flex-column">
-                    <div id="quickwash-preview" class="mb-1" data-aos="fade-up" data-aos-duration="1600"></div>
-                </div>
+                    <script>
+                        $(function() {
+                            $("#ux-lumonote").load("projects/ux-design/previews/lumonote-preview.html");
+                            $("#ux-quickwash").load("projects/ux-design/previews/quickwash-preview.html");
+                        });
+                    </script>   
 
-                <script>
-                    $(function() {
-                        $("#lumonote-preview").load("projects/ux-design/previews/lumonote-preview.html");
-                        $("#quickwash-preview").load("projects/ux-design/previews/quickwash-preview.html");
-                    });
-                </script>   
-
-            </div>         
-
+                </div>      
+            </div>
+              
         </div>
 
     </section>
