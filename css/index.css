@@ -1,0 +1,28 @@
+
+@import "../css/root.css";
+
+
+/*---- home-main style start ----*/
+.animated-border {
+  animation: rotate-border 90s linear infinite;
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*---- new custom stylings ----*/
+#home-main #greeting {
+    font-weight: 900;
+}
+
+#home-main .greeting-text {
+    font-size: 19px;
+}
