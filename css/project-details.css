@@ -64,28 +64,21 @@
 }
 
 #section-nav-div {
+    background-image: url('../assets/images/global/project-nav-background.png');
+    background-size: cover;
+    border-bottom: #ffffffb0 1.7px solid;
+
     position: fixed;
     top: 0;
     margin: 0;
     z-index: 999;
     width: 100%;
     left: 50%;
-    transform: translateX(-50%);
-    border-bottom: #ffffffb0 1.7px solid;
-}
-
-#section-nav-div::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url('../assets/images/global/project-nav-background.png');
-    background-size: cover;
-    opacity: 0.95;
-    z-index: -1;
+    transform: translateX(-50%); 
 }
 
 .section-navigator {    
-    border: #ffffff88 1.7px solid;
+    border: #ffffffb0 1.7px solid;
     background-color: #ffffff25;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 
