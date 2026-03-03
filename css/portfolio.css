@@ -57,6 +57,18 @@
   color: var(--white-color);
 }
 
+.project-filter,
+.project-filter-active {
+    background: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    box-shadow: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
 .project-filter:hover {
   color: var(--primary-variant);
   font-weight: 700;

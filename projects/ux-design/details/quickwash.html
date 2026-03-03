@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!--Bootstrap ================================================== -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" >
 
-    <!-- Google fonts -->
+    <!-- Google fonts --> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -18,15 +17,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <!--vendor css ================================================== -->
-    <link rel="stylesheet" type="text/css" href="../../../css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css">
 
      <!-- script ================================================== -->
-    <script src="../../../js/jquery-1.11.0.min.js"></script>
+    <script src="/js/jquery-1.11.0.min.js"></script>
 
-    <!-- Bootstarp script ================================================== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+    <!-- Bootstrap script ================================================== -->
+    <script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
 
     <!-- Swiper script ================================================== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -35,24 +32,23 @@
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
 
-    <script src="../../../js/plugins.js"></script>
-    <script src="../../../js/script.js"></script>    
-
+    <script src="/js/plugins.js"></script>
+    <script src="/js/script.js"></script>  
     
     <!-- Custom ================================================== -->     
 
     <title>QuickWash</title>
 
-    <link rel="icon" type="image/png" href="../../../assets/images/global/logo-large.png">
+    <link rel="icon" type="image/png" href="/assets/images/global/logo-large.png">
 
-    <link rel="stylesheet" href="../../../css/base.css">
-    <link rel="stylesheet" href="../../../css/project-details.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/project-details.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
-    <script src="../../../js/project-details.js"></script>
+    <script src="/js/ux-project-details.js"></script>
 </head>
 
-<body style="background-image: url('../../../assets/images/global/blue-background-image-2.webp');">
+<body style="background-image: url('/assets/images/global/blue-background-image-2.webp');">
 
     <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
 
@@ -60,7 +56,7 @@
         
         <div class="container-fluid padding-side">
 
-            <a class="navbar-brand" href="../../../index.html"><img id="logo-small" src="../../../assets/images/global/logo-small-variant.png" alt="logo"></a>
+            <a class="navbar-brand" href="/index.html"><img id="logo-small" src="/assets/images/global/logo-small-variant.png" alt="logo"></a>
 
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -81,13 +77,13 @@
                     <ul class="navbar-nav text-center align-items-center justify-content-end flex-grow-1">
 
                         <li class="nav-item">
-                            <a class="nav-link pe-lg-5" href="../../../index.html">Home</a>
+                            <a class="nav-link pe-lg-5" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a id="current" class="nav-link active pe-lg-5" aria-current="page" href="../../../portfolio.html">Portfolio</a>
+                            <a id="current" class="nav-link active pe-lg-5" aria-current="page" href="/portfolio.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link pe-lg-5" href="../../../about.html">About</a>
+                            <a class="nav-link pe-lg-5" href="/about.html">About</a>
                         </li>
 
                     </ul>
@@ -113,7 +109,7 @@
 
                     <nav class="breadcrumb d-flex justify-content-center" data-bs-theme="dark" data-aos="fade-up"
                         data-aos-duration="1400">
-                        <a class="breadcrumb-item " href="../../../portfolio.html">Portfolio</a>
+                        <a class="breadcrumb-item " href="/portfolio.html">Portfolio</a>
                         <span class="breadcrumb-item active " aria-current="page">Project-Details</span>
                     </nav>
 
@@ -150,36 +146,9 @@
             </div>       
             
 
-            <div id="section-nav-div" class="invisible">
-                <div class="section-navigator rounded-5">
-
-                    <a href="#" id="about-section-btn" 
-                        class="btn btn-outline-primary section-navigator-btn">
-                        About 
-                    </a>
-
-                    <a href="#" id="problem-section-btn" 
-                        class="btn btn-outline-primary section-navigator-btn">
-                        Problem
-                    </a>
-
-                    <a href="#" id="research-section-btn" 
-                        class="btn btn-outline-primary section-navigator-btn">
-                        Research
-                    </a>
-
-                    <a href="#" id="design-section-btn" 
-                        class="btn btn-outline-primary section-navigator-btn">
-                        Design
-                    </a>
-
-                    <a href="#" id="reflection-section-btn" 
-                        class="btn btn-outline-primary section-navigator-btn">
-                        Reflection
-                    </a>
-
-                </div>
-            </div>
+            <div id="section-nav-div" class="invisible"></div>
+            <div id="top-jumper-div" class=" invisible position-fixed bottom-0 end-0 me-5 mb-4" 
+                style="z-index: 999;"></div>
 
             
             <div class="pt-3"></div>
@@ -214,7 +183,7 @@
             
             <div class="project-img-border my-5 rounded-3" data-aos="fade-up" data-aos-duration="1400">
                 <img class="img-fluid rounded-3 w-100" 
-                    src="../../../assets/images/ux-projects/quickwash/quickwash-project.png" 
+                    src="/assets/images/ux-projects/quickwash/quickwash-project.png" 
                     alt="project-img">
             </div>
             
@@ -345,7 +314,7 @@
             <div class="my-5" data-aos="fade-up" data-aos-duration="1400">   
 
                 <div class="project-img-border rounded-3">
-                    <img class="img-fluid rounded-3" src="../../../assets/images/ux-projects/quickwash/laundry-image.jpg" alt="project-img">
+                    <img class="img-fluid rounded-3" src="/assets/images/ux-projects/quickwash/laundry-image.jpg" alt="project-img">
                 </div>
 
                 <p class="img-caption display-6 text-center mt-4 mb-5" > 
@@ -413,7 +382,7 @@
 
                 <div class="project-img-border mb-5 rounded-3 mx-4" data-aos="fade-up" data-aos-duration="1400">
                     <img class="img-fluid rounded-3 w-100" 
-                        src="../../../assets/images/ux-projects/quickwash/quickwash-old-designs.png" 
+                        src="/assets/images/ux-projects/quickwash/quickwash-old-designs.png" 
                         alt="project-img">
                 </div>
 
@@ -460,7 +429,7 @@
 
                 <div class="project-img-border my-5 rounded-3 mx-4" data-aos="fade-up" data-aos-duration="1400">
                     <img class="img-fluid rounded-3 w-100" 
-                        src="../../../assets/images/ux-projects/quickwash/quickwash-login-password.png" 
+                        src="/assets/images/ux-projects/quickwash/quickwash-login-password.png" 
                         alt="project-img">
                 </div>
 
@@ -495,7 +464,7 @@
 
                 <div class="project-img-border my-5 rounded-3 mx-4" data-aos="fade-up" data-aos-duration="1400">
                     <img class="img-fluid rounded-3 w-100" 
-                        src="../../../assets/images/ux-projects/quickwash/quickwash-resident-staff.png" 
+                        src="/assets/images/ux-projects/quickwash/quickwash-resident-staff.png" 
                         alt="project-img">
                 </div>
 
@@ -517,7 +486,7 @@
 
                 <div class="project-img-border my-5 rounded-3 mx-4" data-aos="fade-up" data-aos-duration="1400">
                     <img class="img-fluid rounded-3 w-100" 
-                        src="../../../assets/images/ux-projects/quickwash/quickwash-add-edit.png" 
+                        src="/assets/images/ux-projects/quickwash/quickwash-add-edit.png" 
                         alt="project-img">
                 </div>
                 <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">    
@@ -541,7 +510,7 @@
                 </h4>      
                 <div class="project-img-border my-5 rounded-3 mx-4" data-aos="fade-up" data-aos-duration="1400">
                     <img class="img-fluid rounded-3 w-100" 
-                        src="../../../assets/images/ux-projects/quickwash/quickwash-admin-account.png" 
+                        src="/assets/images/ux-projects/quickwash/quickwash-admin-account.png" 
                         alt="project-img">
                 </div>
                 <p class="details-text-big mx-5" data-aos="fade-up" data-aos-duration="1400">    
@@ -586,7 +555,7 @@
 
                         <div class="project-img-border mb-3 mt-4 mx-4 rounded-3" >
                             <img class="img-fluid d-block w-100 rounded-3"
-                                src="../../../assets/images/ux-projects/quickwash/quickwash-design-colors.png" alt="project-img">
+                                src="/assets/images/ux-projects/quickwash/quickwash-design-colors.png" alt="project-img">
                         </div>  
 
                     </div>
@@ -702,46 +671,13 @@
                 <!-- Column 2 -->
                 <div class="col-lg-6 d-flex flex-column" data-aos="fade-up" data-aos-duration="1400">   
 
-                    <div class="portfolio-div d-flex align-items-start border pb-0 rounded-4 btn-float">
+                    <div id="lumonote-preview"></div>
 
-                        <div class="" id="style-1">
-                            <div class="container">
-                                <div class="col">
-
-                                    <div class="col mb-4 mt-3 mx-2">
-                                        <div class="rounded-3">
-                                            <a href="lumonote.html">
-                                                <img src="../../../assets/images/ux-projects/lumonote/lumonote-project.png" alt="project-img"
-                                                    class="img-fluid rounded-3">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col mb-5 mx-3">
-                                        <div class="project-type">
-                                            Mobile Application
-                                        </div>
-
-                                        <h3 class="project-info banner-size fw-medium">
-                                            A robust but simple note-taking mobile app.
-                                        </h3>
-
-                                        <a href="lumonote.html" 
-                                        class="btn btn-outline-primary mt-4 position-relative pe-5">
-                                            Dive Into Design                              
-                                            <div class="position-absolute top-50 end-0 translate-middle-y me-3">
-                                                <svg class="arrow-right p-1" width="28" height="28">
-                                                    <use href="../../../assets/icons/ui-icons.svg#arrow-right"></use>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    <script>
+                        $(function() {
+                            $("#lumonote-preview").load("/projects/ux-design/previews/lumonote-preview.html");
+                        });
+                    </script>  
 
                 </div>
 
@@ -757,35 +693,35 @@
             <li>
                 <a class="nav-link mb-3" href="https://github.com/curioskye-studios" target="_blank" rel="noopener noreferrer">
                     <svg class="social-icon" width="36" height="36">
-                        <use href="../../../assets/icons/social-media-icons.svg#github"></use>
+                        <use href="/assets/icons/social-media-icons.svg#github"></use>
                     </svg>
                 </a>
             </li>
             <li>
                 <a class="nav-link mb-3" href="https://medium.com/@curioskye.studios" target="_blank" rel="noopener noreferrer">
                     <svg class="social-icon" width="36" height="36">
-                        <use href="../../../assets/icons/social-media-icons.svg#medium"></use>
+                        <use href="/assets/icons/social-media-icons.svg#medium"></use>
                     </svg>
                 </a>
             </li>
             <li>
                 <a class="nav-link mb-3" href="https://bsky.app/profile/curioskye-studios.bsky.social" target="_blank" rel="noopener noreferrer">
                     <svg class="social-icon" width="32" height="32">
-                        <use href="../../../assets/icons/social-media-icons.svg#bluesky"></use>
+                        <use href="/assets/icons/social-media-icons.svg#bluesky"></use>
                     </svg>
                 </a>
             </li>
             <li>
                 <a class="nav-link mb-3" href="https://x.com/cke_studios" target="_blank" rel="noopener noreferrer">
                     <svg class="social-icon" width="36" height="36">
-                        <use href="../../../assets/icons/social-media-icons.svg#twitter"></use>
+                        <use href="/assets/icons/social-media-icons.svg#twitter"></use>
                     </svg>
                 </a>
             </li>
             <li>
                 <a class="nav-link mb-3" href="https://www.linkedin.com/in/dayna-clare-itux" target="_blank" rel="noopener noreferrer">
                     <svg class="social-icon" width="36" height="36">
-                        <use href="../../../assets/icons/social-media-icons.svg#linkedin"></use>
+                        <use href="/assets/icons/social-media-icons.svg#linkedin"></use>
                     </svg>
                 </a>
             </li>
