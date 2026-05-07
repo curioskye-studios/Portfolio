@@ -1,0 +1,122 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 64px;
+  gap: 60px;
+}
+
+.home-text {
+  flex: 1;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-headline {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--white);
+}
+
+.home-headline .green {
+  color: var(--green);
+}
+
+.home-sub {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.88);
+}
+
+.home-sub .green {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.home-cta {
+  margin-top: 12px;
+}
+
+/* RIGHT SIDE — Hero with rotating dashed ring */
+.home-hero-right {
+  flex: 0 0 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Rotating dashed ring */
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.dashed-ring {
+  width: 380px;
+  height: 380px;
+  border: 5px dashed rgba(255,255,255,0.75);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin-ring 14s linear infinite;
+  position: relative;
+}
+
+/* The cloud itself stays un-rotated (counter-spins) */
+.cloud-center {
+  animation: spin-ring 14s linear infinite reverse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud-img {
+  width: 240px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.18));
+}
+
+/* Placeholder when no image is provided */
+.cloud-placeholder {
+  width: 220px;
+  height: 160px;
+  background: rgba(255,255,255,0.18);
+  border: 3px solid rgba(255,255,255,0.35);
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  backdrop-filter: blur(6px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 32px 60px;
+    align-items: center;
+  }
+  .home-hero-right { flex: none; }
+  .dashed-ring { width: 280px; height: 280px; }
+  .cloud-img { width: 170px; }
+}
