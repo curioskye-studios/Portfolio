@@ -4,6 +4,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Portfolio.css';
 
+import ArrowButton from '../../components/ArrowButton';
+
 // IMAGES — replace these imports with your actual project screenshots:
 // import lumoNoteImg from '../assets/lumonate.png';
 // import quickWashImg from '../assets/quickwash.png';
@@ -39,18 +41,19 @@ export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('design');
 
   useEffect(() => {
+    document.title = 'Portfolio | CurioSkye Studios';
     AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });
   }, []);
 
   return (
     <div className="portfolio sky-bg">
       <div className="portfolio-inner">
-        <p className="section-label green" data-aos="fade-down">P o r t f o l i o</p>
+        <p className="page-label green portfolio-letter-spacing" data-aos="fade-down">Portfolio</p>
         <h1 className="portfolio-title" data-aos="fade-up" data-aos-delay="100">
           Welcome To The{' '}
           <span className="green">CurioSkye<br />Studios</span> Gallery.
         </h1>
-        <p className="portfolio-sub" data-aos="fade-up" data-aos-delay="200">
+        <p className="page-sub" data-aos="fade-up" data-aos-delay="200">
           Feel free to take a look around!
         </p>
 
@@ -71,7 +74,7 @@ export default function Portfolio() {
         </div>
 
         {/* Project Grid */}
-        <div className="projects-grid">
+        <div className="projects-grid d-lg-">
           {PROJECTS[activeTab].length === 0 && (
             <p style={{ color: 'rgba(255,255,255,0.6)', textAlign: 'center', gridColumn: '1/-1' }}>
               Projects coming soon!
@@ -107,16 +110,21 @@ export default function Portfolio() {
 
               {/* Card Body */}
               <div className="project-body">
+
                 <span className="project-type-badge">{project.type}</span>
                 <h3 className="project-title">{project.title}</h3>
-                <Link to={project.link} className="btn-primary project-btn">
-                  Dive Into Design →
-                </Link>
+
+                <ArrowButton 
+                  linkPath={project.link} className="project-btn"> 
+                    Dive Into Design
+                </ArrowButton>
               </div>
+
             </div>
           ))}
         </div>
       </div>
+
     </div>
   );
 }

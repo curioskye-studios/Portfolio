@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..900&display=swap');
+
+.home {
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 65px;
+  font-family: "Space Grotesk", sans-serif;
+  overflow: hidden;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 64px;
+  gap: 60px;
+}
+
+.home-text {
+  flex: 1;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-headline {
+  font-weight: 600;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 30px;
+  text-align: left;
+  width: 110%;
+}
+
+.home-headline .green {
+  color: var(--green);
+}
+
+.home-sub {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.88);
+  text-align: left;
+  
+  font-weight: 400;
+}
+
+.home-sub .green {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.home-cta {
+  margin-top: 50px;
+}
+
+/* RIGHT SIDE — Hero with rotating dashed ring */
+.home-hero-right {
+  flex: 0 0 420px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.layer-1,
+.layer-2 {
+  grid-area: 1 / 1; /* both in row 1, column 1 */
+}
+
+.dashed-ring {
+  animation: spin-ring 50s linear infinite;
+  transform-origin: center; 
+  width: 30vw;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Rotating dashed ring */
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.cloud-logo {
+  width: 25vw;
+  height: auto;
+  object-fit: contain;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+
+  margin-left: -7px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .home {
+    padding-top: 0px;
+    padding-bottom: 35px;
+  }
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 32px 60px;
+    align-items: center;
+  }
+  .home-hero-right { flex: none; order: -1; /* moves it above the text */ }
+  .dashed-ring { width: 80%; height: auto; }
+  .cloud-logo {
+    width: 65%;
+    height: auto;
+    margin-left: -7px;  
+  }
+}
+

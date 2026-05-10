@@ -5,14 +5,15 @@ import './About.css';
 
 export default function About() {
   useEffect(() => {
+    document.title = 'About | CurioSkye Studios';
     AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
   }, []);
 
   return (
     <div className="about sky-bg">
       <div className="about-inner">
-        <p className="section-label green about-label" data-aos="fade-down">
-          A b o u t &nbsp; M e
+        <p className="page-label green about-letter-spacing" data-aos="fade-down">
+          About Me
         </p>
         <h1 className="about-title" data-aos="fade-up" data-aos-delay="100">
           CurioSkye Studios

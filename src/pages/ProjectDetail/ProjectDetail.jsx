@@ -34,6 +34,7 @@ export default function ProjectDetail() {
   const project = PROJECT_DATA[id];
 
   useEffect(() => {
+    document.title = '[Project Name] | CurioSkye Studios';
     AOS.init({ duration: 700, once: true });
     window.scrollTo(0, 0);
   }, [id]);
