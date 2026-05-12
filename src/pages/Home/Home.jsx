@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Home.css';
 
-import borderImg from '../../assets/logo-img-border.png';
+import borderImg from '/images/logo-img-border.png';
 import logoLarge from '/images/logo-large.png';
 
 import ArrowButton from '../../components/ArrowButton';
@@ -48,7 +48,7 @@ export default function Home() {
 
           <ArrowButton 
             linkPath="/portfolio" className="home-cta"  
-            data-aos="fade-up" data-aos-delay="550"> 
+            data-aos="fade-left" data-aos-delay="550"> 
               Explore Featured Work 
           </ArrowButton>
         </div>

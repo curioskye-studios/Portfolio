@@ -5,13 +5,13 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import About from './pages/about/About';
 import SocialSection from './components/SocialSection/SocialSection';
-import './index.css';
+import './index.css'; 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <SocialSection /> 
+      <SocialSection />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />

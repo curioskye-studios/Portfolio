@@ -3,6 +3,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './About.css';
 
+import { Link } from 'react-router-dom';
+
 export default function About() {
   useEffect(() => {
     document.title = 'About | CurioSkye Studios';
@@ -11,7 +13,9 @@ export default function About() {
 
   return (
     <div className="about sky-bg">
+    
       <div className="about-inner">
+
         <p className="page-label green about-letter-spacing" data-aos="fade-down">
           About Me
         </p>
@@ -50,7 +54,20 @@ export default function About() {
             <span className="green fw-bold">produce the best results</span> for the user.
           </p>
         </div>
+
+        <div className='pt-4'>    
+          <Link 
+            data-aos="fade-left"
+            data-aos-delay="300"
+            to="https://www.linkedin.com/in/dayna-clare-itux" 
+            className="btn-primary">
+
+            Connect With Me
+          </Link>
+        </div>
+
       </div>
+
     </div>
   );
 }

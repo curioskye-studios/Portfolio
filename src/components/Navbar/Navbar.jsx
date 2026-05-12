@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import logoImg from '../../assets/logo-small-variant.png'; 
+import logoImg from '/images/logo-small-variant.png'; 
 // import './Navbar.css'
 import SocialSection from '../SocialSection/SocialSection';
 
@@ -42,7 +42,7 @@ export default function Navbar() {
               <div className="offcanvas-body">
                 <ul 
                   className="nav-links navbar-nav text-center align-items-center justify-content-end flex-grow-1">
-              
+                    
                     <li>
                       <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
                         Home

@@ -36,6 +36,7 @@
 .about-body .green { color: var(--green); }
 .fw-bold { font-weight: 700; }
 
+
 @media (max-width: 700px) {
   .about-inner { padding: 60px 24px 80px; }
 }

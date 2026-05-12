@@ -9,7 +9,7 @@ import './ProjectDetail.css';
 // import quickWashDetail from '../assets/quickwash-detail.png';
 
 const PROJECT_DATA = {
-  lumonate: {
+  lumonote: {
     title: 'LumoNote.',
     subtitle: 'Mobile Application',
     tags: ['Tool', 'Figma', 'UI Design', 'User Research'],
