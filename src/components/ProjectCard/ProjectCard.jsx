@@ -1,5 +1,6 @@
 import './ProjectCard.css'
-import ArrowButton from '../ArrowButton';
+import { Link } from 'react-router-dom';
+import RightArrow from '../RightArrow';
 
 export default function ProjectCard({ projectData, cardAOSDelay, cardStyle }) {
 
@@ -31,7 +32,8 @@ export default function ProjectCard({ projectData, cardAOSDelay, cardStyle }) {
     );
 
   return (
-    <div
+    <Link
+      to={projectData.link}
       key={projectData.id}
       className="project-card"
       style={cardStyle}
@@ -39,23 +41,24 @@ export default function ProjectCard({ projectData, cardAOSDelay, cardStyle }) {
       data-aos-delay={cardAOSDelay}
       data-aos-once="true">
 
+      {/* Card Body */}
+      <div className="project-body">   
+
+        <div className="project-header">
+          <span className="project-type-badge">{projectData.type}</span>
+
+          <div className="project-btn">
+            <RightArrow className="rotate-right" />
+          </div>
+        </div>     
+
+        <h4 className="project-title">{projectData.title}</h4>
+      </div>
+
       {/* Project Image */}
       <div className="project-img-wrap">
         {projectImage}
       </div>
-
-      {/* Card Body */}
-      <div className="project-body">
-
-        <span className="project-type-badge">{projectData.type}</span>
-        <h3 className="project-title">{projectData.title}</h3>
-
-        <ArrowButton 
-          linkPath={projectData.link} className="project-btn"> 
-            Dive Into Design
-        </ArrowButton>
-      </div>
-
-    </div>
+    </Link>
   );
 }

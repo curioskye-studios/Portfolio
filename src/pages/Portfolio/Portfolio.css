@@ -54,16 +54,17 @@
 /* Grid */
 .projects-grid {
   display: flex;
-  gap: 40px;
+  gap: 25px;
   align-items: flex-start;
   justify-content: center; 
+  margin-bottom: 40px;
 }
 
 .projects-col {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
 }
 
 .no-project {

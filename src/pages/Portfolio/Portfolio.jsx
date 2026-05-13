@@ -41,10 +41,15 @@ export default function Portfolio() {
     );
   }
 
-  const col1 = PROJECTS[activeTab].filter(p => isMobile || p.column === 1);
-  const col2 = PROJECTS[activeTab].filter(p => p.column === 2);
+  const col1Projects = 
+    PROJECTS[activeTab].filter(
+      project => isMobile || project.columnNum === 1
+    );
+  const col2Projects = 
+    PROJECTS[activeTab].filter(
+      project => project.columnNum === 2
+  );
   const isEmpty = PROJECTS[activeTab].length === 0;
-
 
   return (
     <div className="portfolio sky-bg">
@@ -86,14 +91,14 @@ export default function Portfolio() {
             (
               <>
                 <div className="projects-col">
-                  {col1.map((project, i) => createProjectCard(project, i))}
+                  {col1Projects.map((project, i) => createProjectCard(project, i))}
                 </div>
 
                 {
                   !isMobile &&
                   (
                     <div className="projects-col">
-                      {col2.map((project, i) => createProjectCard(project, i))}
+                      {col2Projects.map((project, i) => createProjectCard(project, i))}
                     </div>
                   )
                 }

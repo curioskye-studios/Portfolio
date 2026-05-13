@@ -1,4 +1,3 @@
-// IMAGES — replace these imports with your actual project screenshots:
 import lumoNoteImg from '../assets/ux-projects/lumonote/lumonote-project.png';
 import quickWashImg from '../assets/ux-projects/quickwash/quickwash-project.png';
 
@@ -11,7 +10,7 @@ export const PROJECTS = {
       img: lumoNoteImg,
       imgPlaceholder: { bg: '#F5C518', label: 'LumoNote.' },
       link: '/portfolio/lumonote',
-      column: 1
+      columnNum: 1
     },
     {
       id: 'quickwash',
@@ -20,7 +19,7 @@ export const PROJECTS = {
       img: quickWashImg,
       imgPlaceholder: { bg: '#ffffff', label: 'QuickWash' },
       link: '/portfolio/quickwash',
-      column: 2
+      columnNum: 2
     },
   ],
 
