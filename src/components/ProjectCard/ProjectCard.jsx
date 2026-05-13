@@ -1,7 +1,7 @@
 import './ProjectCard.css'
 import ArrowButton from '../ArrowButton';
 
-export default function ProjectCard({ projectData, cardAOSDelay }) {
+export default function ProjectCard({ projectData, cardAOSDelay, cardStyle }) {
 
   /*
     id: 'lumonate',
@@ -34,8 +34,10 @@ export default function ProjectCard({ projectData, cardAOSDelay }) {
     <div
       key={projectData.id}
       className="project-card"
+      style={cardStyle}
       data-aos="fade-up"
-      data-aos-delay={cardAOSDelay}>
+      data-aos-delay={cardAOSDelay}
+      data-aos-once="true">
 
       {/* Project Image */}
       <div className="project-img-wrap">

@@ -11,15 +11,25 @@ export const PROJECTS = {
       img: lumoNoteImg,
       imgPlaceholder: { bg: '#F5C518', label: 'LumoNote.' },
       link: '/portfolio/lumonote',
+      column: 1
     },
     {
       id: 'quickwash',
       type: 'Desktop Application',
       title: 'An Easy To Use Laundry Appointment Scheduling System.',
-      // img: quickWashImg,
       img: quickWashImg,
       imgPlaceholder: { bg: '#ffffff', label: 'QuickWash' },
       link: '/portfolio/quickwash',
+      column: 2
+    },
+    {
+      id: 'quickwash',
+      type: 'Desktop Application',
+      title: 'An Easy To Use Laundry Appointment Scheduling System.',
+      img: quickWashImg,
+      imgPlaceholder: { bg: '#ffffff', label: 'QuickWash' },
+      link: '/portfolio/quickwash',
+      column: 1
     },
   ],
 

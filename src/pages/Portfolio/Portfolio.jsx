@@ -9,15 +9,42 @@ import { PROJECTS } from '../../data/projects';
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('design');
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
 
   useEffect(() => {
     document.title = 'Portfolio | CurioSkye Studios';
     AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });
+
+    window.addEventListener('resize', 
+      () => handleWindowResize(window.innerWidth)
+    );
+    // function clean up
+    return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
 
   function handleTabClick(newTab) {
     setActiveTab(newTab);
   }
+
+  function handleWindowResize(windowWidth) {
+    setIsMobile(windowWidth <= 700);
+  }
+
+  function createProjectCard(project, projectCount) {
+    return (      
+      <ProjectCard 
+        key={project.id} 
+        projectData={project} 
+        cardAOSDelay={100 * (projectCount + 1)} 
+        cardStyle={{ gridColumn: project.column }}                 
+      />
+    );
+  }
+
+  const col1 = PROJECTS[activeTab].filter(p => isMobile || p.column === 1);
+  const col2 = PROJECTS[activeTab].filter(p => p.column === 2);
+  const isEmpty = PROJECTS[activeTab].length === 0;
+
 
   return (
     <div className="portfolio sky-bg">
@@ -39,36 +66,38 @@ export default function Portfolio() {
         <div className="portfolio-tabs" data-aos="fade-up" data-aos-delay="300">
           <button
             className={`tab-btn ${activeTab === 'design' ? 'active' : ''}`}
-            onClick={() => handleTabClick('design')}
-          >
-            UI/UX Design Work
+            onClick={() => handleTabClick('design')} >
+              UI/UX Design Work
           </button>
 
           <button
             className={`tab-btn ${activeTab === 'software' ? 'active' : ''}`}
-            onClick={() => handleTabClick('software')}
-          >
-            Software Dev Work
+            onClick={() => handleTabClick('software')} >
+              Software Dev Work
           </button>
         </div>
 
         {/* Project Grid */}
-        <div className="projects-grid d-lg-">
+        <div className="projects-grid">
           {
-            PROJECTS[activeTab].length === 0 
-            && 
+            isEmpty ? 
+            ( <p className="no-project">Projects coming soon!</p> ) 
+            : 
             (
-              <p style={{ color: 'rgba(255,255,255,0.6)', textAlign: 'center', gridColumn: '1/-1' }}>
-                Projects coming soon!
-              </p>
-            )
-          } 
+              <>
+                <div className="projects-col">
+                  {col1.map((project, i) => createProjectCard(project, i))}
+                </div>
 
-          {
-            PROJECTS[activeTab].map(
-              (project, i) => (
-                <ProjectCard key={project.id} projectData={project} cardAOSDelay={100 * (i + 1)} />
-              )
+                {
+                  !isMobile &&
+                  (
+                    <div className="projects-col">
+                      {col2.map((project, i) => createProjectCard(project, i))}
+                    </div>
+                  )
+                }
+              </>
             )
           }
         </div>
