@@ -19,10 +19,10 @@ export default function ProjectCard({ projectData, category, cardAOSDelay, cardS
   const cardRef = useRef(null);
 
   const handleMouseEnter = () => {
-    cardRef.current.scrollIntoView({ 
-      behavior: 'smooth', 
-      block: 'center' 
-    });
+    // cardRef.current.scrollIntoView({ 
+    //   behavior: 'smooth', 
+    //   block: 'center' 
+    // });
   };
 
   const projectImage = 

@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import './Portfolio.css';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import { PROJECTS } from '../../data/projects';
+import { PROJECTS } from '../../data/projectOverviews';
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('design');
@@ -87,9 +87,9 @@ export default function Portfolio() {
         <div className="projects-grid">
           {
             isEmpty ? 
-            ( <p className="no-project">Projects coming soon!</p> ) 
-            : 
-            (
+            (   
+              <p className="no-project">Projects coming soon!</p> 
+            ) : (
               <>
                 <div className="projects-col">
                   {col1Projects.map((project, i) => createProjectCard(project, i))}

@@ -1,6 +1,15 @@
+:root {  
+  --card-bg: rgba(92, 92, 92, 0.079);
+  --card-border: 1.75px solid rgba(255, 255, 255, 0.401);
+  --card-border-radius: 16px;
+  --card-blur: blur(4px);
+  --standard-padding: 40px 40px;
+}
+
 .project-detail {
   min-height: 100vh;
   padding-top: 80px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .detail-inner {
@@ -61,7 +70,14 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 40px;
+  padding: var(--standard-padding);
+  text-align: center;  
+
+  border: var(--card-border);
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
 }
 
 .detail-description p {
@@ -72,10 +88,9 @@
 
 .detail-img-wrap {
   width: 100%;
-  border-radius: 16px;
+  border-radius: var(--card-border-radius);
   overflow: hidden;
-  margin-bottom: 40px;
-  border: 1px solid rgba(255,255,255,0.2);
+  border: var(--card-border);
 }
 
 .detail-img {
@@ -93,7 +108,49 @@
   justify-content: center;
 }
 
-.back-btn { display: inline-flex; }
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+  padding: var(--standard-padding);
+
+  border: var(--card-border);
+  background: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  backdrop-filter: var(--card-blur);
+  -webkit-backdrop-filter: var(--card-blur);
+}
+
+.detail-heading {
+  text-align: center;
+  font-weight: 700;
+}
+
+.back-btn { 
+  display: inline-flex; 
+}
+
+.bigger-text {
+  font-size: larger;
+}
+
+.green-highlight {
+  color: var(--green);
+  font-weight: 500;
+}
+
+
+.green-line {
+  border-top: 3px solid var(--green);
+  border-radius: 50px;
+  width: 10vw;
+  margin: 15px auto;
+}
+
+.separator {
+  margin-top: 40px;
+}
 
 @media (max-width: 700px) {
   .detail-inner { padding: 50px 24px 80px; }
