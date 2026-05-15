@@ -26,11 +26,12 @@ export const LumoNoteData = {
 
   sections: [
     {      
+      type: 'text',
       heading: 'The Problem',
       body: (
         <div>
           {Em("A note app is an essential tool everyone uses in their day to day.")}
-
+          {Br()}
           <ul>
             {Li(
               "Many people like myself use it mostly for thought organization and planning."
@@ -50,6 +51,7 @@ export const LumoNoteData = {
           {Br()}
 
           {H("Constraints")}
+          {Br()}
           As both the {Em("designer")} and {Em("developer, ")}
           the outcome was limited by {Em("time")} and {Em("my current skill level.")}
           {Br()}
@@ -57,6 +59,34 @@ export const LumoNoteData = {
           to be developed and tested in a short time frame.
         </div>
       )
-    }
+    },
+    {      
+      type: 'text',
+      heading: 'Crafting My Experience Into The Target User',
+      body: (
+        <div>
+          The project was built on these key assumptions about the user:
+          {Br()}
+          <ul>
+            {Li(
+              "Organization, simplicity, approachability and speed is highly valued,"
+            )}
+            {Li(
+              "The combination of checklists and other key note elements is highly valued,"
+            )}
+            {Li(
+              "Simple, in text images is highly valued, and"
+            )}
+            {Li(
+              "Undo and redo are high frequency actions."
+            )}
+          </ul>
+        </div>
+      )
+    },
+    // {
+    //   type: 'image',
+    //   link: ""
+    // }
   ]
 }

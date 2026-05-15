@@ -3,8 +3,11 @@ import TextSection from "./TextSection";
 export default function Section({ data }) {
   return (
     <>
+      <div className='separator-small' />
       <h3 className="detail-heading">{data.heading}</h3>
-      {/* <div className="separator"/> */}
+
+      <div className='separator-small' />
+      
       <div className="detail-content bigger-text">
         {data.body}
       </div>

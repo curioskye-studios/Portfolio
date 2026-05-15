@@ -46,11 +46,47 @@ export default function ProjectDetail() {
         {/* Header */}
         <div className="detail-header" data-aos="fade-up" data-aos-delay="100">
           <h1 className="detail-title">{project.title}</h1>
+          
+          <div className='separator-small' />
 
-          <div className="detail-tags">
-            <span className="detail-tag">Tag</span>
-          </div>
+          <div className='detail-header-body'>
+            <div className="detail-text-wrap">
+              <div className='detail-text-title'>Type: </div>
+              <div className='green'>{project.type}</div>              
+            </div>
+
+            <div className="detail-text-wrap">
+              <div className='detail-text-title'>Roles: </div>
+              <div className="detail-tags">
+                {project.roles.map(role => (
+                  <span key={role} className="detail-tag">{role}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="detail-text-wrap">
+              <div className='detail-text-title'>Date: </div>
+              <div className='green'>{project.date}</div>              
+            </div>
+
+            <div className="detail-text-wrap">
+              <div className='detail-text-title'>Tools: </div>
+              <div className="detail-tags">
+                {project.tools.map(tool => (
+                  <span key={tool} className="detail-tag">{tool}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="detail-text-wrap">
+              <div className='detail-text-title'>Link: </div>
+              <Link className='green' to={project.link}>{project.link}</Link>
+            </div>
+          </div>   
+          
         </div>
+
+        <div className='separator-large' />
 
         {/* Description */}
         <div data-aos="fade-up" data-aos-delay="200">          
@@ -76,10 +112,16 @@ export default function ProjectDetail() {
         <div className='separator' />
 
         <div data-aos="fade-up" data-aos-delay="200">
+          <div className='green-line' />
           {
             project.sections.map(
-              (section, i) => (
-                <Section key={i} data={section} />
+              (section, i) => (      
+                <>
+                  <div className='separator-small' />
+                  <Section key={i} data={section} />
+                  <div className='green-line' style={{marginTop:"-15px"}} />
+                  <div className='separator' />
+                </>                
               )
             )
           }
