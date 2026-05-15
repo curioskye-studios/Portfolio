@@ -9,7 +9,7 @@ const allProjects = {
       title: 'A Robust But Simple Note-Taking Mobile App.',
       img: lumoNoteImg,
       imgPlaceholder: { bg: '#F5C518', label: 'LumoNote.' },
-      columnNum: 1
+      columnNum: 2
     },
   "Quickwash": 
     {
@@ -18,7 +18,7 @@ const allProjects = {
       title: 'An Easy To Use Laundry Appointment Scheduling System.',
       img: quickWashImg,
       imgPlaceholder: { bg: '#ffffff', label: 'QuickWash' },
-      columnNum: 2
+      columnNum: 1
     },
   "ARGUS": 
     {
@@ -33,9 +33,9 @@ const allProjects = {
 
 export const PROJECTS = {
   "design": [
+    allProjects["ARGUS"],
     allProjects["Lumonote"],
     allProjects["Quickwash"],
-    allProjects["ARGUS"],
   ],
 
   "development": [

@@ -111,25 +111,39 @@ export default function ProjectDetail() {
         
         <div className='separator' />
 
-        <div data-aos="fade-up" data-aos-delay="200">
-          <div className='green-line' />
+        <div data-aos="fade-up" data-aos-delay="200">          
+          <div className='green-line' />         
           {
             project.sections.map(
               (section, i) => (      
-                <>
-                  <div className='separator-small' />
-                  <Section key={i} data={section} />
-                  <div className='green-line' style={{marginTop:"-15px"}} />
-                  <div className='separator' />
-                </>                
+                <div key={i} data-aos="fade-up" data-aos-delay="200">
+                  {/* { i > 0 && project.sections[i - 1].type !== "text" 
+                      ? (
+                          <div className='green-line' /> 
+                      ) : null 
+                  } */}
+                  <Section data={section} />
+                </div>                         
               )
             )
           }
         </div>
 
-        <Link to="/portfolio" className="btn-primary back-btn" data-aos="fade-up" data-aos-delay="400">
-          ← Back to Portfolio
-        </Link>
+        <div className='detail-bottom'>
+          <Link to="/portfolio" className="btn-primary back-btn" data-aos="fade-up" data-aos-delay="400">
+            ← Back to Portfolio
+          </Link>
+
+          {project.next && (
+            <Link 
+              to={`/portfolio/${category}/${project.next}`} 
+              className="btn-primary back-btn" data-aos="fade-up" data-aos-delay="400">
+              Next Project →
+            </Link>
+          )}
+        </div>
+
+        
 
       </div>
     </div>
