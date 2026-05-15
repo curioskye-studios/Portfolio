@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
-import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
+import ProjectDetail from './pages/ProjectDetail/newProjectDetail';
 import About from './pages/about/About';
 import SocialSection from './components/SocialSection/SocialSection';
 import './index.css'; 
@@ -15,7 +15,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:id" element={<ProjectDetail />} />
+        <Route path="/portfolio/:category/:id" element={<ProjectDetail />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>

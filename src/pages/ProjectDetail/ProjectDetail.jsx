@@ -1,8 +1,4 @@
 import { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './ProjectDetail.css';
 
 // IMAGES — import your project detail images here:
 // import lumoNoteDetail from '../assets/lumonate-detail.png';

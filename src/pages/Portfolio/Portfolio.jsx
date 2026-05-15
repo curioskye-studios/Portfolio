@@ -35,6 +35,7 @@ export default function Portfolio() {
       <ProjectCard 
         key={project.id} 
         projectData={project} 
+        category={activeTab}
         cardAOSDelay={100 * (projectCount + 1)} 
         cardStyle={{ gridColumn: project.column }}                 
       />
@@ -64,7 +65,7 @@ export default function Portfolio() {
           <span className="green">CurioSkye <br /> Studios</span> Gallery.
         </h1>
         <p className="page-sub" data-aos="fade-up" data-aos-delay="200">
-          Feel free to take a look around!
+          Feel free to take a look around! Click on a project to learn more.
         </p>
 
         {/* Tabs */}
@@ -76,9 +77,9 @@ export default function Portfolio() {
           </button>
 
           <button
-            className={`tab-btn ${activeTab === 'software' ? 'active' : ''}`}
-            onClick={() => handleTabClick('software')} >
-              Software Dev Work
+            className={`tab-btn ${activeTab === 'development' ? 'active' : ''}`}
+            onClick={() => handleTabClick('development')} >
+              Software Development Work
           </button>
         </div>
 
