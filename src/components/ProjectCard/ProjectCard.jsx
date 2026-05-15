@@ -1,16 +1,27 @@
 import './ProjectCard.css'
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 import RightArrow from '../RightArrow';
 
 export default function ProjectCard({ projectData, cardAOSDelay, cardStyle }) {
 
   /*
-    id: 'lumonate',
-    type: 'Mobile Application',
-    title: 'A Robust But Simple Note-Taking Mobile App.',
-    imgLink: null,
-    link: '/portfolio/lumonate',
+    projectData:
+      id: 'lumonote',
+      type: 'Mobile Application',
+      title: 'A Robust But Simple Note-Taking Mobile App.',
+      imgLink: null,
+      link: '/portfolio/lumonate',
   */
+
+  const cardRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    cardRef.current.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'center' 
+    });
+  };
 
   const projectImage = 
     projectData.img ? (
@@ -34,9 +45,13 @@ export default function ProjectCard({ projectData, cardAOSDelay, cardStyle }) {
   return (
     <Link
       to={projectData.link}
+
       key={projectData.id}
       className="project-card"
       style={cardStyle}
+      ref={cardRef} 
+      onMouseEnter={handleMouseEnter}
+
       data-aos="fade-up"
       data-aos-delay={cardAOSDelay}
       data-aos-once="true">
