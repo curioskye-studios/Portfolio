@@ -10,8 +10,10 @@ export default function ProjectCard({ projectData, cardAOSDelay, cardStyle }) {
       id: 'lumonote',
       type: 'Mobile Application',
       title: 'A Robust But Simple Note-Taking Mobile App.',
-      imgLink: null,
-      link: '/portfolio/lumonate',
+      img: lumoNoteImg,
+      imgPlaceholder: { bg: '#F5C518', label: 'LumoNote.' },
+      link: '/portfolio/lumonote',
+      columnNum: 1
   */
 
   const cardRef = useRef(null);
