@@ -33,6 +33,7 @@ const makeImage = (link, alt = "", caption = "") => (
         caption: caption
       }
     }
+    otherClasses='subcontent-img'
   />
 );
 

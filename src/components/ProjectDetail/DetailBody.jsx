@@ -26,7 +26,7 @@ export default function DetailBody( { project } ) {
         }
       </div>   
       
-      <div className='separator' />
+      <div className='separator' style={{marginTop: "60px"}} />
 
       <div data-aos="fade-up" data-aos-delay="200">          
         <div className='green-line' />         

@@ -1,11 +1,11 @@
-export default function ImageSection({ data }) {
+export default function ImageSection({ data, otherClasses="" }) {
   
   return (
     <>
       <div className='separator-small' />
 
-      <div className='detail-img-wrap'>
-        <img className='detail-img' src={data.link} alt={data.alt ? data.alt : ""} />        
+      <div className={'detail-img-wrap ' + otherClasses}>
+        <img className='detail-img ' src={data.link} alt={data.alt ? data.alt : ""} />        
       </div>  
 
       { 

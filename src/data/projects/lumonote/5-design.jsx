@@ -1,6 +1,10 @@
 import { Em, BrS, BrM, BrL, Li, H, A, Img } from '../../../utils/jsxContentCreator';
 import MainSketchImg from '../../../assets/ux-projects/lumonote/main-screen-sketches.png';
 import MainScreenImg from '../../../assets/ux-projects/lumonote/lumonote-main-screens.png';
+import EditNoteSketchImg from '../../../assets/ux-projects/lumonote/note-screen-sketch.png';
+import EditNoteScreenImg from '../../../assets/ux-projects/lumonote/lumonote-note-screens.png';
+import TagSketchImg from '../../../assets/ux-projects/lumonote/tag-screen-sketch.png';
+import TagScreenImg from '../../../assets/ux-projects/lumonote/lumonote-tag-screens.png';
 
 export default 
 {      
@@ -9,78 +13,168 @@ export default
   heading: `Crafting LumoNote's Design`,
   body: (
     <div>
-      The LumoNote name was the first place I started. My mind wandered:
 
-      <ul>
-        {Li(
-          "Luminous, Illumination + Notes ➜ LumoNote ➜ Illuminate your notes and thoughts"
-        )}
-      </ul>
-      {BrS()}
+      <div className="padded-left padded-top padded-right">
+        The LumoNote {Em("name")} was the first place I started. My mind wandered:
 
-      With the app's theme and concept in place, I got to work on some low fidelity wireframes
-      tailored to the user's needs.
+        <ul>
+          {Li(
+            <>{Em("Luminous, Illumination + Notes")} ➜ {Em("LumoNote")} ➜ {Em("Illuminate your notes and thoughts")}</>
+          )}
+        </ul>
+        {BrS()}
 
-      {BrS()}
+        With the app's theme and concept in place, I got to work on some low fidelity wireframes
+        tailored to the user's needs.        
+      </div>
+
+      {BrM()}
 
       {H("The Main Screens")}
 
       {Img(MainSketchImg, "Sketches of main screens")}
 
-      This is the first thing the users see when opening the app.
-      {BrS()}
-      My priority here was to limit the clutter on screen and create a simple and approachable 
-      experience to avoid overwhelm.
-      {BrS()}
+      <div className='padded-sides'>
+        This is the first thing the users see when opening the app.
+        {BrS()}
+        My priority here was to {Em("limit the clutter on screen")} and create a {Em("simple and approachable experience")} to avoid overwhelm.
+        {BrS()}
 
-      Key Ideas:
-      <ul>
-        {Li(
-          "Notes capture the user's eye first as the app's core functionality"
-        )}
-      {BrS()}
-        {Li(
-          "The add notes button jumps out at you as something to interact with, prompting the user to interact"
-        )}
-      {BrS()}
-        {Li(
-          "All possible features are visible without feeling crowded and can be accessed in a simple 1-2 taps"
-        )}
-      {BrS()}
-        {Li(
-          "Viewing any main screen is done by simply clicking the icon at the bottom"
-        )}
-      </ul>
+        Key Ideas:
+        <ul>
+          {Li(
+            <>{Em("Notes")} capture the user's eye first as the app's core functionality</>
+          )}
+          {BrS()}
+          {Li(
+            <>The {Em("add notes button")} jumps out at you as something to interact with, prompting the user to interact</>
+          )}
+          {BrS()}
+          {Li(
+            <>{Em("All possible features are visible")} without feeling crowded and {Em("can be accessed in a simple 1-2 taps")}</>
+          )}
+          {BrS()}
+          {Li(
+            <>Viewing any main screen is done by simply {Em("clicking the icon at the bottom")}</>
+          )}
+        </ul>
 
-      {BrS()}
-      
-      Visible Features:
-      <ul>
-        {Li(
-          "Pinning allows note prioritization (organization)"
-        )}
-      {BrS()}
-        {Li(
-          "The add notes button jumps out at you as something to interact with, prompting the user to interact"
-        )}
-      {BrS()}
-        {Li(
-          "Search is another way of quickly finding and accessing existing notes (speed)"
-        )}
-      </ul>
-      
-      {BrM()}
+        {BrS()}
+        
+        Visible Features:
+        <ul>
+          {Li(
+            <>{Em("Pinning")} allows note prioritization (organization)</>
+          )}
+          {BrS()}
+          {Li(
+            <>The {Em("Calendar")} and {Em("View Notes")} main screens would allow multiple ways of quickly accessing existing notes (speed)</>
+          )}
+          {BrS()}
+          {Li(
+            <>{Em("Search")} is another way of quickly finding and accessing existing notes (speed)</>
+          )}
+        </ul>
+        
+        {BrM()}
 
-      The design went through some more changes during the development of the app, applying colors and the like.
-      {BrS()}
-      The most recent design had a couple key changes.
-      {BrS()}
+        The design went through some more changes during the development of the app, applying colors and the like.
+        {BrS()}
+        The most recent design had a couple key changes.
+      </div>
 
       {Img(MainScreenImg, "Pictures of main screens")}
 
       {H("The Note Taking Experience")}
 
+      <div className='padded-sides'>
+        {BrS()}
+        The Note Screen is where the user spends most of their time.
+        {BrS()}
+        Due to its importance, I spent a lot of time on this screen with a key focus on {Em("simplicity")} and {Em("approachability.")}
+      </div>
 
+      {Img(EditNoteSketchImg, "Sketches of note editing screen")}
+
+      <div className='padded-sides'>
+        Key Ideas:
+        <ul>
+          {Li(
+            <>As the {Em("note content is the most important element,")} the note display takes up most of the screen</>
+          )}
+          {BrS()}
+          {Li(
+            <>
+              The note supports {Em("combinations of different note elements")} (text, images, checklists, etc)
+            </>
+          )}
+          {BrS()}
+          {Li(
+            <>{Em("Undo and Redo")} supported</>
+          )}
+          {BrS()}
+          {Li(
+            <>
+              Text formatting is narrowed down to {Em("basic text editing tools,")} but isn't lacking key 
+              note-taking features. Decent organization of note content can be accomplished with just {Em("title")} and 
+              {Em("subtitle text sizes, bold, italics, underline, clearing font styles ")} and {Em("title.")}
+            </>
+          )}
+        </ul>
+        
+        {BrM()}
+        After some testing and overcoming development issues, the design had undergone a few more changes.
+      </div>
+
+      {Img(EditNoteScreenImg, "Pictures of note taking screen")}
+
+      {H("The Tag Screen")}
+
+      {BrS()}
+      
+      <div className='padded-sides'>
+        This was a later addition, and is accessible from both the {Em("View Notes")} and {Em("Edit Notes")} Screens.
+        {BrS()}
+
+        Key Ideas:
+        <ul>
+          {Li(
+            <>
+              To {Em("avoid clutter,")} the tag management functionality is 
+              {Em("separated into its own independent screen")}
+            </>
+          )}
+        </ul>
+
+        {BrS()}
+        
+        Visible Features:
+        <ul>
+          {Li(
+            <>
+              The user can easily {Em("delete, rename")} or {Em("add new tags")} for their notes to 
+              {Em("help with note organization")}
+            </>
+          )}
+        </ul>
+        
+        {BrS()}
+
+        At first I wanted to {Em("follow a similar display style")} to how tags were displayed on the 
+        {Em("View Notes Screen.")}
+      </div>
+      
+      {Img(TagSketchImg, "Sketch of tag screen")}
+
+      <div className='padded-sides'>
+        {BrS()}
+        But after further contemplation and analyzing how similar apps designed this type of screen, 
+        I went with a {Em("simple list structure")} instead, keeping things straightforward.
+      </div>
+
+      {Img(TagScreenImg, "Picture of tag screen")}
+
+      {BrL()}
     </div>
   )
 }

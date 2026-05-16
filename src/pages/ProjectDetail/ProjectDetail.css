@@ -1,9 +1,46 @@
 :root {  
-  --card-bg: rgba(92, 92, 92, 0.079);
+  --card-bg: rgba(92, 92, 92, 0.104);
   --card-border: 1.75px solid rgba(255, 255, 255, 0.401);
   --card-border-radius: 16px;
   --card-blur: blur(4px);
-  --standard-padding: 40px 40px;
+
+  --standard-padding: 40px;
+  --standard-padding-full: 40px 40px;
+  --standard-padding-sides: 0 40px;
+  --standard-padding-tpbtm: 40px 0;
+}
+
+
+.padded-sides {
+  padding: var(--standard-padding-sides);
+}
+.padded-fully {
+  padding: var(--standard-padding-full);
+}
+.padded-top-btm {
+  padding: var(--standard-padding-tpbtm);
+}
+.padded-top {
+  padding-top: var(--standard-padding);
+}
+.padded-right {
+  padding-right: var(--standard-padding);
+}
+.padded-bottom {
+  padding-bottom: var(--standard-padding);
+}
+.padded-left {
+  padding-left: var(--standard-padding);
+}
+
+.row-adaptable {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.even-row-spacing {
+  flex: 1;
 }
 
 .project-detail {
@@ -13,11 +50,12 @@
 }
 
 .detail-inner {
-  max-width: 1000px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 60px 48px 100px;
   position: relative;
   z-index: 1;
+  text-align: left;
 }
 
 .detail-bottom {
@@ -71,4 +109,5 @@
 
 @media (max-width: 700px) {
   .detail-inner { padding: 50px 24px 80px; }
+  .row-adaptable { flex-direction: column; }
 }

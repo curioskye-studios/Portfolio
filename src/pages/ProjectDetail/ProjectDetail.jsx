@@ -32,7 +32,7 @@ export default function ProjectDetail() {
 
   function updateBackground(){
     document.body.style.backgroundImage = 'none';
-    document.body.style.background = 'linear-gradient(170deg, #4A8FBF 0%, #6BADD4 70%, #9DC8E0 100%)';
+    document.body.style.background = 'linear-gradient(170deg, #4A8FBF 0%, #6BADD4 100%)';
     // document.body.style.backgroundImage = "url('/images/blue-background-image-edited.png')";
   }
   function resetBackground() {    

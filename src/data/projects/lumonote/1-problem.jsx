@@ -6,27 +6,23 @@ export default
   reference: 'problem',
   heading: 'The Problem',
   body: (
-    <div>
+    <div className='padded-fully'>
       {Em("A note app is an essential tool everyone uses in their day to day.")}
       {BrS()}
       <ul>
         {Li(
-          "Many people like myself use it mostly for thought organization and planning."
+          <>Many people like myself use it mostly for {Em("thought organization")} and {Em("planning.")}</>
         )}
         {Li(
-          "For some of those people, the ability to freely combine and customize " + 
-          "how note elements are presented is a must, without unnecessarily complex features getting in the way."
+          <>For some of those people, the ability to {Em("freely combine and customize how note elements are presented")} is a must, without {Em("unnecessarily complex features")} getting in the way.</>
         )}
         {Li(
-          "However, many note apps are either too simple or too complex, " +
-          "sometimes choosing to separate certain note elements into a separate note type altogether."
+          <>However, many note apps are either {Em("too simple")} or {Em("too complex")}, sometimes choosing to {Em("separate certain note elements")} into a separate note type altogether.</>
         )}
       </ul>
-
-      I used this issue as a jumping off point to develop my first prototype of the product for testing.
+      I used this issue as a jumping off point to {Em("develop my first prototype")} of the product for testing.
       
       {BrS()}
-
       {H("Constraints")}
       {BrS()}
       As both the {Em("designer")} and {Em("developer, ")}
