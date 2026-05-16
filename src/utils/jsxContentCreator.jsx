@@ -11,9 +11,6 @@ const makeLargeBreak = () => <div className="separator-large"/>;
 
 const makeLink = (link, text) => <Link to={link}> {text} </Link>;
 
-const makeDiv = (content = "") => <div> {content} </div>;
-const makeParagraph = (content) => <p> {content} </p>
-
 const makeUnorderedList = (content) => <ul> {content} </ul>;
 const makeListItem = (content) => <li> {content} </li>;
 

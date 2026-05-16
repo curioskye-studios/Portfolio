@@ -16,7 +16,7 @@ export const LumoNoteData = {
   type: "Exploratory Project",
   roles: ["UI/UX Designer", "Frontend Developer", "Backend Developer"],
   date: "Autumn 2025",
-  tools: ["Draw.io", "Pencil & Paper"],
+  tools: ["Kotlin", "Draw.io", "Pencil & Paper"],
   link: "https://github.com/curioskye-studios/LumoNote",  
 
   hero: {

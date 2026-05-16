@@ -65,15 +65,17 @@ export default function ProjectDetail() {
 
         <DetailBody project={project} />
 
-        <div className='detail-bottom'>
-          <Link to="/portfolio" className="btn-primary back-btn" data-aos="fade-up" data-aos-delay="400">
+        <div className='separator-large' />
+
+        <div className='detail-bottom' data-aos="fade-up" data-aos-delay="200">
+          <Link to="/portfolio" className="btn-primary back-btn" >
             ← Back to Portfolio
           </Link>
 
           {project.next && (
             <Link 
               to={`/portfolio/${category}/${project.next}`} 
-              className="btn-primary back-btn" data-aos="fade-up" data-aos-delay="400">
+              className="btn-primary back-btn">
               Next Project →
             </Link>
           )}
