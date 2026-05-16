@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
+import ImageSection from '../components/ProjectSection/ImageSection';
 
 // Transform Text
 const emphasize = (text) => <span className="green-highlight"> {text} </span>;
 
 // Create Elements
-const makeBreak = () => <div className="separator-small"/>;
+const makeSmallBreak = () => <div className="separator-small"/>;
+const makeMediumBreak = () => <div className="separator"/>;
+const makeLargeBreak = () => <div className="separator-large"/>;
+
+const makeLink = (link, text) => <Link to={link}> {text} </Link>;
 
 const makeDiv = (content = "") => <div> {content} </div>;
 const makeParagraph = (content) => <p> {content} </p>
@@ -19,13 +24,30 @@ const makeHeading = (content) => (
   </h4>
 );
 
-const makeLink = (link, text) => <Link to={link}> {text} </Link>;
+const makeImage = (link, alt = "", caption = "") => (
+  <ImageSection 
+    data = { 
+      { 
+        link: link, 
+        alt: alt,
+        caption: caption
+      }
+    }
+  />
+);
 
 // Aliases
 export const Em = emphasize;
 
-export const Br = makeBreak;
+export const BrS = makeSmallBreak;
+export const BrM = makeMediumBreak;
+export const BrL = makeLargeBreak;
+
+export const A = makeLink;
+
 export const Ul = makeUnorderedList;
 export const Li = makeListItem;
+
 export const H = makeHeading;
-export const A = makeLink;
+
+export const Img = makeImage;

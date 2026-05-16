@@ -5,12 +5,18 @@ export default function ImageSection({ data }) {
       <div className='separator-small' />
 
       <div className='detail-img-wrap'>
-        <img className='detail-img' src={data.link} />        
+        <img className='detail-img' src={data.link} alt={data.alt ? data.alt : ""} />        
       </div>  
 
-      <p class="img-caption text-center mt-3 mb-5" > 
-        {data.caption}  
-      </p>
+      { 
+        data.caption ? (
+          <p className="img-caption text-center mt-3" > 
+            {data.caption}  
+          </p> 
+        ) : null        
+      }
+      
+      <div className='separator' />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
-import ProjectDetail from './pages/ProjectDetail/newProjectDetail';
+import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import About from './pages/about/About';
 import SocialSection from './components/SocialSection/SocialSection';
 import './index.css'; 

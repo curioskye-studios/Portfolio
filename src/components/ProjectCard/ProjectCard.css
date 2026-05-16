@@ -100,7 +100,7 @@ svg.arrow-right.rotate-right {
   width: fit-content;
 }
 
-.project-title {
+.project-summary {
   font-weight: 600;
   font-size: 1.05rem;
   color: var(--white);

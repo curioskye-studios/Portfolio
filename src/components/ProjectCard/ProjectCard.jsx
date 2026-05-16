@@ -9,7 +9,7 @@ export default function ProjectCard({ projectData, category, cardAOSDelay, cardS
     projectData:
       id: 'lumonote',
       type: 'Mobile Application',
-      title: 'A Robust But Simple Note-Taking Mobile App.',
+      summary: 'A Robust But Simple Note-Taking Mobile App.',
       img: lumoNoteImg,
       imgPlaceholder: { bg: '#F5C518', label: 'LumoNote.' },
       link: '/portfolio/lumonote',
@@ -27,7 +27,7 @@ export default function ProjectCard({ projectData, category, cardAOSDelay, cardS
 
   const projectImage = 
     projectData.img ? (
-      <img src={projectData.img} alt={projectData.title} className="project-img" />
+      <img src={projectData.img} alt={projectData.summary} className="project-img" />
     ) : (
       <div
         className="project-img-placeholder"
@@ -69,7 +69,7 @@ export default function ProjectCard({ projectData, category, cardAOSDelay, cardS
           </div>
         </div>     
 
-        <h4 className="project-title">{projectData.title}</h4>
+        <h4 className="project-summary">{projectData.summary}</h4>
       </div>
 
       {/* Project Image */}

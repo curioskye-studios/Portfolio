@@ -1,0 +1,81 @@
+@import "../../pages/ProjectDetail/ProjectDetail.css";
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 35px;
+}
+
+.breadcrumb a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover { color: var(--white); }
+.breadcrumb .green { color: var(--green); font-weight: 700; }
+
+.detail-header {
+  margin-bottom: 28px;
+  /* margin-left: 18px; */
+}
+
+.detail-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  margin-bottom: 16px;
+  font-size: 52px;
+  font-size: 45px;
+  /* text-align: center; */
+}
+
+.detail-header-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* margin-left: 10px; */
+}
+
+.detail-text-wrap {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.detail-text-wrap a {
+  text-decoration: underline;
+  padding-right: 20px;
+}
+
+.img-caption a {
+  text-decoration: underline;
+  color: var(--green);
+}
+
+.detail-text-title {
+  font-weight: 700px;
+  /* color: var(--green); */
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-tag {
+  border: 1.5px solid var(--green);
+  border-radius: 50px;
+  padding: 1px 13px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  color: rgba(255,255,255,0.85);
+  color: var(--green);
+}

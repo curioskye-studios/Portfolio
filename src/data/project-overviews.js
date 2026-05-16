@@ -6,7 +6,7 @@ const allProjects = {
     {
       id: 'lumonote',
       type: 'Mobile Application',
-      title: 'A Robust But Simple Note-Taking Mobile App.',
+      summary: 'A Robust But Simple Note-Taking Mobile App.',
       img: lumoNoteImg,
       imgPlaceholder: { bg: '#F5C518', label: 'LumoNote.' },
       columnNum: 2
@@ -15,7 +15,7 @@ const allProjects = {
     {
       id: 'quickwash',
       type: 'Desktop Application',
-      title: 'An Easy To Use Laundry Appointment Scheduling System.',
+      summary: 'An Easy To Use Laundry Appointment Scheduling System.',
       img: quickWashImg,
       imgPlaceholder: { bg: '#ffffff', label: 'QuickWash' },
       columnNum: 1
@@ -24,7 +24,7 @@ const allProjects = {
     {
       id: 'argus',
       type: 'Website / Web Application',
-      title: 'A Person of Interest Identifier.',
+      summary: 'A Person of Interest Identifier.',
       img: "",
       imgPlaceholder: { bg: '#c9c9c9', label: 'ARGUS' },
       columnNum: 1

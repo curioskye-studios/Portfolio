@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import './Portfolio.css';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
-import { PROJECTS } from '../../data/projectOverviews';
+import { PROJECTS } from '../../data/project-overviews';
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('design');

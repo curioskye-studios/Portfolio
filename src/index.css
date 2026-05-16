@@ -48,8 +48,9 @@
 
 /* Body */
 body {
-  background: linear-gradient(170deg, #4A8FBF 0%, #6BADD4 40%, #9DC8E0 70%, #B8D9ED 100%);
+  background-color: #6BADD4;
   background-image: url('/images/blue-background-image.webp');
+  background-repeat: no-repeat;
   background-size: cover;
   color: var(--white-color);
 }
