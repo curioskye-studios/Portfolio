@@ -31,12 +31,19 @@ export default function ProjectDetail() {
   }, [id]);
 
   function updateBackground(){
+    const skyGradient = 
+    ` 
+      linear-gradient(180deg,
+#4A8FBF 0%, #6BADD4 40%,
+#82BAD5 65%, #6BADD4 100%)
+    `;
+
     document.body.style.backgroundImage = 'none';
-    document.body.style.background = 'linear-gradient(170deg, #4A8FBF 0%, #6BADD4 100%)';
-    // document.body.style.backgroundImage = "url('/images/blue-background-image-edited.png')";
+    document.body.style.background = skyGradient;
+    // document.body.style.backgroundImage = "url('/images/hazy-horizon.svg)";
   }
   function resetBackground() {    
-    // document.body.style.background = '';
+    document.body.style.background = '';
     document.body.style.backgroundImage = "url('/images/blue-background-image.webp')";
   }
 

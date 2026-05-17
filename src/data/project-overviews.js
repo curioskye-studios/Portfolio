@@ -33,9 +33,9 @@ const allProjects = {
 
 export const PROJECTS = {
   "design": [
-    allProjects["ARGUS"],
-    allProjects["Lumonote"],
     allProjects["Quickwash"],
+    allProjects["Lumonote"],
+    allProjects["ARGUS"],
   ],
 
   "development": [
