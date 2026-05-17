@@ -1,8 +1,8 @@
 :root {  
-  --card-bg: rgba(92, 92, 92, 0.104);
+  --card-bg: rgba(17, 16, 16, 0.04);
   --card-border: 1.75px solid rgba(255, 255, 255, 0.401);
   --card-border-radius: 16px;
-  --card-blur: blur(4px);
+  --card-blur: blur(8px);
 
   --standard-padding: 40px;
   --standard-padding-full: 40px 40px;

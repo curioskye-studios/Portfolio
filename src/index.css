@@ -49,7 +49,7 @@
 /* Body */
 body {
   background-color: #6BADD4;
-  background-image: url('/images/blue-background-image.webp');
+  background-image: url('/blue-background-image.webp');
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--white-color);

@@ -7,7 +7,7 @@ export default
   heading: 'Research',
   body: (
     <div className='padded-fully'>
-      The team members had conducted this phase before I joined the team, so I was not as involved here.
+      The team had conducted this phase before I joined the team, so I was not as involved here.
 
       {BrS()}
 

@@ -6,9 +6,8 @@ import SystemSupport from './2-system';
 import WasherImage from './3-washer-img';
 import Research from './4-research';
 import Design from './5-design';
-// import Decisions from './6-decisions';
-// import Development from './7-development';
-// import Reflection from './8-reflection';
+import Decisions from './6-decisions';
+import Reflection from './7-reflection';
 
 export const QuickwashData = { 
   // next: 'quickwash',
@@ -38,8 +37,7 @@ export const QuickwashData = {
     WasherImage,
     Research,
     Design,
-    // Decisions,
-    // Development,
-    // Reflection,
+    Decisions,
+    Reflection,
   ]
 }

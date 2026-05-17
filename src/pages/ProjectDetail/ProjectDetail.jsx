@@ -34,17 +34,17 @@ export default function ProjectDetail() {
     const skyGradient = 
     ` 
       linear-gradient(180deg,
-#4A8FBF 0%, #6BADD4 40%,
-#82BAD5 65%, #6BADD4 100%)
+      #4A8FBF 0%, #6BADD4 40%,
+      #82BAD5 65%, #6BADD4 100%)
     `;
 
     document.body.style.backgroundImage = 'none';
     document.body.style.background = skyGradient;
-    // document.body.style.backgroundImage = "url('/images/hazy-horizon.svg)";
+    // document.body.style.backgroundImage = "url('/blue-background-image-2.webp)";
   }
   function resetBackground() {    
     document.body.style.background = '';
-    document.body.style.backgroundImage = "url('/images/blue-background-image.webp')";
+    document.body.style.backgroundImage = "url('/blue-background-image.webp')";
   }
 
   if (!project) {

@@ -4,8 +4,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Home.css';
 
-import borderImg from '/images/logo-img-border.png';
-import logoLarge from '/images/logo-large.png';
+import borderImg from '/logo-img-border.png';
+import logoLarge from '/logo-large.png';
 
 import ArrowButton from '../../components/ArrowButton';
 

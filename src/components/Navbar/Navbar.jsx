@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import logoImg from '/images/logo-small-variant.png'; 
+import logoImg from '/logo-small-variant.png'; 
 // import './Navbar.css'
 import SocialSection from '../SocialSection/SocialSection';
 

@@ -6,7 +6,7 @@ export default
   reference: 'reflection',
   heading: `Outcome & Reflection`,
   body: (
-    <div className='padded-sides padded-top'>
+    <div className='padded-fully'>
       I attempted to {Em("use the prototype in my day to day")} to test its long term usability.
 
       Some things stood out to me in particular:
@@ -42,8 +42,6 @@ export default
           <>I also learned that {Em("documenting as I go would have made writing on LumoNote much easier,")} especially regarding collecting design iterations and tracking my decisions and reasoning. I'll be sure to be more diligent with this.</>
         )}
       </ul>
-      
-      {BrL()}
     </div>
   )
 }
