@@ -7,7 +7,7 @@ export default
   heading: `Reflection`,
   body: (
     <div className='padded-fully'>
-      My biggest takeaways from working on QuickWash would be that:
+      My {Em("biggest takeaways")} from working on QuickWash would be that:
 
       {BrS()}
 

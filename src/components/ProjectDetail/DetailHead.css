@@ -1,5 +1,9 @@
 @import "../../pages/ProjectDetail/ProjectDetail.css";
 
+:root {
+  --tag-color: var(--green);
+}
+
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -59,8 +63,9 @@
 }
 
 .detail-text-title {
-  font-weight: 700px;
-  /* color: var(--green); */
+  /* font-weight: bold; */
+  width: 50px;
+  color: rgba(255,255,255,0.65);
 }
 
 .detail-tags {
@@ -70,12 +75,12 @@
 }
 
 .detail-tag {
-  border: 1.5px solid var(--green);
+  border: 1.5px solid var(--tag-color);
   border-radius: 50px;
   padding: 1px 13px;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 500;
   font-size: 11px;
   color: rgba(255,255,255,0.85);
-  color: var(--green);
+  color: var(--tag-color);
 }

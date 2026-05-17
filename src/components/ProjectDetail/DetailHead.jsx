@@ -23,10 +23,13 @@ export default function DetailHead( { category, id, project } ) {
         <div className='separator-small' />
 
         <div className='detail-header-body'>
+        
           <div className="detail-text-wrap">
             <div className='detail-text-title'>Type: </div>
             <div className='green'>{project.type}</div>              
           </div>
+
+          <div className='separator-small' style={{marginTop: "3px"}}/>
 
           <div className="detail-text-wrap">
             <div className='detail-text-title'>Roles: </div>
@@ -45,6 +48,8 @@ export default function DetailHead( { category, id, project } ) {
               ))}
             </div>
           </div>
+
+          <div className='separator-small' style={{marginTop: "3px"}}/>
 
           <div className="detail-text-wrap">
             <div className='detail-text-title'>Date: </div>
