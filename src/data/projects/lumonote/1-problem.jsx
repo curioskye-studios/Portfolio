@@ -11,16 +11,22 @@ export default
       {Em("elements separated")} unnecessarily.
       {BrS()}
 
-      {B("1. Goal:")} <br />
-      Flexible, customizable notes for thought organization {Em("without the bloat.")}
+      {B("1.")}{Em("Goal:")} <br />
+      <ul>
+        {Li(<>Flexible, customizable notes for thought organization {Em("without the bloat.")}</>)}
+      </ul>      
       {BrS()}
 
-      {B("2. Constraints:")} <br />
-      Solo designer + developer, limited by {Em("time")} and {Em("skill level.")}
+      {B("2.")}{Em("Constraints:")} <br />
+      <ul>
+        {Li(<>Solo designer + developer, limited by {Em("time")} and {Em("skill level.")}</>)}
+      </ul>
       {BrS()}
       
-      {B("3. Approach:")} <br />
-      I {Em("focused on high-impact features")} and shelved low-priority ones for quick prototyping.
+      {B("3.")}{Em("Approach:")} <br />
+      <ul>
+        {Li(<>I {Em("focused on high-impact features")} and shelved low-priority ones for quick prototyping.</>)}
+      </ul>
       {BrS()}
     </div>
   ),

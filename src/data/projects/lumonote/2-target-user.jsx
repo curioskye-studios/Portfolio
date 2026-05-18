@@ -14,15 +14,15 @@ export default
         )}
         {BrS()}
         {Li(
-          <>The {Em("combination of checklists and other key note elements")} is highly valued,</>
+          <>The {Em("combination of checklists")} and {Em("other key note elements")}  is highly valued,</>
         )}
         {BrS()}
         {Li(
-          <>{Em("Simple, in text images")} is highly valued, and</>
+          <>Simple, {Em("in text images")} is highly valued, and</>
         )}
         {BrS()}
         {Li(
-          <>{Em("Undo and redo")} are {Em("high frequency")} actions.</>
+          <>{Em("Undo")} and {Em("redo")} are {Em("high frequency")} actions.</>
         )}
       </ul>
     </div>

@@ -1,7 +1,7 @@
 .toggle-wrap {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   gap: 12px;
 }
 
@@ -37,7 +37,7 @@ input:checked ~ .slider {
   width: 20px;
   height: 20px;
   left: 4px;
-  top: 4px;
+  top: 5px;
   background: white;
   border-radius: 50%;
   transition: transform 0.2s;

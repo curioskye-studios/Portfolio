@@ -1,9 +1,9 @@
 import "./Toggle.css";
 
-export default function Toggle({ label = "Toggle", on, onChange }) {
+export default function Toggle({ label = "Toggle", on, onChange, ...props }) {
 
   return (
-    <div className="toggle-wrap">
+    <div className="toggle-wrap" { ...props }>
       <label className="toggle">
         <input
           type="checkbox"

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import ImageSection from '../components/ProjectSection/ImageSection';
 
 // Transform Text
+// const emphasize = (text) => <span style={{fontWeight: "bold", color: "var(--blue)"}}> {text} </span>;
 const emphasize = (text) => <span className="green-highlight"> {text} </span>;
 const bolden = (text) => <span style={{fontWeight: "bold"}}> {text} </span>;
 

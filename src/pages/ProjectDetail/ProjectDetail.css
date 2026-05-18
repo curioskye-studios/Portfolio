@@ -1,5 +1,5 @@
 :root {  
-  --card-bg: rgba(17, 16, 16, 0.04);
+  --card-bg: rgba(17, 16, 16, 0.079);
   --card-border: 1.75px solid rgba(255, 255, 255, 0.401);
   --card-border-radius: 16px;
   --card-blur: blur(8px);
