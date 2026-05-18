@@ -1,4 +1,4 @@
-import "./Toggle.css";
+import "./ToggleButton.css";
 
 export default function Toggle({ label = "Toggle", on, onChange, ...props }) {
 

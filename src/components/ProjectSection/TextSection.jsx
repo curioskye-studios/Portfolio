@@ -1,4 +1,4 @@
-import Toggle from "../Toggle/Toggle";
+import Toggle from "../ToggleButton/ToggleButton";
 import { useState } from "react";
 
 export default function TextSection({ data }) {

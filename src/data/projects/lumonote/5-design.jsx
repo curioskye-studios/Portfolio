@@ -1,6 +1,6 @@
-import { Em, BrS, BrM, BrL, Li, H, A, Img } from '../../../utils/jsxContentCreator';
-import MainSketchImg from '../../../assets/ux-projects/lumonote/main-screen-sketches.png';
-import MainScreenImg from '../../../assets/ux-projects/lumonote/lumonote-main-screens.png';
+import { Em, B, BrS, BrM, BrL, Li, H, A, Img } from '../../../utils/jsxContentCreator';
+import MainSketchesImg from '../../../assets/ux-projects/lumonote/main-screen-sketches.png';
+import MainScreensImg from '../../../assets/ux-projects/lumonote/lumonote-main-screens.png';
 import EditNoteSketchImg from '../../../assets/ux-projects/lumonote/note-screen-sketch.png';
 import EditNoteScreenImg from '../../../assets/ux-projects/lumonote/lumonote-note-screens.png';
 import TagSketchImg from '../../../assets/ux-projects/lumonote/tag-screen-sketch.png';
@@ -11,6 +11,64 @@ export default
   type: 'text',
   reference: 'design',
   heading: `Crafting LumoNote's Design`,
+  summary: (
+    <div>
+      <div className='padded-left padded-top padded-right'>
+        {B("The Start:")} 
+        <br />
+        Coming up with the "LumoNote" concept: 
+        <ul>
+          {Li(<>{Em("Luminous")} + {Em("Notes")} → {Em("Illuminate your thoughts")}</>)}
+        </ul>        
+      </div>
+
+      {BrM()}
+
+      {H("The Main Screens")}
+
+      <div className='padded-sides'>
+        {B("Original Sketch:")}
+      </div>
+      {Img(MainSketchesImg, "Sketches of main screens")}
+
+      <div className='padded-sides'>
+        {B("Latest Iteration:")}
+      </div>
+      {Img(MainScreensImg, "Pictures of main screens")}
+
+      {BrS()}
+      
+      {H("The Note Taking Experience")}
+
+      <div className='padded-sides'>
+        {B("Original Sketch:")}
+      </div>
+      {Img(EditNoteSketchImg, "Sketches of note editing screen")}
+      
+      <div className='padded-sides'>
+        {B("Latest Iteration:")}
+      </div>
+      {Img(EditNoteScreenImg, "Pictures of note taking screen")}
+
+      {BrS()}
+
+      {H("The Tag Screen")}
+
+      <div className='padded-sides'>
+        {B("Original Sketch:")}
+      </div>
+      {Img(TagSketchImg, "Sketch of tag screen")}
+
+      
+      <div className='padded-sides'>
+        {B("Latest Iteration:")}
+      </div>
+      {Img(TagScreenImg, "Picture of tag screen")}
+
+      {BrM()}
+
+    </div>
+  ),
   body: (
     <div>
 
@@ -32,7 +90,7 @@ export default
 
       {H("The Main Screens")}
 
-      {Img(MainSketchImg, "Sketches of main screens")}
+      {Img(MainSketchesImg, "Sketches of main screens")}
 
       <div className='padded-sides'>
         This is the first thing the users see when opening the app.
@@ -83,7 +141,7 @@ export default
         The most recent design had a couple key changes.
       </div>
 
-      {Img(MainScreenImg, "Pictures of main screens")}
+      {Img(MainScreensImg, "Pictures of main screens")}
 
       {H("The Note Taking Experience")}
 
