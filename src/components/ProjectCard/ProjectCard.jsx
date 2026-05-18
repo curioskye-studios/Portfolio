@@ -1,7 +1,7 @@
 import './ProjectCard.css'
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
-import RightArrow from '../RightArrow';
+import RightArrow from '../Icons/RightArrow';
 
 export default function ProjectCard({ projectData, category, cardAOSDelay, cardStyle }) {
 

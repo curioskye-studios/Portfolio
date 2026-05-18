@@ -1,6 +1,6 @@
 import "./ToggleButton.css";
 
-export default function Toggle({ label = "Toggle", on, onChange, ...props }) {
+export default function ToggleButton({ label = "Toggle", on, onChange, ...props }) {
 
   return (
     <div className="toggle-wrap" { ...props }>

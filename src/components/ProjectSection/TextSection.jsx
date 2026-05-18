@@ -1,4 +1,4 @@
-import Toggle from "../ToggleButton/ToggleButton";
+import ToggleButton from "../ToggleButton/ToggleButton";
 import { useState } from "react";
 
 export default function TextSection({ data }) {
@@ -17,7 +17,7 @@ export default function TextSection({ data }) {
     <>
       {
         hasSummary ? (
-          <Toggle label="Summarized" on={summaryOn} onChange={setSummaryOn} style={{marginRight: "25px"}}/>
+          <ToggleButton label="Summarized" on={summaryOn} onChange={setSummaryOn} style={{marginRight: "25px"}}/>
         )
         : null
       }      

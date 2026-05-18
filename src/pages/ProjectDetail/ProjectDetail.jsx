@@ -10,6 +10,7 @@ import { PROJECT_DETAILS } from '../../data/project-details';
 
 import DetailHead from '../../components/ProjectDetail/DetailHead';
 import DetailBody from '../../components/ProjectDetail/DetailBody';
+import ScrollTopButton from '../../components/ScrollTopButton/ScrollTopButton';
 
 export default function ProjectDetail() {
   const { category, id } = useParams();
@@ -74,6 +75,8 @@ export default function ProjectDetail() {
 
         <DetailBody project={project} />
 
+        <ScrollTopButton />
+
         <div className='separator-large' />
 
         <div className='detail-bottom' data-aos="fade-up" data-aos-delay="200">
@@ -89,8 +92,6 @@ export default function ProjectDetail() {
             </Link>
           )}
         </div>
-
-        
 
       </div>
     </div>

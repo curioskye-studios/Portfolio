@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import RightArrow from './RightArrow';
+import RightArrow from './Icons/RightArrow';
 
 export default function ArrowButton({ className, linkPath, children, ...props }) {
 
