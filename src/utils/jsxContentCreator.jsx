@@ -3,6 +3,7 @@ import ImageSection from '../components/ProjectSection/ImageSection';
 
 // Transform Text
 const emphasize = (text) => <span className="green-highlight"> {text} </span>;
+const bolden = (text) => <span style={{fontWeight: "bold"}}> {text} </span>;
 
 // Create Elements
 const makeSmallBreak = () => <div className="separator-small"/>;
@@ -36,6 +37,7 @@ const makeImage = (link, alt = "", caption = "") => (
 
 // Aliases
 export const Em = emphasize;
+export const B = bolden;
 
 export const BrS = makeSmallBreak;
 export const BrM = makeMediumBreak;

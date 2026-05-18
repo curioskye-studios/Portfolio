@@ -12,12 +12,15 @@ export default
         {Li(
           <>{Em("Organization, simplicity, approachability")} and {Em("speed")} is highly valued,</>
         )}
+        {BrS()}
         {Li(
           <>The {Em("combination of checklists and other key note elements")} is highly valued,</>
         )}
+        {BrS()}
         {Li(
           <>{Em("Simple, in text images")} is highly valued, and</>
         )}
+        {BrS()}
         {Li(
           <>{Em("Undo and redo")} are {Em("high frequency")} actions.</>
         )}

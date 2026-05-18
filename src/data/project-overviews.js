@@ -15,7 +15,7 @@ const allProjects = {
     {
       id: 'quickwash',
       type: 'Desktop Application',
-      summary: 'An Easy To Use Laundry Appointment Scheduling System.',
+      summary: 'An Approachable Laundry Appointment Scheduling System.',
       img: quickWashImg,
       imgPlaceholder: { bg: '#ffffff', label: 'QuickWash' },
       columnNum: 1

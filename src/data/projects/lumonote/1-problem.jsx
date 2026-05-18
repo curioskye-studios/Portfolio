@@ -1,10 +1,29 @@
-import { Em, BrS, Li, H, A } from '../../../utils/jsxContentCreator';
+import { Em, B, BrS, Li, H, A } from '../../../utils/jsxContentCreator';
 
 export default 
 {      
   type: 'text',
   reference: 'problem',
   heading: 'The Problem',
+  summary: (
+    <div className='padded-fully'>
+      LumoNote exists because I found most note apps {Em("too simple")} or {Em("too complex,")} with 
+      {Em("elements separated")} unnecessarily.
+      {BrS()}
+
+      {B("1. Goal:")} <br />
+      Flexible, customizable notes for thought organization {Em("without the bloat.")}
+      {BrS()}
+
+      {B("2. Constraints:")} <br />
+      Solo designer + developer, limited by {Em("time")} and {Em("skill level.")}
+      {BrS()}
+      
+      {B("3. Approach:")} <br />
+      I {Em("focused on high-impact features")} and shelved low-priority ones for quick prototyping.
+      {BrS()}
+    </div>
+  ),
   body: (
     <div className='padded-fully'>
       {Em("A note app is an essential tool everyone uses in their day to day.")}

@@ -18,6 +18,8 @@ export default function ProjectDetail() {
   useEffect(() => {
     document.title = `${capitalizer(category)} | ${capitalizer(id)}`;
     AOS.init({ duration: 700, once: true });
+    
+    window.scrollTo(0, 0);
 
     if (!project) {
       document.body.style.backgroundImage = 'none';
