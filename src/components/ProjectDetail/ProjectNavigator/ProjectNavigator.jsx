@@ -26,7 +26,7 @@ export default function ProjectNavigator({ referencedSections }) {
         referencedSections.map(
           (section, i) => (      
             <div key={i}>
-              <button className='btn-primary' onClick={}>{section.reference}</button>
+              <button className='btn-primary' onClick={handleReferenceClick}>{section.reference}</button>
               {/* <div className='green-line'/> */}
             </div>                         
           )
