@@ -11,6 +11,7 @@ import { PROJECT_DETAILS } from '../../data/project-details';
 import DetailHead from '../../components/ProjectDetail/DetailHead';
 import DetailBody from '../../components/ProjectDetail/DetailBody';
 import ScrollTopButton from '../../components/ScrollTopButton/ScrollTopButton';
+import ProjectNavigator from '../../components/ProjectDetail/ProjectNavigator/ProjectNavigator';
 
 export default function ProjectDetail() {
   const { category, id } = useParams();
@@ -65,6 +66,11 @@ export default function ProjectDetail() {
     );
   }
 
+  const referencedSections = 
+    project.sections.filter(
+      (section) => section.reference
+    );
+
   return (
     <div className="project-detail sky-bg">
       <div className="detail-inner">
@@ -72,6 +78,8 @@ export default function ProjectDetail() {
         <DetailHead category={category} id={id} project={project}/>
 
         <div className='separator-large' />
+
+        <ProjectNavigator referencedSections={referencedSections} /> 
 
         <DetailBody project={project} />
 

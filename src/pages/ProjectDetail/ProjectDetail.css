@@ -48,6 +48,12 @@
   flex: 1;
 }
 
+.hidden {
+  display: none;
+}
+
+/* Main Styles */
+
 .project-detail {
   min-height: 100vh;
   padding-top: 80px;

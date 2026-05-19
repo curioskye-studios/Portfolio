@@ -1,10 +1,11 @@
 import ToggleButton from "../ToggleButton/ToggleButton";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function TextSection({ data }) {
   const [summaryOn, setSummaryOn] = useState(true);
 
   const hasSummary = Boolean(data.summary);
+  const hasReference = Boolean(data.reference);
 
   const summary = hasSummary ? 
     data.summary : (
@@ -13,8 +14,12 @@ export default function TextSection({ data }) {
       </div>       
     );
 
+  const navigationRef = useRef(null);
+
   return (
     <>
+      {hasReference && <div className="hidden" ref={navigationRef} />}
+
       {
         hasSummary ? (
           <ToggleButton label="Summarized" on={summaryOn} onChange={setSummaryOn} style={{marginRight: "25px"}}/>
