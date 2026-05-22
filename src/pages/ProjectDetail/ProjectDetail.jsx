@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -13,26 +13,50 @@ import DetailBody from '../../components/ProjectDetail/DetailBody';
 import ScrollTopButton from '../../components/ScrollTopButton/ScrollTopButton';
 import ProjectNavigator from '../../components/ProjectDetail/ProjectNavigator/ProjectNavigator';
 
+import { SectionRefsContext } from './SectionRefsContext';
+
 export default function ProjectDetail() {
   const { category, id } = useParams();
   const project = PROJECT_DETAILS[id];
 
+  const [isPast, setIsPast] = useState(false);
+  const elementRef = useRef(null); 
+  const sectionRefs = useRef({});
+
+  const referencedSections = 
+    project.sections.filter(
+      (section) => section.reference
+    ); 
+
   useEffect(() => {
-    document.title = `${capitalizer(category)} | ${capitalizer(id)}`;
-    AOS.init({ duration: 700, once: true });
-    
-    window.scrollTo(0, 0);
+    pageSetup();
 
     if (!project) {
       document.body.style.backgroundImage = 'none';
     } else {
       updateBackground();
     }
+    
+    window.addEventListener("scroll", onScroll);
 
     return () => {
       resetBackground();
+      window.removeEventListener("scroll", onScroll);
     };
   }, [id]);
+
+  function pageSetup() {    
+    document.title = `${capitalizer(category)} | ${capitalizer(id)}`;
+    AOS.init({ duration: 700, once: true });
+    
+    window.scrollTo(0, 0);
+  }
+
+  function onScroll() {
+    if (!elementRef.current) return;
+    const { top } = elementRef.current.getBoundingClientRect();
+    setIsPast(top < 0);
+  }
 
   function updateBackground(){
     const skyGradient = 
@@ -66,20 +90,19 @@ export default function ProjectDetail() {
     );
   }
 
-  const referencedSections = 
-    project.sections.filter(
-      (section) => section.reference
-    );
-
   return (
+    <SectionRefsContext.Provider value={sectionRefs}>
+
     <div className="project-detail sky-bg">
       <div className="detail-inner">
 
-        <DetailHead category={category} id={id} project={project}/>
+        <div ref={elementRef}>
+          <DetailHead category={category} id={id} project={project}/>
+        </div>
 
         <div className='separator-large' />
 
-        <ProjectNavigator referencedSections={referencedSections} /> 
+        <ProjectNavigator referencedSections={referencedSections} shouldDisplay={isPast} />
 
         <DetailBody project={project} />
 
@@ -103,5 +126,7 @@ export default function ProjectDetail() {
 
       </div>
     </div>
+      
+    </SectionRefsContext.Provider>
   );
 }

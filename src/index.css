@@ -112,9 +112,9 @@ body {
 .btn-primary {
   background: var(--green);
   color: #1a1a1a;
-  border: none;
+  border: 1.5px solid var(--green);
   border-radius: 50px;
-  padding: 20px 26px;
+  padding: 8px 22px;
   font-weight: 800;
   cursor: pointer;
   gap: 8px;
@@ -124,7 +124,6 @@ body {
 
 .btn-primary:hover {
   border: 1.5px solid #1a1a1a;
-  transform: translateY(-2px);
 }
 
 .btn-primary svg.arrow-right{

@@ -54,7 +54,7 @@
 
 .detail-text-wrap a {
   text-decoration: underline;
-  padding-right: 20px;
+  /* padding-right: 20px; */
 }
 
 .img-caption a {
@@ -66,7 +66,7 @@
   /* font-weight: bold; */
   width: 50px;
   color: rgba(255,255,255,0.65);
-  text-align: center;
+  /* text-align: center; */
 }
 
 .detail-tags {

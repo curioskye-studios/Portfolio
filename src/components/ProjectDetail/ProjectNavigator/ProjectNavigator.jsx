@@ -1,32 +1,56 @@
 import './ProjectNavigator.css'
+import { capitalizer } from '../../../utils/textFormatter';
 
-export default function ProjectNavigator({ referencedSections }) {
-  // export default function ProjectNavigator() {
+import { useContext } from 'react';
+import { SectionRefsContext } from '../../../pages/ProjectDetail/SectionRefsContext';
 
-  //collect all referenced sections name from the current project info
-  //loop through and create the buttons to get to each
-  //create logic to get to the section on click
+export default function ProjectNavigator({ referencedSections, shouldDisplay }) {
 
-  //create button element to pass data into
+  /* 
+    collect all referenced sections name from the current project info
+    loop through and create the buttons to get to each
+    create logic to get to the section on click
 
-  function handleReferenceClick() {
-    
+    create button element to pass data into
+  */
+
+  const sectionRefs = useContext(SectionRefsContext);
+
+  function handleReferenceClick(reference) {
+
+    // console.log(sectionRefs.current[reference]);
+
+    sectionRefs.current[reference]?.scrollIntoView(
+      { 
+        behavior: "smooth" 
+      }
+    );
+  }
+
+  function createSectionButton(reference) {
+
+    return (      
+      <button 
+        className='navigator-btn' 
+        onClick={() => handleReferenceClick(reference)}
+      >
+        {capitalizer(reference)}
+      </button>
+    );
   }
   
 
   return (
-    <div className='navigator'>
-      {/* {
-        referencedSections.map(
-          (section) => {console.log(section.reference)}
-        )
-      } */}
+    <div className={`navigator ${shouldDisplay ? "" : "hidden"}`}>
+
+      Navigate: 
 
       {
         referencedSections.map(
           (section, i) => (      
+
             <div key={i}>
-              <button className='btn-primary' onClick={handleReferenceClick}>{section.reference}</button>
+              {createSectionButton(section.reference)}
               {/* <div className='green-line'/> */}
             </div>                         
           )

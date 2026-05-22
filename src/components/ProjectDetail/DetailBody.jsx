@@ -39,7 +39,7 @@ export default function DetailBody( { project } ) {
                         <div className='green-line' /> 
                     ) : null 
                 } */}
-                <Section data={section} />
+                <Section data={section}/>
               </div>                         
             )
           )

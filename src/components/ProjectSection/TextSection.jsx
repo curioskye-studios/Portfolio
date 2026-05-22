@@ -1,8 +1,11 @@
 import ToggleButton from "../ToggleButton/ToggleButton";
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
+
+import { SectionRefsContext } from '../../pages/ProjectDetail/SectionRefsContext';
 
 export default function TextSection({ data }) {
   const [summaryOn, setSummaryOn] = useState(true);
+  const sectionRefs = useContext(SectionRefsContext);
 
   const hasSummary = Boolean(data.summary);
   const hasReference = Boolean(data.reference);
@@ -14,15 +17,25 @@ export default function TextSection({ data }) {
       </div>       
     );
 
-  const navigationRef = useRef(null);
-
   return (
     <>
-      {hasReference && <div className="hidden" ref={navigationRef} />}
+      {
+        hasReference && (
+          <div 
+            className="hidden" 
+            ref={(el) => sectionRefs.current[data.reference] = el} 
+          />
+        )
+      }
 
       {
         hasSummary ? (
-          <ToggleButton label="Summarized" on={summaryOn} onChange={setSummaryOn} style={{marginRight: "25px"}}/>
+          <ToggleButton 
+            label="Summarized" 
+            on={summaryOn} 
+            onChange={setSummaryOn} 
+            style={{marginRight: "25px"}}
+          />
         )
         : null
       }      
@@ -45,8 +58,7 @@ export default function TextSection({ data }) {
           <div className="detail-content bigger-text">
             { data.body }
           </div> 
-        )
-       
+        )       
       }
             
       <div className='green-line' style={{marginTop:"-15px"}} />
