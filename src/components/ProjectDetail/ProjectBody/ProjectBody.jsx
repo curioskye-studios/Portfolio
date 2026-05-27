@@ -1,12 +1,12 @@
-import './DetailBody.css';
-import Section from '../../components/ProjectSection/Section'
+import './ProjectBody.css';
+import Section from '../ProjectSection/Section'
 
 export default function DetailBody( { project } ) { 
 
   return (
     <>   
       {/* Sections */}
-      <div className='separator' style={{marginTop: "60px"}} />
+      <div className='separator' style={{marginTop: "-30px"}} />
 
       <div data-aos="fade-up" data-aos-delay="200">          
         <div className='green-line' />         

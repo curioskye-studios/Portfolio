@@ -1,4 +1,4 @@
-@import "../../pages/ProjectDetail/ProjectDetail.css";
+@import "../../../pages/ProjectDetail/ProjectDetail.css";
 
 :root {
   --tag-color: var(--green);

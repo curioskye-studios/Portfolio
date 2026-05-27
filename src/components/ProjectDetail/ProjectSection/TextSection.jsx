@@ -1,7 +1,7 @@
-import ToggleButton from "../ToggleButton/ToggleButton";
+import ToggleButton from "../../ToggleButton/ToggleButton";
 import { useState, useRef, useContext } from "react";
 
-import { SectionRefsContext } from '../../pages/ProjectDetail/SectionRefsContext';
+import { SectionRefsContext } from '../../../pages/ProjectDetail/SectionRefsContext';
 
 export default function TextSection({ data }) {
   const [summaryOn, setSummaryOn] = useState(true);
@@ -32,7 +32,7 @@ export default function TextSection({ data }) {
         hasSummary ? (
           <ToggleButton 
             label="Summarized" 
-            on={summaryOn} 
+            isOn={summaryOn} 
             onChange={setSummaryOn} 
             style={{marginRight: "25px"}}
           />

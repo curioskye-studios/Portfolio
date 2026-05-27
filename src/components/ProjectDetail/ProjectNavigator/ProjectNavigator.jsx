@@ -1,24 +1,18 @@
 import './ProjectNavigator.css'
-import { capitalizer } from '../../../utils/textFormatter';
 
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { SectionRefsContext } from '../../../pages/ProjectDetail/SectionRefsContext';
 
-export default function ProjectNavigator({ referencedSections, shouldDisplay }) {
+import SectionButton from './SectionButton';
+import DisplayToggleButton from './DisplayToggleButton';
 
-  /* 
-    collect all referenced sections name from the current project info
-    loop through and create the buttons to get to each
-    create logic to get to the section on click
+export default function ProjectNavigator({ referencedSections, moreClasses = "" }) {
 
-    create button element to pass data into
-  */
+  const [shouldDisplayButtons, setShouldDisplayButtons] = useState(true);
 
   const sectionRefs = useContext(SectionRefsContext);
 
   function handleReferenceClick(reference) {
-
-    // console.log(sectionRefs.current[reference]);
 
     sectionRefs.current[reference]?.scrollIntoView(
       { 
@@ -27,35 +21,50 @@ export default function ProjectNavigator({ referencedSections, shouldDisplay }) 
     );
   }
 
-  function createSectionButton(reference) {
+  function handleDisplayClick() {
+    setShouldDisplayButtons(prevState => !prevState);
+  }
 
-    return (      
-      <button 
-        className='navigator-btn' 
-        onClick={() => handleReferenceClick(reference)}
-      >
-        {capitalizer(reference)}
-      </button>
-    );
+  function createSectionButtons() {
+    return (
+      referencedSections.map(
+        (section, i) => (      
+
+          <div key={i}>
+            { createSectionButton(section.reference) }
+          </div>                         
+        )
+      )
+    );    
+  }
+
+  function createSectionButton(reference) {
+    return (
+      <>
+        {/* <div className='green-line'/> */}
+
+        <SectionButton 
+          reference={reference} 
+          onClick={() => handleReferenceClick(reference)} 
+        />
+      </>
+    );    
   }
   
 
   return (
-    <div className={`navigator ${shouldDisplay ? "" : "hidden-temp"}`}>
+    <div className={`navigator ${shouldDisplayButtons ? '' : 'collapsed'} ${moreClasses}`}>
 
-      Navigate: 
+      <div className='nav-toggle'>
+        <DisplayToggleButton onClick={handleDisplayClick} isOn={shouldDisplayButtons} />
+        {/* View Sections: On */}
+      </div>
 
-      {
-        referencedSections.map(
-          (section, i) => (      
-
-            <div key={i}>
-              {createSectionButton(section.reference)}
-              {/* <div className='green-line'/> */}
-            </div>                         
-          )
-        )
-      }
+      <div className={`nav-buttons ${shouldDisplayButtons ? "" : "hidden-nav-btns" }`} >
+        {
+          shouldDisplayButtons ? createSectionButtons() : null
+        }
+      </div>      
       
     </div>
   );

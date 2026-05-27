@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ImageSection from '../components/ProjectSection/ImageSection';
+import ImageSection from '../components/ProjectDetail/ProjectSection/ImageSection';
 
 // Transform Text
 // const emphasize = (text) => <span style={{fontWeight: "bold", color: "var(--blue)"}}> {text} </span>;

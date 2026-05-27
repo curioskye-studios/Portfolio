@@ -1,0 +1,38 @@
+@import "../../../pages/ProjectDetail/ProjectDetail.css";
+
+.detail-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  
+  bottom: 0;
+  left: 50%;
+  z-index: 100;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+}
+
+.nav-section {  
+  margin-bottom: 15px;
+}
+
+.top-btn {
+  margin-left: auto;
+  margin-right: 5vw; 
+  margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+
+  .nav-section {  
+    margin-bottom: 10px;
+  }
+  .top-btn {
+    
+  }
+}

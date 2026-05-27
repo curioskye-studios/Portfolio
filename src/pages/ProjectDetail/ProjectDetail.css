@@ -115,6 +115,8 @@
   display: block;
 }
 
+
+
 @media (max-width: 700px) {
   .detail-inner { padding: 50px 24px 80px; }
   .row-adaptable { flex-direction: column; }

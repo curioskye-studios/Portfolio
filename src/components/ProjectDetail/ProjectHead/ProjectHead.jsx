@@ -1,7 +1,7 @@
-import './DetailHead.css';
+import './ProjectHead.css';
 import { Link, useParams } from 'react-router-dom';
 
-import { capitalizer } from '../../utils/textFormatter'; 
+import { capitalizer } from '../../../utils/textFormatter'; 
 
 export default function DetailHead( { category, id, project } ) {
   
@@ -63,6 +63,9 @@ export default function DetailHead( { category, id, project } ) {
         </div>   
 
       </div>
+
+      
+      <div className='separator' style={{marginTop: "60px"}} />
 
       {/* Overview */}
       <div className='overview' data-aos="fade-up" data-aos-delay="200">

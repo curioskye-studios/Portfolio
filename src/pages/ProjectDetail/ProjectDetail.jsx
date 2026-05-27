@@ -8,12 +8,11 @@ import { capitalizer } from '../../utils/textFormatter';
 
 import { PROJECT_DETAILS } from '../../data/project-details';
 
-import DetailHead from '../../components/ProjectDetail/DetailHead';
-import DetailBody from '../../components/ProjectDetail/DetailBody';
-import ScrollTopButton from '../../components/ScrollTopButton/ScrollTopButton';
-import ProjectNavigator from '../../components/ProjectDetail/ProjectNavigator/ProjectNavigator';
+import DetailHead from '../../components/ProjectDetail/ProjectHead/ProjectHead';
+import DetailBody from '../../components/ProjectDetail/ProjectBody/ProjectBody';
 
 import { SectionRefsContext } from './SectionRefsContext';
+import ProjectControl from '../../components/ProjectDetail/ProjectControl/ProjectControl';
 
 export default function ProjectDetail() {
   const { category, id } = useParams();
@@ -102,11 +101,9 @@ export default function ProjectDetail() {
 
         <div className='separator-large' />
 
+        <ProjectControl referencedSections={referencedSections} shouldDisplay={isPast}/>
+
         <DetailBody project={project} />  
-
-        <ProjectNavigator referencedSections={referencedSections} shouldDisplay={isPast} />
-
-        <ScrollTopButton shouldDisplay={isPast} />
 
         <div className='separator-large' />
 
