@@ -15,6 +15,9 @@
   transform: translateX(-50%);
 
   width: 100%;
+  height: fit-content;
+
+  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
 .nav-section {  
