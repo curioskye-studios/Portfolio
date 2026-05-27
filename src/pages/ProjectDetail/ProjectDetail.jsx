@@ -54,8 +54,8 @@ export default function ProjectDetail() {
 
   function onScroll() {
     if (!elementRef.current) return;
-    const { top } = elementRef.current.getBoundingClientRect();
-    setIsPast(top < 0);
+    const { bottom } = elementRef.current.getBoundingClientRect();
+    setIsPast(bottom < 0);
   }
 
   function updateBackground(){
@@ -95,18 +95,18 @@ export default function ProjectDetail() {
 
     <div className="project-detail sky-bg">
       <div className="detail-inner">
-
+        
         <div ref={elementRef}>
-          <DetailHead category={category} id={id} project={project}/>
-        </div>
+          <DetailHead category={category} id={id} project={project}/>      
+        </div>        
 
         <div className='separator-large' />
 
+        <DetailBody project={project} />  
+
         <ProjectNavigator referencedSections={referencedSections} shouldDisplay={isPast} />
 
-        <DetailBody project={project} />
-
-        <ScrollTopButton />
+        <ScrollTopButton shouldDisplay={isPast} />
 
         <div className='separator-large' />
 

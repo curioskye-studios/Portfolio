@@ -1,7 +1,7 @@
 import "./ScrollTopButton.css";
 import UpArrow from "../Icons/UpArrow";
 
-export default function ScrollTopButton({  }) {
+export default function ScrollTopButton({ shouldDisplay = true }) {
 
   function handleButtonClick() {
     window.scrollTo(
@@ -13,8 +13,11 @@ export default function ScrollTopButton({  }) {
   }
 
   return (
-    <button className="btn-primary back-to-top" onClick={ handleButtonClick }>
-      Top <UpArrow />
+    <button 
+      className={`btn-primary back-to-top ${shouldDisplay ? "" : "hidden-temp"}`} 
+      onClick={ handleButtonClick }
+    >
+        Top <UpArrow />
     </button>
   );
 }

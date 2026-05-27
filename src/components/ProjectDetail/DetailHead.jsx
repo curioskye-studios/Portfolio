@@ -16,7 +16,7 @@ export default function DetailHead( { category, id, project } ) {
         <span className="green">{capitalizer(id)}</span>
       </nav>
 
-      {/* Header */}
+      {/* Description */}
       <div className="detail-header" data-aos="fade-up" data-aos-delay="100">
         <h1 className="detail-title">{project.title}</h1>
         
@@ -61,8 +61,34 @@ export default function DetailHead( { category, id, project } ) {
             <Link className='green' to={project.link}>{project.link}</Link>
           </div>
         </div>   
+
+      </div>
+
+      {/* Overview */}
+      <div className='overview' data-aos="fade-up" data-aos-delay="200">
+
+        <div>          
+          <div className='green-line' />
+          <div className="detail-description bigger-text">          
+            {project.hero.description}
+          </div>
+          <div className='green-line'/>
+        </div>
+        
+        <div className='separator' />
+  
+        <div className='detail-img-wrap'>
+          {
+            project.hero.img ? ( 
+              <img className='detail-img' src={project.hero.img} />
+            ) : (
+              <div className='detail-img-placeholder' />
+            )
+          }
+        </div>   
         
       </div>
+
     </>
   );
 }

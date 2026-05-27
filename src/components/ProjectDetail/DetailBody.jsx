@@ -4,28 +4,8 @@ import Section from '../../components/ProjectSection/Section'
 export default function DetailBody( { project } ) { 
 
   return (
-    <>
-      {/* Description */}
-      <div data-aos="fade-up" data-aos-delay="200">          
-        <div className='green-line' />
-        <div className="detail-description bigger-text">          
-          {project.hero.description}
-        </div>
-        <div className='green-line'/>
-      </div>
-      
-      <div className='separator' />
-
-      <div className='detail-img-wrap'>
-        {
-          project.hero.img ? ( 
-            <img className='detail-img' src={project.hero.img} />
-          ) : (
-            <div className='detail-img-placeholder' />
-          )
-        }
-      </div>   
-      
+    <>   
+      {/* Sections */}
       <div className='separator' style={{marginTop: "60px"}} />
 
       <div data-aos="fade-up" data-aos-delay="200">          

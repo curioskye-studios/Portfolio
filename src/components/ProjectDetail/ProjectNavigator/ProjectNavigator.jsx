@@ -41,7 +41,7 @@ export default function ProjectNavigator({ referencedSections, shouldDisplay }) 
   
 
   return (
-    <div className={`navigator ${shouldDisplay ? "" : "hidden"}`}>
+    <div className={`navigator ${shouldDisplay ? "" : "hidden-temp"}`}>
 
       Navigate: 
 

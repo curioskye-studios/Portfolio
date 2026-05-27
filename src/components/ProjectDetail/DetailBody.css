@@ -1,28 +1,5 @@
 @import "../../pages/ProjectDetail/ProjectDetail.css";
 
-.detail-description {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: var(--standard-padding-full);
-  text-align: center;  
-
-  border: var(--card-border);
-  background: var(--card-bg);
-  border-radius: var(--card-border-radius);
-  backdrop-filter: var(--card-blur);
-  -webkit-backdrop-filter: var(--card-blur);
-
-  margin: 0 auto;
-  width: 95%;
-}
-
-.detail-description p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.88);
-}
-
 .detail-img-wrap {
   width: 100%;
   border-radius: var(--card-border-radius);
