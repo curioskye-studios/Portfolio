@@ -10,9 +10,9 @@ export default function ImageSection({ data, otherClasses="" }) {
 
       { 
         data.caption ? (
-          <p className="img-caption text-center mt-3" > 
+          <div className="img-caption text-center mt-3" > 
             {data.caption}  
-          </p> 
+          </div> 
         ) : null        
       }
       
