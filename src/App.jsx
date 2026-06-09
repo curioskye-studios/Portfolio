@@ -17,7 +17,9 @@ export default function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:category/:id" element={<ProjectDetail />} />
         <Route path="/about" element={<About />} />
-      </Routes>
+      </Routes>     
+        
+      <h5 className='porfolio-credits'>© curioskye studios 2026</h5>
     </BrowserRouter>
   );
 }

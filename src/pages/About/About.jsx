@@ -5,6 +5,8 @@ import './About.css';
 
 import { Link } from 'react-router-dom';
 
+import TalkIcon from '../../components/Icons/TalkIcon';
+
 export default function About() {
   useEffect(() => {
     document.title = 'About | CurioSkye Studios';
@@ -62,7 +64,9 @@ export default function About() {
             to="https://www.linkedin.com/in/dayna-clare-itux" 
             className="btn-primary">
 
-            Connect With Me
+            Connect With Me!
+
+            <TalkIcon />
           </Link>
         </div>
 

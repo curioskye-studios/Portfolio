@@ -16,6 +16,7 @@ import { SectionRefsContext } from './SectionRefsContext';
 import ProjectControl from '../../components/ProjectDetail/ProjectControl/ProjectControl';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import ArrowButton from '../../components/ArrowButton';
 
 export default function ProjectDetail() {
   const { category, id } = useParams();
@@ -129,14 +130,19 @@ export default function ProjectDetail() {
           data-aos="fade-up" data-aos-delay="200"
           ref={disappearElementRef}>
 
-          <Link to="/portfolio" className="btn-primary back-btn" >
-            ← Back to Portfolio
-          </Link>
+          <ArrowButton 
+            linkPath="/portfolio" className="back-btn" isRight={false}> 
+              Back to Portfolio
+          </ArrowButton>
+
+          {/* <Link to="/portfolio" className="btn-primary  >
+            ←
+          </Link> */}
 
           {project.next && (
             <div className="next-project">
               <h5 className='next-project-text'>Explore Another Project:</h5>
-              
+
               <ProjectCard               
                 key={project.id} 
                 projectData={ALL_PROJECTS[capitalizer(project.next)]} 
@@ -144,9 +150,9 @@ export default function ProjectDetail() {
               />            
             </div>
           )}
-        </div>
+        </div>        
 
-      </div>
+      </div>      
     </div>
       
     </SectionRefsContext.Provider>
