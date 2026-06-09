@@ -21,8 +21,9 @@ export default function ProjectDetail() {
   const { category, id } = useParams();
   const project = PROJECT_DETAILS[id];
 
-  const [isPast, setIsPast] = useState(false);
-  const elementRef = useRef(null); 
+  const [shouldDisplay, setShouldDisplay] = useState(false);
+  const appearElementRef = useRef(null); 
+  const disappearElementRef = useRef(null); 
   const sectionRefs = useRef({});
 
   const referencedSections = 
@@ -55,9 +56,22 @@ export default function ProjectDetail() {
   }
 
   function onScroll() {
-    if (!elementRef.current) return;
-    const { bottom } = elementRef.current.getBoundingClientRect();
-    setIsPast(bottom < 0);
+    if (!appearElementRef.current || !disappearElementRef.current) return;
+
+    const { bottom: appearElBottom } = appearElementRef.current.getBoundingClientRect(); 
+    const { top: disappearElTop } = disappearElementRef.current.getBoundingClientRect();
+
+    const isAppearElVisible = appearElBottom < 0;
+    const isDisappearElVisible = disappearElTop < window.innerHeight && disappearElTop > 0;
+
+    const shouldDisplayVal = isAppearElVisible && !isDisappearElVisible;
+
+    console.log(isAppearElVisible);
+    console.log(!isDisappearElVisible);
+
+    setShouldDisplay(prev => {
+      return prev !== shouldDisplayVal ? shouldDisplayVal : prev;
+    });
   }
 
   function updateBackground(){
@@ -98,19 +112,23 @@ export default function ProjectDetail() {
     <div className="project-detail sky-bg">
       <div className="detail-inner">
         
-        <div ref={elementRef}>
+        <div ref={appearElementRef}>
           <DetailHead category={category} id={id} project={project}/>      
         </div>        
 
         <div className='separator-large' />
 
-        <ProjectControl referencedSections={referencedSections} shouldDisplay={isPast}/>
-
+        <ProjectControl referencedSections={referencedSections} shouldDisplay={shouldDisplay}/>
+        
         <DetailBody project={project} />  
 
         <div className='separator-large' />
 
-        <div className='detail-bottom row-adaptable' data-aos="fade-up" data-aos-delay="200">
+        <div 
+          className='detail-bottom row-adaptable' 
+          data-aos="fade-up" data-aos-delay="200"
+          ref={disappearElementRef}>
+
           <Link to="/portfolio" className="btn-primary back-btn" >
             ← Back to Portfolio
           </Link>
@@ -118,17 +136,13 @@ export default function ProjectDetail() {
           {project.next && (
             <div className="next-project">
               <h5 className='next-project-text'>Explore Another Project:</h5>
+              
               <ProjectCard               
                 key={project.id} 
                 projectData={ALL_PROJECTS[capitalizer(project.next)]} 
                 category={category}                
               />            
             </div>
-            /* <Link 
-              to={`/portfolio/${category}/${project.next}`} 
-              className="btn-primary back-btn">
-              Next Project →
-            </Link> */
           )}
         </div>
 
