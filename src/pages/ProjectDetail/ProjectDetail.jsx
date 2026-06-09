@@ -6,6 +6,7 @@ import './ProjectDetail.css';
 
 import { capitalizer } from '../../utils/textFormatter'; 
 
+import { ALL_PROJECTS } from '../../data/project-overviews';
 import { PROJECT_DETAILS } from '../../data/project-details';
 
 import DetailHead from '../../components/ProjectDetail/ProjectHead/ProjectHead';
@@ -13,6 +14,8 @@ import DetailBody from '../../components/ProjectDetail/ProjectBody/ProjectBody';
 
 import { SectionRefsContext } from './SectionRefsContext';
 import ProjectControl from '../../components/ProjectDetail/ProjectControl/ProjectControl';
+
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 export default function ProjectDetail() {
   const { category, id } = useParams();
@@ -107,17 +110,25 @@ export default function ProjectDetail() {
 
         <div className='separator-large' />
 
-        <div className='detail-bottom' data-aos="fade-up" data-aos-delay="200">
+        <div className='detail-bottom row-adaptable' data-aos="fade-up" data-aos-delay="200">
           <Link to="/portfolio" className="btn-primary back-btn" >
             ← Back to Portfolio
           </Link>
 
           {project.next && (
-            <Link 
+            <div className="next-project">
+              <h5 className='next-project-text'>Explore Another Project:</h5>
+              <ProjectCard               
+                key={project.id} 
+                projectData={ALL_PROJECTS[capitalizer(project.next)]} 
+                category={category}                
+              />            
+            </div>
+            /* <Link 
               to={`/portfolio/${category}/${project.next}`} 
               className="btn-primary back-btn">
               Next Project →
-            </Link>
+            </Link> */
           )}
         </div>
 

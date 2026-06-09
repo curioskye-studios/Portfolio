@@ -37,7 +37,7 @@ export default function Portfolio() {
         projectData={project} 
         category={activeTab}
         cardAOSDelay={100 * (projectCount + 1)} 
-        cardStyle={{ gridColumn: project.column }}                 
+        otherConfigs={{ cardStyle: { gridColumn: project.column } }}
       />
     );
   }

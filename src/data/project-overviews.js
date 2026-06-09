@@ -1,7 +1,7 @@
 import lumoNoteImg from '../assets/ux-projects/lumonote/lumonote-project.png';
 import quickWashImg from '../assets/ux-projects/quickwash/quickwash-project.png';
 
-const allProjects = {    
+export const ALL_PROJECTS = {    
   "Lumonote": 
     {
       id: 'lumonote',
@@ -33,9 +33,9 @@ const allProjects = {
 
 export const PROJECTS = {
   "design": [
-    allProjects["Quickwash"],
-    allProjects["Lumonote"],
-    allProjects["ARGUS"],
+    ALL_PROJECTS["Quickwash"],
+    ALL_PROJECTS["Lumonote"],
+    ALL_PROJECTS["ARGUS"],
   ],
 
   "development": [

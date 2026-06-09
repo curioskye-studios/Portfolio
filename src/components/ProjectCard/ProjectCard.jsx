@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import RightArrow from '../Icons/RightArrow';
 
-export default function ProjectCard({ projectData, category, cardAOSDelay, cardStyle }) {
+export default function ProjectCard({ projectData, category, cardAOSDelay = 100, otherConfigs = {}}) {
 
   /*
     projectData:
@@ -44,13 +44,16 @@ export default function ProjectCard({ projectData, category, cardAOSDelay, cardS
       </div>
     );
 
+  const otherClasses = otherConfigs.cardClasses? otherConfigs.cardClasses : "";
+  const customStyle = otherConfigs.cardStyle? otherConfigs.cardStyle : null;
+
   return (
     <Link
       to={`/portfolio/${category}/${projectData.id}`}
 
       key={projectData.id}
-      className="project-card"
-      style={cardStyle}
+      className={`project-card ${otherClasses}`}
+      style={customStyle}
       ref={cardRef} 
       onMouseEnter={handleMouseEnter}
 

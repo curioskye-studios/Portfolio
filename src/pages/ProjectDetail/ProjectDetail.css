@@ -69,11 +69,29 @@
 .detail-bottom {
   display: flex;
   justify-content: space-between;
+  align-items: start;
+  margin-bottom: 30px;
 }
 
 .back-btn { 
   display: inline-flex; 
+  height: fit-content;
+  width: fit-content;
 }
+
+.next-project {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+}
+
+.next-project-text {
+  margin-bottom: 20px;
+}
+
+
+/* Miscellaneous Styles */
 
 .bigger-text {
   font-size: larger;
@@ -83,9 +101,6 @@
   color: var(--green);
   font-weight: 500;
 }
-
-/* .green {
-} */
 
 .green-line {
   border-top: 3px solid var(--green);
@@ -116,8 +131,18 @@
 }
 
 
+/* Adapting Styles */
 
 @media (max-width: 700px) {
   .detail-inner { padding: 50px 24px 80px; }
-  .row-adaptable { flex-direction: column; }
+  .detail-bottom {
+    align-items: center;
+  }
+  .row-adaptable { 
+    flex-direction: column;
+    gap: 60px;
+  }
+  .next-project {
+    width: 85%;
+  }
 }
