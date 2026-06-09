@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
       </Routes>     
         
-      <h5 className='porfolio-credits'>© curioskye studios 2026</h5>
+      <h5 className='portfolio-credits'>© curioskye studios 2026</h5>
     </BrowserRouter>
   );
 }
