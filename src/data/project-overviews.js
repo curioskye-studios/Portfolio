@@ -1,7 +1,18 @@
 import lumoNoteImg from '../assets/ux-projects/lumonote/lumonote-project.png';
 import quickWashImg from '../assets/ux-projects/quickwash/quickwash-project.png';
 
-export const ALL_PROJECTS = {    
+import { capitalizer } from '../utils/textFormatter';
+
+
+export function getProjectOverview(projectName) {
+
+  const fixedName = capitalizer(projectName);
+
+  return ALL_PROJECTS[fixedName];
+}
+
+
+const ALL_PROJECTS = {    
   "Lumonote": 
     {
       id: 'lumonote',

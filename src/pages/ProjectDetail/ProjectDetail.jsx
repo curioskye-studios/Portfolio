@@ -6,7 +6,7 @@ import './ProjectDetail.css';
 
 import { capitalizer } from '../../utils/textFormatter'; 
 
-import { ALL_PROJECTS } from '../../data/project-overviews';
+import { getProjectOverview } from '../../data/project-overviews';
 import { PROJECT_DETAILS } from '../../data/project-details';
 
 import DetailHead from '../../components/ProjectDetail/ProjectHead/ProjectHead';
@@ -145,7 +145,7 @@ export default function ProjectDetail() {
 
               <ProjectCard               
                 key={project.id} 
-                projectData={ALL_PROJECTS[capitalizer(project.next)]} 
+                projectData={getProjectOverview(project.next)} 
                 category={category}                
               />            
             </div>
