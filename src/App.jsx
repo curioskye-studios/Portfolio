@@ -6,6 +6,7 @@ import ProjectDetail from './pages/ProjectDetail/ProjectDetail';
 import About from './pages/about/About';
 import SocialSection from './components/SocialSection/SocialSection';
 import './index.css'; 
+import CreditSection from './components/CreditSection/CreditSection';
 
 export default function App() {
   return (
@@ -17,9 +18,8 @@ export default function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/portfolio/:category/:id" element={<ProjectDetail />} />
         <Route path="/about" element={<About />} />
-      </Routes>     
-        
-      <h5 className='portfolio-credits'>© curioskye studios 2026</h5>
+      </Routes>             
+      <CreditSection />
     </BrowserRouter>
   );
 }
