@@ -9,12 +9,11 @@ export default function ProjectControl( { referencedSections, shouldDisplay } ) 
     <div 
       className={`detail-control ${shouldDisplay ? "" : "hidden-temp"}`}
       inert={!shouldDisplay ? "" : undefined}
-      >
-      
+    >      
       <ScrollTopButton moreClasses='top-btn' />
-     
+    
       <ProjectNavigator 
-        moreClasses={`nav-section ${shouldDisplay ? "" : "hidden-temp"}`}
+        moreClasses="nav-section"
         referencedSections={referencedSections} 
       />
     </div>
