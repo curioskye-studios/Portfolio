@@ -77,15 +77,11 @@ export default function ProjectDetail() {
 
   function updateBackground(){
     const skyGradient = 
-    ` 
-      linear-gradient(180deg,
-      #4A8FBF 0%, #6BADD4 40%,
-      #82BAD5 65%, #6BADD4 100%)
-    `;
+      `
+        linear-gradient(-225deg, #4A8FBF 0%, #6BADD4 40%, #82BAD5 65%, #6BADD4 100%)
+      `
 
-    document.body.style.backgroundImage = 'none';
-    document.body.style.background = skyGradient;
-    // document.body.style.backgroundImage = "url('/blue-background-image-2.webp)";
+    document.body.style.backgroundImage = skyGradient;
   }
   function resetBackground() {    
     document.body.style.background = '';
