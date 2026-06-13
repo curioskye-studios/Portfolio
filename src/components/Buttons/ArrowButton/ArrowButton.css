@@ -1,0 +1,14 @@
+.arrow-btn {
+  background: var(--green);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 50px;
+  padding: 5px 20px 5px 15px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.arrow-btn:hover {
+  border: 1.5px solid #1a1a1a;
+}

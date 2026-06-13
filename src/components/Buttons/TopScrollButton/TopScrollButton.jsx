@@ -1,7 +1,7 @@
-import "./ScrollTopButton.css";
-import UpArrow from "../Icons/UpArrow";
+import "./TopScrollButton.css";
+import UpArrow from "../../Icons/UpArrow";
 
-export default function ScrollTopButton({ moreClasses="" }) {
+export default function TopScrollButton({ moreClasses="" }) {
 
   function handleButtonClick() {
     window.scrollTo(

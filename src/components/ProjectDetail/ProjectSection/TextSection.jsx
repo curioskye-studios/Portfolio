@@ -1,4 +1,4 @@
-import ToggleButton from "../../ToggleButton/ToggleButton";
+import ToggleButton from "../../Buttons/ToggleButton/ToggleButton";
 import { useState, useRef, useContext } from "react";
 
 import { SectionRefsContext } from '../../../pages/ProjectDetail/SectionRefsContext';

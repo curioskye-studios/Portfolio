@@ -1,6 +1,6 @@
 import './ProjectControl.css';
 
-import ScrollTopButton from '../../../components/ScrollTopButton/ScrollTopButton';
+import ScrollTopButton from '../../../components/Buttons/TopScrollButton/TopScrollButton';
 import ProjectNavigator from '../../../components/ProjectDetail/ProjectNavigator/ProjectNavigator';
 
 export default function ProjectControl( { referencedSections, shouldDisplay } ) {

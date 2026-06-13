@@ -7,7 +7,7 @@ import './Home.css';
 import borderImg from '/logo-img-border.png';
 import logoLarge from '/logo-large.png';
 
-import ArrowButton from '../../components/ArrowButton';
+import ArrowButton from '../../components/Buttons/ArrowButton/ArrowButton';
 
 export default function Home() {
   useEffect(() => {

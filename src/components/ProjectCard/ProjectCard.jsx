@@ -1,7 +1,10 @@
 import './ProjectCard.css'
+
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
+
 import RightArrow from '../Icons/RightArrow';
+import ArrowButton from '../Buttons/ArrowButton/ArrowButton';
 
 export default function ProjectCard({ projectData, category, cardAOSDelay = 100, otherConfigs = {}}) {
 
@@ -67,9 +70,7 @@ export default function ProjectCard({ projectData, category, cardAOSDelay = 100,
         <div className="project-header">
           <span className="project-type-badge">{projectData.type}</span>
 
-          <div className="project-btn">
-            <RightArrow className="rotate-right" />
-          </div>
+          <ArrowButton className="rotate-right" hasText={false} />
         </div>     
 
         <h4 className="project-summary">{projectData.summary}</h4>
