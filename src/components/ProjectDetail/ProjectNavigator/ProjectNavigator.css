@@ -1,10 +1,10 @@
 @import "../../../pages/ProjectDetail/ProjectDetail.css";
 
 :root {  
-  --nav-bg: rgba(24, 24, 24, 0);
+  --nav-bg: rgba(255, 255, 255, 0.011);
   --nav-border: 1.75px solid rgba(255, 255, 255, 0.401);
   --nav-border-radius: 16px;
-  --nav-blur: blur(9px);
+  --nav-blur: blur(3px);
 }
 
 .navigator {    
