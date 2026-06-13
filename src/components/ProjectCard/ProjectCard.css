@@ -1,7 +1,3 @@
-:root {
-  --badge-white: #e5e5e5;
-}
-
 .project-card {
   background: rgba(92, 92, 92, 0.156);
   border: 1.75px solid rgba(255, 255, 255, 0.401);

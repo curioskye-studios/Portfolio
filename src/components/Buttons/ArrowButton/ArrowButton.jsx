@@ -7,7 +7,7 @@ import LeftArrow from '../../Icons/LeftArrow';
 
 export default function ArrowButton(
     {   
-      linkPath = "", 
+      linkPath, 
       hasText = true, 
       isRight = true, 
       shouldSpin = false,
@@ -16,29 +16,38 @@ export default function ArrowButton(
     } 
   ) {
 
+  const content = (
+    <>
+      {
+        !isRight ? 
+        <LeftArrow className={`arrow ${hasText ? "left-arrow" : ""}`} /> 
+        : null
+      }
+
+      {hasText ? children : null}
+
+      {
+        isRight ? 
+        <RightArrow className={`arrow ${hasText ? "right-arrow" : ""} ${shouldSpin ? "rotate-right" : ""}`} /> 
+        : null
+      }
+    </>
+  );
+
   return (
     <div {...props}>
-    
-      <Link to={linkPath} className={`btn-primary arrow-btn ${hasText? "" : "no-text"}`}>
-        {
-          !isRight? 
-          <LeftArrow 
-            className={`arrow ${hasText? "left-arrow" : ""}`}
-          /> 
-          : null
-        }
-
-        {hasText? children : null}
-        
-        {
-          isRight? 
-          <RightArrow 
-            className={`arrow ${hasText? "right-arrow" : ""} ${shouldSpin? "rotate-right" : ""}`} 
-          /> 
-          : null
-        }
-      </Link>
-
+      {linkPath ? 
+        ( 
+          <Link to={linkPath} className={`btn-primary arrow-btn ${hasText ? "" : "no-text"}`}>
+            {content}
+          </Link>
+        )
+        : (
+            <div className={`btn-primary arrow-btn ${hasText ? "" : "no-text"}`}>
+              {content}
+            </div>
+          )
+      }
     </div>
   );
 } 

@@ -32,6 +32,9 @@
 .padded-left {
   padding-left: var(--standard-padding);
 }
+.padded-carousel {
+  padding: 25px 5px 5px 5px;
+}
 
 .column {
   display: flex;

@@ -50,3 +50,8 @@ input:checked ~ .slider {
 .toggle-label {
   font-size: 18px;
 }
+
+.highlight-label {
+  color: var(--green);
+  font-weight: 900;
+}

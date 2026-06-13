@@ -67,8 +67,8 @@ export default function ProjectDetail() {
 
     const shouldDisplayVal = isAppearElVisible && !isDisappearElVisible;
 
-    console.log(isAppearElVisible);
-    console.log(!isDisappearElVisible);
+    // console.log(isAppearElVisible);
+    // console.log(!isDisappearElVisible);
 
     setShouldDisplay(prev => {
       return prev !== shouldDisplayVal ? shouldDisplayVal : prev;

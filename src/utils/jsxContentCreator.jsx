@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
+
 import ImageSection from '../components/ProjectDetail/ProjectSection/ImageSection';
+import Carousel from '../components/Carousel/Carousel';
 
 // Transform Text
 // const emphasize = (text) => <span style={{fontWeight: "bold", color: "var(--blue)"}}> {text} </span>;
@@ -36,6 +38,15 @@ const makeImage = (link, alt = "", caption = "") => (
   />
 );
 
+const makeCarousel = (carouselItems = []) => (
+  <Carousel 
+    carouselItems = {
+      carouselItems
+    } 
+  />
+);
+
+
 // Aliases
 export const Em = emphasize;
 export const B = bolden;
@@ -52,3 +63,4 @@ export const Li = makeListItem;
 export const H = makeHeading;
 
 export const Img = makeImage;
+export const Crsl = makeCarousel;

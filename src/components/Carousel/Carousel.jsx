@@ -31,7 +31,7 @@ export default function Carousel( { carouselItems = [] } ) {
         if (prevItemIndex - 1 >= 0) {
           return prevItemIndex - 1;
         }         
-        else return prevItemIndex;
+        else return itemCount - 1;
       }   
     );
   }
@@ -43,7 +43,7 @@ export default function Carousel( { carouselItems = [] } ) {
         if (prevItemIndex + 1 < itemCount) {
           return prevItemIndex + 1;
         }         
-        else return prevItemIndex;
+        else return 0;
       }
     );
   }
@@ -51,13 +51,22 @@ export default function Carousel( { carouselItems = [] } ) {
   return (
     <div className='carousel-div'>
 
-      <ArrowButton isRight={false} hasText={false} onClick={navigvateLeft}/>
+      <div className='carousel-controls'>        
+
+        <ArrowButton isRight={false} hasText={false} onClick={navigvateLeft}/>
+
+        <div className='progress-tracker'>
+          <span className='highlight-tracker'>{currItemIndex + 1}</span> 
+          {" "} / {itemCount}
+        </div>        
+
+        <ArrowButton hasText={false} onClick={navigvateRight}/>
+
+      </div>    
 
       <div className='carousel-content'>
         {content}
-      </div>
-
-      <ArrowButton hasText={false} onClick={navigvateRight}/>
+      </div>  
 
     </div>
   );

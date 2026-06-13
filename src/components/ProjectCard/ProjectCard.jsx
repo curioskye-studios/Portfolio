@@ -71,7 +71,6 @@ export default function ProjectCard({ projectData, category, cardAOSDelay = 100,
           <span className="project-type-badge">{projectData.type}</span>
 
           <ArrowButton 
-            linkPath={`/portfolio/${category}/${projectData.id}`}
             shouldSpin={true} 
             hasText={false} 
           />

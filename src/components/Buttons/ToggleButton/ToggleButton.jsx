@@ -16,7 +16,10 @@ export default function ToggleButton({ label = "Toggle", isOn, onChange, ...prop
         </span>
       </label>
 			
-      <span className="toggle-label">{label}: {isOn ? "On" : "Off"}</span>
+      <span className="toggle-label">
+        {label}: {" "}
+        <span className="highlight-label">{isOn ? "On" : "Off"}</span>
+      </span>
     </div>
   );
 }
