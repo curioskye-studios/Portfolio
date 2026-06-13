@@ -1,4 +1,5 @@
 import { Em, B, BrS, BrM, BrL, Li, H, A, Img, Crsl } from '../../../utils/jsxContentCreator';
+
 import MainSketchesImg from '../../../assets/ux-projects/lumonote/main-screen-sketches.png';
 import MainScreensImg from '../../../assets/ux-projects/lumonote/lumonote-main-screens.png';
 import EditNoteSketchImg from '../../../assets/ux-projects/lumonote/note-screen-sketch.png';
