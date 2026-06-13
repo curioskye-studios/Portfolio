@@ -3,7 +3,6 @@ export default function RightArrow({ className = '' }) {
   return (
     <svg 
       className={`arrow-right ${className}`}
-      style={{marginTop: "-4px", marginLeft: "6px"}} 
       xmlns="http://www.w3.org/2000/svg" 
       width="17" height="17" 
       viewBox="0 0 24 24">

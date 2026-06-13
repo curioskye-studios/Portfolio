@@ -18,8 +18,6 @@ import ProjectControl from '../../components/ProjectDetail/ProjectControl/Projec
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import ArrowButton from '../../components/Buttons/ArrowButton/ArrowButton';
 
-import Carousel from '../../components/Carousel/Carousel';
-
 export default function ProjectDetail() {
   const { category, id } = useParams();
   const project = PROJECT_DETAILS[id];
@@ -155,8 +153,6 @@ export default function ProjectDetail() {
         </div>        
 
       </div>      
-
-      <Carousel carouselItems={["one", "two", "three"]} />
     </div>
       
     </SectionRefsContext.Provider>

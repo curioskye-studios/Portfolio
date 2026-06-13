@@ -1,4 +1,6 @@
 import './Carousel.css';
+import { useState } from 'react';
+
 import CarouselItem from './CarouselItem';
 
 import ArrowButton from '../Buttons/ArrowButton/ArrowButton';
@@ -17,7 +19,10 @@ export default function Carousel( { carouselItems = [] } ) {
   // text/no-text, arrow directtion (left/right)
   // then customize two instances below
 
-  const content = "jsx code";
+  const [itemCount, setItemCount] = useState(carouselItems.length);
+  const [currItemIndex, setCurrItemIndex] = useState(0);
+
+  let content = carouselItems[currItemIndex];
 
   return (
     <div className='carousel-div'>

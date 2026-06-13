@@ -3,7 +3,7 @@ export default function LeftArrow({ className = '' }) {
   return (
     <svg
       className={`${className}`}
-      style={{ marginTop: "-4px", marginRight: "6px", rotate: "180deg" }}
+      style={{ rotate: "180deg" }}
       xmlns="http://www.w3.org/2000/svg" 
       width="17" height="17" 
       viewBox="0 0 24 24">

@@ -70,7 +70,11 @@ export default function ProjectCard({ projectData, category, cardAOSDelay = 100,
         <div className="project-header">
           <span className="project-type-badge">{projectData.type}</span>
 
-          <ArrowButton className="rotate-right" hasText={false} />
+          <ArrowButton 
+            linkPath={`/portfolio/${category}/${projectData.id}`}
+            shouldSpin={true} 
+            hasText={false} 
+          />
         </div>     
 
         <h4 className="project-summary">{projectData.summary}</h4>
