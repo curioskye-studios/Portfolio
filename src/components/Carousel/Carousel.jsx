@@ -1,8 +1,6 @@
 import './Carousel.css';
 import { useState } from 'react';
 
-import CarouselItem from './CarouselItem';
-
 import ArrowButton from '../Buttons/ArrowButton/ArrowButton';
 
 export default function Carousel( { carouselItems = [] } ) {
@@ -62,11 +60,11 @@ export default function Carousel( { carouselItems = [] } ) {
 
         <ArrowButton hasText={false} onClick={navigvateRight}/>
 
-      </div>    
+      </div>  
 
       <div className='carousel-content'>
         {content}
-      </div>  
+      </div>    
 
     </div>
   );
