@@ -3,6 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 
 import { capitalizer } from '../../../utils/textFormatter'; 
 
+import ImageLightbox from '../../ImageViewer/ImageViewer';
+
 export default function DetailHead( { category, id, project } ) {
   
   return (
@@ -83,7 +85,8 @@ export default function DetailHead( { category, id, project } ) {
         <div className='detail-img-wrap'>
           {
             project.hero.img ? ( 
-              <img className='detail-img' src={project.hero.img} />
+              <ImageLightbox className='detail-img'  src={project.hero.img} />
+              /* <img className='detail-img' src={project.hero.img} /> */
             ) : (
               <div className='detail-img-placeholder' />
             )

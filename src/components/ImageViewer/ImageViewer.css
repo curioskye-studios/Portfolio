@@ -53,9 +53,9 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(10, 20, 26, 0.88);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(25, 26, 26, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@
   overflow: hidden;
 
   /* frosted glass card — same pattern used in Carousel */
-  background: rgba(16, 33, 41, 0.72);      /* --primary-color tinted */
+  background: rgba(40, 41, 41, 0.168);      /* --primary-color tinted */
   border: 1.5px solid rgba(255, 255, 255, 0.13);
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.45),

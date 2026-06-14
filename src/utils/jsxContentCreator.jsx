@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import ImageSection from '../components/ProjectDetail/ProjectSection/ImageSection';
+import { ImageSectionWithViewer } from '../components/ImageViewer/ImageViewer';
 import Carousel from '../components/Carousel/Carousel';
 
 // Transform Text
@@ -26,7 +27,17 @@ const makeHeading = (content) => (
 );
 
 const makeImage = (link, alt = "", caption = "") => (
-  <ImageSection 
+  // <ImageSection 
+  //   data = { 
+  //     { 
+  //       link: link, 
+  //       alt: alt,
+  //       caption: caption
+  //     }
+  //   }
+  //   otherClasses='subcontent-img'
+  // />
+  <ImageSectionWithViewer
     data = { 
       { 
         link: link, 
@@ -35,7 +46,7 @@ const makeImage = (link, alt = "", caption = "") => (
       }
     }
     otherClasses='subcontent-img'
-  />
+  />  
 );
 
 const makeCarousel = (carouselItems = []) => (

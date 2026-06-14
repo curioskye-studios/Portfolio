@@ -1,5 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from 'react';
-import './ImageLightbox.css';
+import { createPortal } from 'react-dom';
+import './ImageViewer.css';
 
 /**
  * ImageLightbox
@@ -13,7 +14,7 @@ import './ImageLightbox.css';
  *   caption    – optional caption shown below the image
  *   className  – extra classes forwarded to the thumbnail wrapper
  */
-export default function ImageLightbox({ src, alt = '', caption, className = '' }) {
+export default function ImageViewer({ src, alt = '', caption, className = '' }) {
   const [open, setOpen]         = useState(false);
   const [scale, setScale]       = useState(1);
   const [offset, setOffset]     = useState({ x: 0, y: 0 });
@@ -133,8 +134,8 @@ export default function ImageLightbox({ src, alt = '', caption, className = '' }
         </div>
       </div>
 
-      {/* ── modal ── */}
-      {open && (
+      {/* ── modal (portalled to document.body to escape any stacking context) ── */}
+      {open && createPortal(
         <div
           className="lb-backdrop"
           onClick={closeModal}
@@ -182,7 +183,8 @@ export default function ImageLightbox({ src, alt = '', caption, className = '' }
             </div>
 
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
@@ -193,13 +195,13 @@ export default function ImageLightbox({ src, alt = '', caption, className = '' }
    Drop-in replacement for ImageSection that adds lightbox support.
    Usage is identical to your existing ImageSection component.
 ──────────────────────────────────────────────────────────────────── */
-export function ImageSectionWithLightbox({ data, otherClasses = '' }) {
+export function ImageSectionWithViewer({ data, otherClasses = '' }) {
   return (
     <>
       <div className="separator-small" />
 
       <div className={`detail-img-wrap ${otherClasses}`}>
-        <ImageLightbox
+        <ImageViewer
           src={data.link}
           alt={data.alt ?? ''}
           caption={data.caption}
