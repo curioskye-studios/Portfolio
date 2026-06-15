@@ -1,19 +1,13 @@
-/* ============================================================
-   ImageLightbox — styled to match the portfolio design system
-   Colors / fonts pulled from src/index.css
-   ============================================================ */
-
-/* ── thumbnail wrapper ─────────────────────────────────────────── */
-.lb-thumb-wrap {
+.thumbnail-wrap {
   position: relative;
-  display: inline-block;      /* or block — use whichever fits your layout */
+  display: block;      
   width: 100%;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 10px;        /* matches existing card radius */
+  border-radius: 10px;       
 }
 
-.lb-thumb {
+.thumbnail {
   display: block;
   width: 100%;
   height: auto;
@@ -21,13 +15,12 @@
 }
 
 /* hover: slight scale-up + dim so the icon pops */
-.lb-thumb-wrap:hover .lb-thumb {
+.thumbnail-wrap:hover .thumbnail {
   transform: scale(1.025);
   filter: brightness(0.72);
 }
 
-/* zoom-icon overlay */
-.lb-thumb-overlay {
+.thumbnail-overlay {
   position: absolute;
   inset: 0;
   display: flex;
@@ -39,193 +32,166 @@
   pointer-events: none;
 }
 
-.lb-thumb-wrap:hover .lb-thumb-overlay {
+.thumbnail-wrap:hover .thumbnail-overlay {
   opacity: 1;
 }
 
-.lb-thumb-overlay svg {
+.thumbnail-overlay svg {
   filter: drop-shadow(0 0 8px rgba(140, 248, 78, 0.6));
 }
 
-
-/* ── backdrop ──────────────────────────────────────────────────── */
-.lb-backdrop {
+.viewer-backdrop {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(25, 26, 26, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(25, 26, 26, 0.484);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: lb-fade-in 0.22s ease forwards;
+  animation: viewer-fade-in 0.22s ease forwards;
 }
 
-@keyframes lb-fade-in {
+@keyframes viewer-fade-in {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
 
-
-/* ── modal panel ───────────────────────────────────────────────── */
-.lb-modal {
+.viewer-modal { 
   position: relative;
   display: flex;
   flex-direction: column;
   width: min(92vw, 1100px);
-  max-height: 90vh;
+  height: 90vh; 
+
   border-radius: 14px;
   overflow: hidden;
-
-  /* frosted glass card — same pattern used in Carousel */
-  background: rgba(40, 41, 41, 0.168);      /* --primary-color tinted */
-  border: 1.5px solid rgba(255, 255, 255, 0.13);
+  border: 1.3px solid rgba(210, 212, 212, 0.243);
+	
+  background: rgba(201, 202, 207, 0.254);
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(140, 248, 78, 0.08);    /* faint green glow */
 
-  animation: lb-slide-up 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: viewer-slide-up 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
-@keyframes lb-slide-up {
+@keyframes viewer-slide-up {
   from { transform: translateY(28px); opacity: 0; }
   to   { transform: translateY(0);    opacity: 1; }
 }
 
-
-/* ── header bar ────────────────────────────────────────────────── */
-.lb-header {
+.viewer-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+	justify-content: right;
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  gap: 12px;
+	width: 100%;
   flex-shrink: 0;
 }
 
-.lb-caption {
+.viewer-caption-wrap { 	
+  display: flex;
+  align-items: center;
+	justify-content: center;
+
+	padding: 1.5px;
+}
+
+.viewer-caption { 
   font-family: "Space Grotesk", serif;
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+	font-weight: 400;
+	text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.88);
+
   letter-spacing: 0.01em;
-  flex: 1;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.367);
 }
 
-.lb-close {
-  flex-shrink: 0;
+.viewer-close-icon {
+  width: 17px;
+  height: 17px;
+}
+.viewer-close {
+  padding: 1px;
+}
+
+.viewer-img-main {
+  flex: 1;
   display: flex;
+	overflow: hidden;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
-}
 
-.lb-close:hover {
-  background: rgba(140, 248, 78, 0.15);
-  border-color: #8cf84e;
-  color: #8cf84e;
-}
-
-
-/* ── image stage ───────────────────────────────────────────────── */
-.lb-stage {
-  flex: 1;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-height: 200px;
-  max-height: calc(90vh - 110px);  /* header + controls */
-  user-select: none;
+	height: 100%;
+
+  background: rgba(38, 38, 39, 0.353);
+	
+  border: 1.3px solid rgba(210, 212, 212, 0.379);
+	border-right: none;
+	border-left: none;
+
+	/* padding: 1.5px 0; */
+
+	user-select: none;
+  border-radius: 10px;
 }
 
-.lb-image {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+.viewer-img {
+  width: 100%;      /* ✓ Fill the container width */
+  height: 100%;     /* ✓ Fill the container height */
+  
+  object-fit: contain;  /* ← This keeps the aspect ratio intact */
   will-change: transform;
-  border-radius: 4px;
-  pointer-events: none;   /* let the stage handle all pointer events */
-}
-
-
-/* ── zoom controls ─────────────────────────────────────────────── */
-.lb-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  flex-shrink: 0;
-}
-
-.lb-ctrl-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 36px;
-  height: 36px;
-  padding: 0 10px;
-  border-radius: 50px;
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.05);
-  color: #ffffff;
-  cursor: pointer;
-  font-family: "Space Grotesk", serif;
-  font-weight: 700;
-  font-size: 0.85rem;
-  transition: background 0.2s, border-color 0.2s, color 0.2s;
-}
-
-.lb-ctrl-btn:hover {
-  background: rgba(140, 248, 78, 0.15);
-  border-color: #8cf84e;
-  color: #8cf84e;
-}
-
-/* the % readout in the middle — slightly wider */
-.lb-zoom-label {
-  min-width: 58px;
-  letter-spacing: 0.02em;
-}
-
-
-/* ── scroll hint (shown briefly at 1×) ────────────────────────── */
-.lb-hint {
-  position: absolute;
-  bottom: 58px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Space Grotesk", serif;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
   pointer-events: none;
-  white-space: nowrap;
+  border-radius: 5px;
 }
 
+.viewer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	
+  border-top: 1px solid rgba(210, 212, 212, 0.379);
+	
+  gap: 10px;
+  padding: 16px 16px;
+	bottom: 0;
 
-/* ── mobile tweaks ─────────────────────────────────────────────── */
-@media (max-width: 600px) {
-  .lb-modal {
-    width: 100vw;
-    max-height: 100svh;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-  }
+	width: 100%;
+}
 
-  .lb-stage {
-    max-height: calc(100svh - 110px);
-  }
+.zoom-tracker {
+  border: 2px solid var(--badge-white);
+  background: rgba(11, 11, 11, 0.059);
+  border-radius: 50px;
+  padding: 2px 20px;
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--badge-white);
+  width: fit-content;
+	opacity: 0.75;
+}
+
+.viewer-btn {
+  background: var(--green);
+  color: #1a1a1a;
+  border: 1.5px solid var(--green);
+  border-radius: 50%;
+
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+
+  padding: 1px 9px 4px 9px;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewer-btn:hover {
+  border: 1.5px solid #1a1a1a;
 }

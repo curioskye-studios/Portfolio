@@ -1,6 +1,5 @@
 import TextSection from "./TextSection";
-import ImageSection from "./ImageSection";
-import { ImageSectionWithViewer } from "../../ImageViewer/ImageViewer";
+import ImageSectionWithViewer from "./ImageSection";
 
 export default function Section({ data }) {
   
@@ -8,7 +7,6 @@ export default function Section({ data }) {
     case 'text':       
       return <TextSection data={data} />;
     case 'image':      
-      // return <ImageSection data={data} />;
       return <ImageSectionWithViewer data={data} />
     default:           
       return null;
