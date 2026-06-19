@@ -59,8 +59,9 @@ export default function ImageViewer({ imgPath, alt = '', caption, className = ''
           onMouseMove={viewerHook.handleMouseMove}
           onMouseUp={viewerHook.handleMouseUnpressed}
           onMouseLeave={viewerHook.handleMouseUnpressed}
-          // onTouchStart={viewerHook.onTouchStart}
-          // onTouchEnd={viewerHook.onTouchEnd}
+          onTouchStart={viewerHook.handleTouchStart}
+          onTouchMove={viewerHook.handleTouchMove}
+          onTouchEnd={viewerHook.handleTouchEnd}
         >
           <img 
             className="viewer-img"

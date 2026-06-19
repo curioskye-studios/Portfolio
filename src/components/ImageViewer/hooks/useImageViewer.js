@@ -1,17 +1,21 @@
 import { useState, useRef, useEffect } from 'react';
 
 import useZoom from './useZoom';
+import usePan from './usePan';
 import useClickPan from './useClickPan';
+import useTouchPan from './useTouchPan';
 
 export default function useImageViewer() {
 
   const zoomHook = useZoom();
-  const clickPanHook = useClickPan();
+
+  const panHook = usePan();
+  const clickPanHook = useClickPan(panHook);
+  const touchPanHook = useTouchPan(panHook);
 
   const [isOpen, setIsOpen] = useState(false); 
 
   const imgRef = useRef(null);
-
 
   useEffect(() => {
     const imgElement = imgRef.current;
@@ -24,22 +28,28 @@ export default function useImageViewer() {
       'wheel', zoomHook.disableMouseScroll, { passive: false }
     );
 
+    imgElement.addEventListener(
+      'touchmove', touchPanHook.handleTouchMove, { passive: false }
+    );
+
     return () => {
       imgElement.removeEventListener('wheel', zoomHook.handleMouseScroll);
       document.body.removeEventListener('wheel', zoomHook.disableMouseScroll);
+
+      imgElement.removeEventListener('touchmove', touchPanHook.handleTouchMove);
     }
-  }, [isOpen, zoomHook.handleMouseScroll]);
+  }, [isOpen, zoomHook.handleMouseScroll, touchPanHook.handleTouchMove]);
 
   useEffect(() => {
 
-    if (zoomHook.currScale === 1) clickPanHook.resetImgPosition();
+    if (zoomHook.currScale === 1) panHook.resetImgPosition();
 
   }, [zoomHook.currScale]);
 
 
   function openModal() {
     setIsOpen(true);
-    clickPanHook.resetImgPosition();
+    panHook.resetImgPosition();
     zoomHook.resetImgScale();
   };
 
@@ -71,17 +81,26 @@ export default function useImageViewer() {
     disableMouseScroll: zoomHook.disableMouseScroll,
   }
 
+  const panHookObj = {
+    currImgPosition: panHook.currImgPosition,
+    setCurrImgPosition: panHook.setCurrImgPosition,
+
+    isDragging: panHook.isDragging,
+    setIsDragging: panHook.setIsDragging,
+
+    resetImgPosition: panHook.resetImgPosition
+  }
+
   const clickPanHookObj = {    
-    currImgPosition: clickPanHook.currImgPosition,
-    setCurrImgPosition: clickPanHook.setCurrImgPosition,
-
-    isDragging: clickPanHook.isDragging,
-    setIsDragging: clickPanHook.setIsDragging,
-
     handleMousePressed: clickPanHook.handleMousePressed,
     handleMouseMove: clickPanHook.handleMouseMove,
-    handleMouseUnpressed: clickPanHook.handleMouseUnpressed,
-    resetImgPosition: clickPanHook.resetImgPosition    
+    handleMouseUnpressed: clickPanHook.handleMouseUnpressed
+  }
+
+  const touchPanHookObj = {
+    handleTouchStart: touchPanHook.handleTouchStart,
+    handleTouchMove: touchPanHook.handleTouchMove,
+    handleTouchEnd: touchPanHook.handleTouchEnd
   }
 
 
@@ -99,6 +118,8 @@ export default function useImageViewer() {
     
     ...zoomHookObj,
 
-    ...clickPanHookObj
+    ...panHookObj,
+    ...clickPanHookObj,
+    ...touchPanHookObj
   };
 }
