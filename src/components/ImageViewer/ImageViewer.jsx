@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import './ImageViewer.css';
 
@@ -15,23 +14,6 @@ export default function ImageViewer({ imgPath, alt = '', caption, className = ''
 
   const viewerHook = useImageViewer();
   useKeyboard(viewerHook.isOpen, viewerHook.closeModal);
-
-  useEffect(() => {
-    const imgElement = viewerHook.imgRef.current;
-    if (!imgElement) return;
-
-    imgElement.addEventListener(
-      'wheel', viewerHook.handleMouseScroll, { passive: false }
-    );
-    document.body.addEventListener(
-      'wheel', viewerHook.disableMouseScroll, { passive: false }
-    );
-
-    return () => {
-      imgElement.removeEventListener('wheel', viewerHook.handleMouseScroll);
-      document.body.removeEventListener('wheel', viewerHook.disableMouseScroll);
-    }
-  }, [viewerHook.isOpen, viewerHook.handleMouseScroll]);
 
   const scaleDisplayValue = Math.round(viewerHook.currScale * 100);  
 

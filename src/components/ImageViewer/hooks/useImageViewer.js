@@ -12,12 +12,30 @@ export default function useImageViewer() {
 
   const imgRef = useRef(null);
 
+
+  useEffect(() => {
+    const imgElement = imgRef.current;
+    if (!imgElement) return;
+
+    imgElement.addEventListener(
+      'wheel', zoomHook.handleMouseScroll, { passive: false }
+    );
+    document.body.addEventListener(
+      'wheel', zoomHook.disableMouseScroll, { passive: false }
+    );
+
+    return () => {
+      imgElement.removeEventListener('wheel', zoomHook.handleMouseScroll);
+      document.body.removeEventListener('wheel', zoomHook.disableMouseScroll);
+    }
+  }, [isOpen, zoomHook.handleMouseScroll]);
+
   useEffect(() => {
 
     if (zoomHook.currScale === 1) clickPanHook.resetImgPosition();
 
   }, [zoomHook.currScale]);
-  
+
 
   function openModal() {
     setIsOpen(true);
