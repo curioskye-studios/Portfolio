@@ -10,7 +10,11 @@
 .thumbnail {
   display: block;
   width: 100%;
+  
+  object-fit: cover;  /* ← This keeps the aspect ratio intact */
   height: auto;
+  
+  max-height: 450px;
   transition: transform 0.35s ease, filter 0.35s ease;
 }
 
@@ -44,7 +48,7 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(115, 196, 237, 0.844);
+  background: rgba(115, 196, 237, 0.878);
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   display: flex;
@@ -129,8 +133,8 @@
 }
 
 .viewer-close-icon {
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
 }
 .viewer-close {
   padding: 1px;
@@ -165,8 +169,6 @@
   object-fit: contain;  /* ← This keeps the aspect ratio intact */
   will-change: transform;
   pointer-events: none;
-  /* border-radius: 5px; */
-  /* border-radius: 50px; */
 }
 
 .viewer-controls {
