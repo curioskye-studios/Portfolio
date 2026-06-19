@@ -31,22 +31,12 @@ const ALL_PROJECTS = {
       imgPlaceholder: { bg: '#ffffff', label: 'QuickWash' },
       columnNum: 1
     },
-  "ARGUS": 
-    {
-      id: 'argus',
-      type: 'Website / Web Application',
-      summary: 'A Person of Interest Identifier.',
-      img: "",
-      imgPlaceholder: { bg: '#c9c9c9', label: 'ARGUS' },
-      columnNum: 1
-    },
 }
 
 export const PROJECTS = {
   "design": [
     ALL_PROJECTS["Quickwash"],
     ALL_PROJECTS["Lumonote"],
-    ALL_PROJECTS["ARGUS"],
   ],
 
   "development": [

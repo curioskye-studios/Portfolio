@@ -220,3 +220,13 @@
 .viewer-btn:hover {
   border: 1.5px solid #1a1a1a;
 }
+
+/* Adapting Styles */
+
+@media (max-width: 700px) {
+  .viewer-modal { 
+    width: 90vw;
+    min-height: 80vh;
+    max-height: 90vh;
+  }
+}

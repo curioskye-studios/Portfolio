@@ -65,7 +65,7 @@ export default function useImageViewer() {
 
   function resetImage(event) {
     zoomHook.handleZoomReset(event);
-    clickPanHook.resetImgPosition()
+    panHook.resetImgPosition()
   }
 
 
