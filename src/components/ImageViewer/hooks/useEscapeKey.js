@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export function useKeyboard(isOpen, onEscape) {
+export default function useEscapeKey(isOpen, onEscape) {
   useEffect(() => {
     if (!isOpen) return;
 

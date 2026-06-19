@@ -8,12 +8,12 @@ import PlusIcon from '../Icons/PlusIcon';
 import ZoomIcon from '../Icons/ZoomIcon';
 
 import useImageViewer from './hooks/useImageViewer';
-import { useKeyboard } from './hooks/useKeyboard';
+import useEscapeKey from './hooks/useEscapeKey';
 
 export default function ImageViewer({ imgPath, alt = '', caption, className = '' }) {
 
   const viewerHook = useImageViewer();
-  useKeyboard(viewerHook.isOpen, viewerHook.closeModal);
+  useEscapeKey(viewerHook.isOpen, viewerHook.closeModal);
 
   const scaleDisplayValue = Math.round(viewerHook.currScale * 100);  
 
