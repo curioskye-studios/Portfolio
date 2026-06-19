@@ -16,6 +16,7 @@ export default function useImageViewer() {
   const [isOpen, setIsOpen] = useState(false); 
 
   const imgRef = useRef(null);
+  
 
   useEffect(() => {
     const imgElement = imgRef.current;
@@ -68,42 +69,6 @@ export default function useImageViewer() {
   }
 
 
-  const zoomHookObj = {    
-    currScale: zoomHook.currScale,
-    setCurrScale: zoomHook.setCurrScale,
-
-    handleZoomIn: zoomHook.handleZoomIn,
-    handleZoomOut: zoomHook.handleZoomOut,
-    handleZoomReset: zoomHook.handleZoomReset,
-
-    resetImgScale: zoomHook.resetImgScale,
-    handleMouseScroll: zoomHook.handleMouseScroll,
-    disableMouseScroll: zoomHook.disableMouseScroll,
-  }
-
-  const panHookObj = {
-    currImgPosition: panHook.currImgPosition,
-    setCurrImgPosition: panHook.setCurrImgPosition,
-
-    isDragging: panHook.isDragging,
-    setIsDragging: panHook.setIsDragging,
-
-    resetImgPosition: panHook.resetImgPosition
-  }
-
-  const clickPanHookObj = {    
-    handleMousePressed: clickPanHook.handleMousePressed,
-    handleMouseMove: clickPanHook.handleMouseMove,
-    handleMouseUnpressed: clickPanHook.handleMouseUnpressed
-  }
-
-  const touchPanHookObj = {
-    handleTouchStart: touchPanHook.handleTouchStart,
-    handleTouchMove: touchPanHook.handleTouchMove,
-    handleTouchEnd: touchPanHook.handleTouchEnd
-  }
-
-
   return {
     isOpen, // same thing as isOpen: isOpen,
     setIsOpen,
@@ -116,10 +81,10 @@ export default function useImageViewer() {
 
     resetImage,
     
-    ...zoomHookObj,
+    ...zoomHook,
 
-    ...panHookObj,
-    ...clickPanHookObj,
-    ...touchPanHookObj
+    ...panHook,
+    ...clickPanHook,
+    ...touchPanHook
   };
 }
