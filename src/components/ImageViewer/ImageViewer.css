@@ -44,7 +44,7 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(25, 26, 26, 0.484);
+  background: rgba(115, 196, 237, 0.844);
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   display: flex;
@@ -62,17 +62,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: min(92vw, 900px);
-  height: 90vh; 
+  width: min(92vw, 75vw);
+  height: 90vh;
 
   border-radius: 14px;
   overflow: hidden;
-  border: 1.3px solid rgba(210, 212, 212, 0.243);
+  border: 1.3px solid rgba(255, 255, 255, 0.521);
 	
-  background: rgba(201, 202, 207, 0.254);
-  box-shadow:
-    0 24px 60px rgba(0, 0, 0, 0.45),
-    0 0 0 1px rgba(140, 248, 78, 0.08);    /* faint green glow */
+  background: rgba(47, 73, 73, 0.261);
+  
+  box-shadow: 
+    rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, 
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, 
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
   animation: viewer-slide-up 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
@@ -85,7 +87,7 @@
 .viewer-header {
   display: flex;
   align-items: center;
-	justify-content: right;
+	justify-content: space-between;
   padding: 12px 16px;
 	width: 100%;
   flex-shrink: 0;
@@ -95,6 +97,7 @@
   display: flex;
   align-items: center;
 	justify-content: center;
+  flex-direction: column;
 
 	padding: 1.5px;
 }
@@ -102,13 +105,27 @@
 .viewer-caption { 
   font-family: "Space Grotesk", serif;
 
-  font-size: 12px;
+  padding-left: 18px;
+  padding-top: 5px;
+
+  font-size: 14.5px;
 	font-weight: 400;
 	text-transform: capitalize;
   color: rgba(255, 255, 255, 0.88);
 
   letter-spacing: 0.01em;
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.367);
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.164);
+  /* background: red; */
+}
+
+.viewer-info { 
+  font-family: "Space Grotesk", serif;
+
+  font-size: 12px;
+	font-weight: 400;
+  color: rgba(255, 255, 255, 0.749);
+  
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.164);
 }
 
 .viewer-close-icon {
@@ -129,16 +146,16 @@
   min-height: 200px;
 	height: 100%;
 
-  background: rgba(38, 38, 39, 0.353);
+  background: rgba(48, 52, 53, 0);
 	
-  border: 1.3px solid rgba(210, 212, 212, 0.379);
+  border: 1.5px solid rgba(210, 212, 212, 0.531);
 	border-right: none;
 	border-left: none;
 
-	/* padding: 1.5px 0; */
+	padding: 1.5px 0;
 
 	user-select: none;
-  border-radius: 10px;
+  /* border-radius: 8px; */
 }
 
 .viewer-img {
@@ -148,7 +165,8 @@
   object-fit: contain;  /* ← This keeps the aspect ratio intact */
   will-change: transform;
   pointer-events: none;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+  /* border-radius: 50px; */
 }
 
 .viewer-controls {
@@ -156,13 +174,18 @@
   align-items: center;
   justify-content: center;
 	
-  border-top: 1px solid rgba(210, 212, 212, 0.379);
+  /* border-top: 1px solid rgba(210, 212, 212, 0.379); */
 	
-  gap: 10px;
-  padding: 16px 16px;
+  gap: 20px;
+  padding: 10px 16px 16px 16px;
 	bottom: 0;
 
 	width: 100%;
+}
+
+.viewer-controls svg {
+  width: 15px;
+  height: 15px;
 }
 
 .zoom-tracker {
