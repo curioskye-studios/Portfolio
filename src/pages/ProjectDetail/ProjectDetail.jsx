@@ -5,6 +5,7 @@ import 'aos/dist/aos.css';
 import './ProjectDetail.css';
 
 import { capitalizer } from '../../utils/textFormatter'; 
+import { updateBackgroundGradient, resetBackgroundGradient } from '../../utils/backgroundEditor.jsx';
 
 import { getProjectOverview } from '../../data/project-overviews';
 import { PROJECT_DETAILS } from '../../data/project-details';
@@ -35,16 +36,12 @@ export default function ProjectDetail() {
   useEffect(() => {
     pageSetup();
 
-    if (!project) {
-      document.body.style.backgroundImage = 'none';
-    } else {
-      updateBackground();
-    }
+    updateBackgroundGradient(true);
     
     window.addEventListener("scroll", onScroll);
 
     return () => {
-      resetBackground();
+      resetBackgroundGradient();
       window.removeEventListener("scroll", onScroll);
     };
   }, [id]);
@@ -72,18 +69,7 @@ export default function ProjectDetail() {
     });
   }
 
-  function updateBackground(){
-    const skyGradient = 
-      `
-        linear-gradient(-225deg, #4A8FBF 0%, #6BADD4 40%, #82BAD5 65%, #6BADD4 100%)
-      `
-
-    document.body.style.backgroundImage = skyGradient;
-  }
-  function resetBackground() {    
-    document.body.style.background = '';
-    document.body.style.backgroundImage = "url('/blue-background-image.webp')";
-  }
+  
 
   if (!project) {
     return (

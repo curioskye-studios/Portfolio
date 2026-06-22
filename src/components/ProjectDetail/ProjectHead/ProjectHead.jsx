@@ -60,7 +60,7 @@ export default function DetailHead( { category, id, project } ) {
 
           <div className="detail-text-wrap">
             <div className='detail-text-title'>Link: </div>
-            <Link className='green' to={project.link}>{project.link}</Link>
+            <Link className='green detail-link' to={project.link}>{project.link}</Link>
           </div>
         </div>   
 

@@ -1,5 +1,6 @@
 import "./TopScrollButton.css";
 import UpArrow from "../../Icons/UpArrow";
+import IconButton from "../IconButton/IconButton";
 
 export default function TopScrollButton({ moreClasses="" }) {
 
@@ -13,11 +14,10 @@ export default function TopScrollButton({ moreClasses="" }) {
   }
 
   return (
-    <button 
-      className={`btn-primary back-to-top ${moreClasses}`} 
+    <IconButton   
+      svgIconComponent={<UpArrow className="up-icon"/>} 
+      className={`btn-primary top-btn ${moreClasses}`} 
       onClick={ handleButtonClick }
-    >
-        Top <UpArrow />
-    </button>
+    />
   );
 }

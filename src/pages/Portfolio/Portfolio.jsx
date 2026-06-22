@@ -7,6 +7,8 @@ import './Portfolio.css';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { PROJECTS } from '../../data/project-overviews';
 
+import { updateBackgroundImage, resetBackgroundImage } from '../../utils/backgroundEditor.jsx';
+
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('design');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 700);
@@ -14,12 +16,20 @@ export default function Portfolio() {
   useEffect(() => {
     document.title = 'Portfolio | CurioSkye Studios';
     AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });
+    
+    window.scrollTo(0, 0);
 
     window.addEventListener('resize', 
       () => handleWindowResize(window.innerWidth)
     );
-    // function clean up
-    return () => window.removeEventListener('resize', handleWindowResize);
+
+    updateBackgroundImage();
+
+    return () => {      
+      resetBackgroundImage();
+      
+      window.removeEventListener('resize', handleWindowResize);
+    }
   }, []);
 
   function handleTabClick(newTab) {

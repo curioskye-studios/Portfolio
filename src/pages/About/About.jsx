@@ -7,10 +7,18 @@ import { Link } from 'react-router-dom';
 
 import TalkIcon from '../../components/Icons/TalkIcon';
 
+import { resetBackgroundImage, updateBackgroundImage } from '../../utils/backgroundEditor.jsx';
+
 export default function About() {
   useEffect(() => {
     document.title = 'About | CurioSkye Studios';
     AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
+    
+    updateBackgroundImage();
+
+    return () => {      
+      resetBackgroundImage(); 
+    }    
   }, []);
 
   return (

@@ -9,10 +9,18 @@ import logoLarge from '/logo-large.png';
 
 import ArrowButton from '../../components/Buttons/ArrowButton/ArrowButton';
 
+import { updateBackgroundImage, resetBackgroundImage } from '../../utils/backgroundEditor.jsx';
+
 export default function Home() {
   useEffect(() => {
     document.title = 'CurioSkye Studios';
     AOS.init({ duration: 800, once: true, easing: 'ease-out-cubic' });
+
+    updateBackgroundImage();
+
+    return () => {      
+      resetBackgroundImage(); 
+    }
   }, []);
 
   return (
