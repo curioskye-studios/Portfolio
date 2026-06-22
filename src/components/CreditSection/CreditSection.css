@@ -4,3 +4,11 @@
   opacity: 0.6;
   font-size: 18px;
 }
+
+/* Adapting Styles */
+
+@media (max-width: 700px) {
+  .portfolio-credits {
+    font-size: 15px;
+  }
+}

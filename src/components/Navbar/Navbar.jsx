@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import logoImg from '/logo-small-variant.png'; 
-// import './Navbar.css'
+import './Navbar.css'
 import SocialSection from '../SocialSection/SocialSection';
 
 export default function Navbar() {
@@ -11,12 +11,16 @@ export default function Navbar() {
         
         <div className="container-fluid padding-side">
 
-          <NavLink to="/" className="nav-logo">
-            <img id="logo-small" src={logoImg} alt="logo"/>
+          {/* Logo — left side */}
+          <NavLink to="/" className="navbar-brand nav-logo">
+            <div className='logo-container'>              
+              <img id="logo-small" src={logoImg} alt="logo"/>
+            </div>
           </NavLink>
 
+          {/* Toggler — right side on mobile */}
           <button 
-            className="navbar-toggler shadow-none" 
+            className="navbar-toggler shadow-none ms-auto" 
             type="button" 
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasNavbar" 
@@ -24,6 +28,7 @@ export default function Navbar() {
               <span className="navbar-toggler-icon"></span>
           </button>
 
+          {/* Offcanvas panel */}
           <div 
             className="offcanvas offcanvas-end" 
             tabIndex="-1" 

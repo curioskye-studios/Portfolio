@@ -8,6 +8,11 @@
   --standard-padding-full: 40px 40px;
   --standard-padding-sides: 0 40px;
   --standard-padding-tpbtm: 40px 0;
+
+  --mb-standard-padding: 25px;
+  --mb-standard-padding-full: 25px 25px;
+  --mb-standard-padding-sides: 0 25px;
+  --mb-standard-padding-tpbtm: 25px 0;
 }
 
 
@@ -137,7 +142,31 @@
 /* Adapting Styles */
 
 @media (max-width: 700px) {
-  .detail-inner { padding: 50px 24px 80px; }
+  .padded-sides {
+    padding: var(--mb-standard-padding-sides);
+  }
+  .padded-fully {
+    padding: var(--mb-standard-padding-full);
+  }
+  .padded-top-btm {
+    padding: var(--mb-standard-padding-tpbtm);
+  }
+  .padded-top {
+    padding-top: var(--mb-standard-padding);
+  }
+  .padded-right {
+    padding-right: var(--mb-standard-padding);
+  }
+  .padded-bottom {
+    padding-bottom: var(--mb-standard-padding);
+  }
+  .padded-left {
+    padding-left: var(--mb-standard-padding);
+  }
+
+  .detail-inner { 
+    padding: 50px 12px 80px 12px; 
+  }
   .detail-bottom {
     align-items: center;
   }

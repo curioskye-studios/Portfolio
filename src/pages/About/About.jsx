@@ -59,8 +59,8 @@ export default function About() {
 
         <div className='pt-4'>    
           <Link 
-            data-aos="fade-left"
-            data-aos-delay="300"
+            data-aos="fade-up"
+            data-aos-delay="250"
             to="https://www.linkedin.com/in/dayna-clare-itux" 
             className="btn-primary">
 

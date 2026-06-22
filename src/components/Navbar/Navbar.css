@@ -1,28 +1,18 @@
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  list-style: none;
+#logo-small {
+  object-fit: contain;  /* scales down proportionally, no cropping */
+}
+.btn-close {
+  filter: invert(1);
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: var(--white);
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.2s;
-  position: relative;
-  padding-bottom: 4px;
-}
 
-.nav-links a.active { color: var(--green); }
-.nav-links a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -3px; left: 0; right: 0;
-  height: 2px;
-  background: var(--green);
-  border-radius: 2px;
+/* Adapting Styles */
+
+@media (max-width: 700px) { 
+  .logo-container {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 15px;
+    /* background: red; */
+  }
 }
-.nav-links a:hover { color: var(--green); }
