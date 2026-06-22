@@ -63,12 +63,9 @@ export default function ProjectDetail() {
     const { top: disappearElTop } = disappearElementRef.current.getBoundingClientRect();
 
     const isAppearElVisible = appearElBottom < 0;
-    const isDisappearElVisible = disappearElTop < window.innerHeight && disappearElTop > 0;
+    const isDisappearElVisible = disappearElTop < window.innerHeight; 
 
     const shouldDisplayVal = isAppearElVisible && !isDisappearElVisible;
-
-    // console.log(isAppearElVisible);
-    // console.log(!isDisappearElVisible);
 
     setShouldDisplay(prev => {
       return prev !== shouldDisplayVal ? shouldDisplayVal : prev;
@@ -130,10 +127,6 @@ export default function ProjectDetail() {
             linkPath="/portfolio" className="back-btn" isRight={false}> 
               Back to Portfolio
           </ArrowButton>
-
-          {/* <Link to="/portfolio" className="btn-primary  >
-            ←
-          </Link> */}
 
           {project.next && (
             <div className="next-project">
