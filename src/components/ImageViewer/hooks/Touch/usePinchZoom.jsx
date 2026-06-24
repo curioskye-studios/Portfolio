@@ -71,7 +71,7 @@ export default function usePinchZoom(zoomHook, panHook) {
     //Ratio < 1 → fingers pinched closer → zoom out
     const pinchRatio = currentDistance / pinchStartDistance.current;
 
-    const sensitivity = 0.1; // 1 for full sensitivity
+    const sensitivity = 0.8; // 1 for full sensitivity
     const sensitiveRatio = 1 + (pinchRatio - 1) * sensitivity;
 
     const newScale = pinchStartScale.current * sensitiveRatio;
