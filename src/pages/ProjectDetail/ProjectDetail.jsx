@@ -105,7 +105,7 @@ export default function ProjectDetail() {
         <div className='separator-large' />
 
         <div 
-          className='detail-bottom row-adaptable' 
+          className='detail-bottom row-adaptable row-adaptable-gap' 
           data-aos="fade-up" data-aos-delay="200"
           ref={disappearElementRef}>
 

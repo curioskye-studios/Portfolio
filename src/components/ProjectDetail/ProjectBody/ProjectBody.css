@@ -1,31 +1,5 @@
 @import "../../../pages/ProjectDetail/ProjectDetail.css";
 
-.detail-img-wrap {
-  width: 100%;
-  border-radius: var(--card-border-radius);
-  overflow: hidden;
-  border: var(--card-border);
-}
-
-.subcontent-img {
-  width: 92%;
-  margin: 0 auto;
-}
-
-.detail-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.detail-img-placeholder {
-  width: 100%;
-  height: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
 .detail-content {
   display: flex;

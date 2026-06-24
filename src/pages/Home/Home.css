@@ -15,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 87%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 60px 64px;
@@ -79,7 +79,7 @@
 .dashed-ring {
   animation: spin-ring 50s linear infinite;
   transform-origin: center; 
-  width: 30vw;
+  width: 410px;
   height: auto;
   justify-self: center;
   align-self: center;
@@ -92,7 +92,7 @@
 }
 
 .cloud-logo {
-  width: 25vw;
+  width: 360px;
   height: auto;
   object-fit: contain;
 
@@ -117,8 +117,15 @@
     padding: 80px 32px 60px;
     align-items: center;
   }
-  .home-hero-right { flex: none; order: -1; /* moves it above the text */ }
-  .dashed-ring { width: 80%; height: auto; }
+  .home-headline {
+    width: 100%;
+  }
+  .home-hero-right { 
+    flex: none; order: -1; /* moves it above the text */ 
+  }
+  .dashed-ring { 
+    width: 80%; height: auto; 
+  }
   .cloud-logo {
     width: 65%;
     height: auto;

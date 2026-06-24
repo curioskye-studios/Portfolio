@@ -163,6 +163,9 @@
   .padded-left {
     padding-left: var(--mb-standard-padding);
   }
+  .padded-left.even-row-spacing {
+    padding-left: 0;
+  }
 
   .detail-inner { 
     padding: 50px 12px 80px 12px; 
@@ -172,9 +175,15 @@
   }
   .row-adaptable { 
     flex-direction: column;
-    gap: 60px;
+  }  
+  .row-adaptable-gap {
+    gap: 60px;    
   }
   .next-project {
     width: 85%;
+  }
+
+  .mobile-hidden {
+    display: none;
   }
 }

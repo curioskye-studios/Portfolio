@@ -1,4 +1,4 @@
-import { Em, BrS, BrM, BrL, Li, H, A, Img } from '../../../utils/jsxContentCreator';
+import { Em, BrS, BrM, BrL, Li, H, A, Img, HoM } from '../../../utils/jsxContentCreator';
 import DesignColorsImg from '../../../assets/ux-projects/lumonote/lumonote-design-colors.png';
 import DesignFontsImg from '../../../assets/ux-projects/lumonote/lumonote-design-font.png';
 
@@ -32,7 +32,8 @@ export default
           </div>
         </div>
 
-        {BrM()}
+        {HoM(<> {BrM()} </>)}
+        {BrS()}
 
         <div className='row-adaptable'>
           <div className='even-row-spacing'>

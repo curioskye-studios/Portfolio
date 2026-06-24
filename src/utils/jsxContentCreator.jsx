@@ -6,7 +6,9 @@ import Carousel from '../components/Carousel/Carousel';
 // Transform Text
 // const emphasize = (text) => <span style={{fontWeight: "bold", color: "var(--blue)"}}> {text} </span>;
 const emphasize = (text) => <span className="green-highlight"> {text} </span>;
-const bolden = (text) => <span style={{fontWeight: "bold"}}> {text} </span>;
+const bolden = (text) => <span style={{fontWeight: "700"}}> {text} </span>;
+
+const hideOnMobile = (content) => <span className="mobile-hidden"> {content} </span>;
 
 // Create Elements
 const makeSmallBreak = () => <div className="separator-small"/>;
@@ -50,6 +52,7 @@ const makeCarousel = (carouselItems = []) => (
 // Aliases
 export const Em = emphasize;
 export const B = bolden;
+export const HoM = hideOnMobile;
 
 export const BrS = makeSmallBreak;
 export const BrM = makeMediumBreak;
