@@ -1,0 +1,27 @@
+.top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  padding: 9.5px 10px;
+
+  border-radius: 50%;
+}
+
+.up-icon {
+  height: 18px;
+  width: 18px;
+}
+
+
+@media (max-width: 700px) {
+  .top-btn {
+    padding: 7.5px 8px;
+  }
+
+  .up-icon {
+    height: 15px;
+    width: 15px;
+  }
+}

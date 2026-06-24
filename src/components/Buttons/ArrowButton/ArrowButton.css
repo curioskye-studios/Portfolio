@@ -1,0 +1,33 @@
+.arrow-btn {
+  background: var(--green);
+  color: #1a1a1a;
+  border: 1.5px solid var(--green);
+  border-radius: 50px;
+
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.arrow-btn:hover {
+  border: 1.5px solid #1a1a1a;
+}
+
+.no-text {
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.arrow {
+  margin-top: -2px; 
+}
+
+.left-arrow {
+  margin-right: 6px;
+}
+
+.right-arrow {
+  margin-left: 6px;
+}
