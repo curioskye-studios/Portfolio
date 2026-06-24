@@ -31,27 +31,6 @@ export default function useZoom() {
     });
   }
 
-  
-  
-  function handleMouseScroll(scrollEvent) {    
-    scrollEvent.preventDefault(); // stop the page itself from scrolling
-
-    //Positive value → scrolling down (or pinch-zooming out on some trackpads)
-    //Negative value → scrolling up (or pinch-zooming in on some trackpads)
-    const verticalScroll = scrollEvent.deltaY;
-
-    if (verticalScroll < 0) {
-      handleZoomIn();
-    } else {
-      handleZoomOut();
-    }
-  }
-
-  function disableMouseScroll(scrollEvent) {
-    scrollEvent.preventDefault(); 
-  }
-
-
   return {  
     currScale,
     setCurrScale,
@@ -60,8 +39,6 @@ export default function useZoom() {
     handleZoomOut,
     handleZoomReset,
 
-    resetImgScale,
-    handleMouseScroll,
-    disableMouseScroll    
+    resetImgScale
   };
 }

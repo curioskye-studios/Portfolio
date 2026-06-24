@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 export default function useEscapeKey(isOpen, onEscape) {
+  
   useEffect(() => {
     if (!isOpen) return;
 

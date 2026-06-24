@@ -1,17 +1,29 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, use } from 'react';
 
 import useZoom from './useZoom';
 import usePan from './usePan';
-import useClickPan from './useClickPan';
-import useTouchPan from './useTouchPan';
+
+import useScrollZoom from './Mouse/useScrollZoom';
+import useClickPan from './Mouse/useClickPan';
+
+import usePinchZoom from './Touch/usePinchZoom';
+import useTouchPan from './Touch/useTouchPan';
+
+import useTouch from './Touch/useTouch';
+
 
 export default function useImageViewer() {
 
   const zoomHook = useZoom();
-
   const panHook = usePan();
+
+  const scrollZoomHook = useScrollZoom(zoomHook);
   const clickPanHook = useClickPan(panHook);
+
+  const pinchZoomHook = usePinchZoom(zoomHook, panHook);
   const touchPanHook = useTouchPan(panHook);
+
+  const touchHook = useTouch(touchPanHook, pinchZoomHook);
 
   const [isOpen, setIsOpen] = useState(false); 
 
@@ -21,25 +33,19 @@ export default function useImageViewer() {
   useEffect(() => {
     const imgElement = imgRef.current;
     if (!imgElement) return;
-
-    imgElement.addEventListener(
-      'wheel', zoomHook.handleMouseScroll, { passive: false }
-    );
+      
     document.body.addEventListener(
-      'wheel', zoomHook.disableMouseScroll, { passive: false }
+      'wheel', scrollZoomHook.disableMouseScroll, { passive: false }
     );
+    setupEventListeners(imgElement);
 
-    imgElement.addEventListener(
-      'touchmove', touchPanHook.handleTouchMove, { passive: false }
-    );
-
-    return () => {
-      imgElement.removeEventListener('wheel', zoomHook.handleMouseScroll);
-      document.body.removeEventListener('wheel', zoomHook.disableMouseScroll);
-
-      imgElement.removeEventListener('touchmove', touchPanHook.handleTouchMove);
+    return () => {      
+      document.body.removeEventListener(
+        'wheel', scrollZoomHook.disableMouseScroll
+      );
+      removeEventListeners(imgElement)
     }
-  }, [isOpen, zoomHook.handleMouseScroll, touchPanHook.handleTouchMove]);
+  }, [isOpen, scrollZoomHook.handleMouseScroll, touchHook.handleTouchMove]);
 
   useEffect(() => {
 
@@ -47,6 +53,29 @@ export default function useImageViewer() {
 
   }, [zoomHook.currScale]);
 
+
+  function setupEventListeners(element) {  
+    element.addEventListener(
+      'wheel', scrollZoomHook.handleMouseScroll, { passive: false }
+    );
+    element.addEventListener(
+      'touchmove', touchHook.handleTouchMove, { passive: false }
+    );
+    element.addEventListener(
+      'touchstart',touchHook.handleTouchStart, { passive: false }
+    );
+  }
+  function removeEventListeners(element) {  
+    element.removeEventListener(
+      'wheel', scrollZoomHook.handleMouseScroll
+    );
+    element.removeEventListener(
+      'touchmove', touchHook.handleTouchMove
+    );
+    element.removeEventListener(
+      'touchstart', touchHook.handleTouchStart
+    );
+  }
 
   function openModal() {
     setIsOpen(true);
@@ -65,7 +94,7 @@ export default function useImageViewer() {
 
   function resetImage(event) {
     zoomHook.handleZoomReset(event);
-    panHook.resetImgPosition()
+    panHook.resetImgPosition();
   }
 
 
@@ -82,9 +111,11 @@ export default function useImageViewer() {
     resetImage,
     
     ...zoomHook,
-
     ...panHook,
+
+    ...scrollZoomHook,
     ...clickPanHook,
-    ...touchPanHook
+    
+    ...touchHook
   };
 }

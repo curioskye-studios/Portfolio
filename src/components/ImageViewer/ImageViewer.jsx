@@ -32,7 +32,6 @@ export default function ImageViewer({ imgPath, alt = '', caption, className = ''
       className="viewer-backdrop" 
       onClick={(e) => {if (!viewerHook.isDragging) viewerHook.closeModal}}       
       draggable={false}   
-      ref={viewerHook.imgRef} 
     >
 
       <div className="viewer-modal" onClick={(e) => viewerHook.disableCloseModal(e)}>
@@ -54,13 +53,12 @@ export default function ImageViewer({ imgPath, alt = '', caption, className = ''
         </div>               
         
         <div 
-          className="viewer-img-main" 
+          className="viewer-img-main"           
+          ref={viewerHook.imgRef} 
           onMouseDown={viewerHook.handleMousePressed}
           onMouseMove={viewerHook.handleMouseMove}
           onMouseUp={viewerHook.handleMouseUnpressed}
           onMouseLeave={viewerHook.handleMouseUnpressed}
-          onTouchStart={viewerHook.handleTouchStart}
-          onTouchMove={viewerHook.handleTouchMove}
           onTouchEnd={viewerHook.handleTouchEnd}
         >
           <img 

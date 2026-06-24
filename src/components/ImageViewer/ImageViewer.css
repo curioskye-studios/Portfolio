@@ -229,4 +229,7 @@
     min-height: 80vh;
     max-height: 90vh;
   }
+  .viewer-caption { 
+    font-size: 13px;
+  }
 }

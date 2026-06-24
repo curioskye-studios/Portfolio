@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SocialLinkIcon from '../SocialLinkIcon';
+import SocialLinkIcon from './SocialLinkIcon';
 
 export default function() {
 

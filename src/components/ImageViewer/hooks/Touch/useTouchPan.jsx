@@ -1,14 +1,14 @@
 
 export default function useTouchPan(panHook){
 
-  function handleTouchStart(touchEvent) {
+  function handlePanStart(touchEvent) {
     panHook.setIsDragging(true);
 
     const touch = touchEvent.touches[0];
     const clickXPos = touch.clientX;
     const clickYPos = touch.clientY;
 
-    const { xPos, yPos } = calculateClickAndImgOffset(
+    const { xPos, yPos } = panHook.calculateClickAndImgOffset(
       { x: clickXPos, y: clickYPos },
       { x: panHook.currImgPosition.xPos, y: panHook.currImgPosition.yPos }
     );
@@ -16,15 +16,14 @@ export default function useTouchPan(panHook){
     panHook.dragStart.current = { xPos, yPos };
   }
 
-  function handleTouchMove(touchEvent) {
+  function handlePanMove(touchEvent) {
     if (!panHook.isDragging) return;
-    touchEvent.preventDefault(); // stop page scroll while panning
 
     const touch = touchEvent.touches[0];
     const clickXPos = touch.clientX;
     const clickYPos = touch.clientY;
 
-    const { xPos, yPos } = calculateClickAndImgOffset(
+    const { xPos, yPos } = panHook.calculateClickAndImgOffset(
       { x: clickXPos, y: clickYPos },
       { x: panHook.dragStart.current.xPos, y: panHook.dragStart.current.yPos }
     );
@@ -32,13 +31,13 @@ export default function useTouchPan(panHook){
     panHook.setCurrImgPosition({ xPos, yPos });
   }
 
-  function handleTouchEnd() {
+  function handlePanEnd() {
     panHook.setIsDragging(false);
   }
 
   return { 
-    handleTouchStart,
-    handleTouchMove,
-    handleTouchEnd
+    handlePanStart,
+    handlePanMove,
+    handlePanEnd
   };
 }

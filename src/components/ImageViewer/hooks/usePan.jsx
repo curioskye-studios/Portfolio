@@ -10,6 +10,17 @@ export default function usePan() {
     setCurrImgPosition({ xPos: 0, yPos: 0 });
   }
 
+  function calculateClickAndImgOffset(clickPosObj, imgPosObj) {
+    
+    const clickNImgXOffset =  clickPosObj.x - imgPosObj.x;
+    const clickNImgYOffset =  clickPosObj.y - imgPosObj.y;
+
+    return {
+      xPos: clickNImgXOffset,
+      yPos: clickNImgYOffset
+    };
+  }
+
 	return {
 		currImgPosition,
 		setCurrImgPosition,
@@ -19,6 +30,7 @@ export default function usePan() {
 
 		dragStart,
 
-		resetImgPosition
+		resetImgPosition,
+		calculateClickAndImgOffset
 	};
 }
