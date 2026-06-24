@@ -1,16 +1,54 @@
-# React + Vite
+# Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website showcasing the featured UI/UX design projects and software development work of
+**CurioSkye Studios**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Live Site
 
-## React Compiler
+> [curioskye-studios.github.io/Portfolio](https://curioskye-studios.github.io/Portfolio/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Overview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This is a responsive, multi-page portfolio website built to present design case studies and development projects. It features smooth animations, a clean layout, and a consistent visual identity across all pages.
+
+---
+
+## 🛠️ Built With
+
+- **HTML5 & CSS3**
+- **JavaScript / jQuery**
+- **Bootstrap 5**
+- **Swiper.js** – for carousels/sliders
+- **AOS (Animate on Scroll)** – for scroll animations
+- **Iconify** – for icons
+- **Google Fonts** – Space Grotesk
+
+
+---
+
+## ✨ Features
+
+- Responsive design across desktop and mobile
+- Animated page transitions and scroll reveals
+- Project detail pages with structured case study layout
+- Section navigator for project pages
+
+---
+
+
+## 📬 Contact
+
+- **LinkedIn:** [linkedin.com/in/dayna-clare-itux](https://www.linkedin.com/in/dayna-clare-itux)
+- **GitHub:** [github.com/curioskye-studios](https://github.com/curioskye-studios)
+- **Bluesky:** [@curioskye-studios.bsky.social](https://bsky.app/profile/curioskye-studios.bsky.social)
+- **Medium:** [@curioskye.studios](https://medium.com/@curioskye.studios)
+
+---
+
+## 📄 License
+
+This project is for personal/portfolio use. Please do not reproduce or redistribute without permission.
