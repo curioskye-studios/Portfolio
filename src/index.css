@@ -40,8 +40,8 @@
 
 /* Fonts */
 :root {
-  --heading-font: "Space Grotesk", serif;
-  --body-font: "Space Grotesk", serif;
+  --heading-font: "Space Grotesk", san-serif;
+  --body-font: "Space Grotesk", san-serif;
 }
 
 
@@ -53,11 +53,31 @@
 
 /* Body */
 body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
   background-color: #6199C7;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background-image: url('/blue-background-image.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--white-color);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
 }
 
 

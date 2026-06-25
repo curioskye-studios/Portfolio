@@ -7,7 +7,6 @@ import './Portfolio.css';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { PROJECTS } from '../../data/project-overviews';
 
-import { updateBackgroundImage, resetBackgroundImage } from '../../utils/backgroundEditor.jsx';
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState('design');
@@ -23,11 +22,7 @@ export default function Portfolio() {
       () => handleWindowResize(window.innerWidth)
     );
 
-    updateBackgroundImage();
-
     return () => {      
-      resetBackgroundImage();
-      
       window.removeEventListener('resize', handleWindowResize);
     }
   }, []);
