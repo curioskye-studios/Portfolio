@@ -5,11 +5,25 @@
   padding-top: 20px;
 }
 
+.about p {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.75;
+  color: rgba(255,255,255,0.9);
+  font-size: 18px;
+  text-align: center;
+}
+
 .about-inner {
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* max-width: 1100px; */
   margin: 0 auto;
   padding: 80px 48px;
   position: relative;
+
   z-index: 1;
   text-align: center;
 }
@@ -22,21 +36,113 @@
 }
 
 .about-body {
+  position: relative;
+  z-index: 1;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  gap: 60px;
 }
+
 
 .about-body p {
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
-  line-height: 1.75;
-  color: rgba(255,255,255,0.9);
+  text-align: center;
+  line-height: 2;
 }
 
-.about-body .green { color: var(--green); }
-.fw-bold { font-weight: 700; }
+
+.about-text-wrap {  
+  width: 70%;
+}
+
+.about-text {      
+  background: rgba(17, 16, 16, 0.079);
+  border: 1.75px solid rgba(255, 255, 255, 0.401);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  padding: 60px 40px 40px 40px;
+  font-size: 20px;
+}
 
 
-@media (max-width: 700px) {
+.about-logo {
+  flex: 0 0 420px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.layer-1,
+.layer-2 {
+  grid-area: 1 / 1; /* both in row 1, column 1 */
+}
+
+.dashed-ring {
+  animation: spin-ring 50s linear infinite;
+  transform-origin: center; 
+  width: 390px;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Rotating dashed ring */
+@keyframes spin-ring {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.cloud-logo {
+  width: 340px;
+  height: auto;
+  object-fit: contain;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.about .green { 
+  color: var(--green); 
+}
+
+.about .fw-bold { 
+  font-weight: 700; 
+}
+
+
+@media (max-width: 1000px) {
   .about-inner { padding: 60px 24px 80px; }
+  .about-body.row-adaptable{
+    flex-direction: column;    
+    gap: 30px;
+  }
+  .about-body {
+    width: 95%;
+  }
+  .dashed-ring { 
+    width: 260; 
+    height: auto; 
+  }
+  .cloud-logo {
+    width: 150;
+    height: auto;
+  }
+  .about-text-wrap {  
+    width: 95%;
+  }
+  .about-logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }

@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+.home p {  
+  font-size: 18px;
+}
+
 .home-content {
   position: relative;
   z-index: 1;
@@ -18,7 +22,7 @@
   width: 87%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 60px 64px;
+  /* padding: 60px 64px; */
   gap: 60px;
   padding: 0 20px;
 }

@@ -41,20 +41,6 @@
   padding: 25px 5px 5px 5px;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.row-adaptable {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.even-row-spacing {
-  flex: 1;
-}
 
 
 /* Main Styles */

@@ -173,3 +173,25 @@ body::after {
   overflow: hidden;
   pointer-events: none;
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row-adaptable {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.even-row-spacing {
+  flex: 1;
+}
+
+
+@media (max-width: 700px) {
+  .row-adaptable { 
+    flex-direction: column;
+  }  
+}
