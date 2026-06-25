@@ -79,7 +79,7 @@ export default function ProjectDetail() {
 
         <div className='separator-large' />
 
-        <Link to="/portfolio" style={{width:"fit-content", margin:"0 auto"}} className="btn-primary back-btn" data-aos="fade-up" data-aos-delay="400">
+        <Link to="/gallery" style={{width:"fit-content", margin:"0 auto"}} className="btn-primary back-btn" data-aos="fade-up" data-aos-delay="400">
           ← Back to Portfolio
         </Link>
       </div>
@@ -110,7 +110,7 @@ export default function ProjectDetail() {
           ref={disappearElementRef}>
 
           <ArrowButton 
-            linkPath="/portfolio" className="back-btn" isRight={false}> 
+            linkPath="/gallery" className="back-btn" isRight={false}> 
               Back to Portfolio
           </ArrowButton>
 

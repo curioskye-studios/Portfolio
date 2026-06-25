@@ -4,7 +4,7 @@
   align-items: center;
 
   cursor: pointer;
-  padding: 9.5px 10px;
+  padding: 9px 10px 9.5px 10px;
 
   border-radius: 50%;
 }
@@ -16,12 +16,11 @@
 
 
 @media (max-width: 700px) {
-  .top-btn {
+  /* .top-btn {
     padding: 7.5px 8px;
-  }
-
+  } */
   .up-icon {
-    height: 15px;
-    width: 15px;
+    height: 17px;
+    width: 17pxx;
   }
 }

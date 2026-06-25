@@ -11,7 +11,7 @@ export default function DetailHead( { category, id, project } ) {
     <>
       {/* Breadcrumb */}
       <nav className="breadcrumb" data-aos="fade-down">
-        <Link to="/portfolio">Portfolio</Link>
+        <Link to="/gallery">Portfolio</Link>
         <span>›</span>
         <span>{capitalizer(category) + " Work"}</span>
         <span>›</span>

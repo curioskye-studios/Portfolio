@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Portfolio from './pages/Portfolio/Portfolio';
@@ -10,16 +10,16 @@ import CreditSection from './components/CreditSection/CreditSection';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <SocialSection />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfolio/:category/:id" element={<ProjectDetail />} />
+        <Route path="/gallery" element={<Portfolio />} />
+        <Route path="/gallery/:category/:id" element={<ProjectDetail />} />
         <Route path="/about" element={<About />} />
       </Routes>             
       <CreditSection />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

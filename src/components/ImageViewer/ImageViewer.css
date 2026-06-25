@@ -110,6 +110,7 @@
   font-family: "Space Grotesk", serif;
 
   padding-left: 18px;
+  padding-right: 10px;
   padding-top: 5px;
 
   font-size: 15px;
@@ -226,8 +227,7 @@
 @media (max-width: 700px) {
   .viewer-modal { 
     width: 90vw;
-    min-height: 80vh;
-    max-height: 90vh;
+    height: 85vh;
   }
   .viewer-caption { 
     font-size: 13px;

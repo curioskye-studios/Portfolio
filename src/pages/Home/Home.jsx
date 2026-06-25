@@ -55,7 +55,7 @@ export default function Home() {
           </p>
 
           <ArrowButton 
-            linkPath="/portfolio" className="home-cta"  
+            linkPath="/gallery" className="home-cta"  
             data-aos="fade-left" data-aos-delay="550"> 
               Explore Featured Work 
           </ArrowButton>

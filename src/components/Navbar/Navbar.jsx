@@ -54,7 +54,7 @@ export default function Navbar() {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/portfolio" className={({ isActive }) => isActive ? 'active' : ''}>
+                      <NavLink to="/gallery" className={({ isActive }) => isActive ? 'active' : ''}>
                         Portfolio
                       </NavLink>
                     </li>

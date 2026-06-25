@@ -15,7 +15,7 @@ export default function ProjectCard({ projectData, category, cardAOSDelay = 100,
       summary: 'A Robust But Simple Note-Taking Mobile App.',
       img: lumoNoteImg,
       imgPlaceholder: { bg: '#F5C518', label: 'LumoNote.' },
-      link: '/portfolio/lumonote',
+      link: '/gallery/lumonote',
       columnNum: 1
   */
 
@@ -52,7 +52,7 @@ export default function ProjectCard({ projectData, category, cardAOSDelay = 100,
 
   return (
     <Link
-      to={`/portfolio/${category}/${projectData.id}`}
+      to={`/gallery/${category}/${projectData.id}`}
 
       key={projectData.id}
       className={`project-card ${otherClasses}`}

@@ -88,8 +88,8 @@ export default function usePinchZoom(zoomHook, panHook) {
       calculateNewPos(midpoint.y, startPos.yPos, restrictedScale, pinchStartScale.current);
     
     zoomHook.setCurrScale(restrictedScale);
-    panHook.setCurrImgPosition({ xPos: newX, yPos: newY }); 
-    saveState(newX, newY); 
+    // panHook.setCurrImgPosition({ xPos: newX, yPos: newY }); 
+    // saveState(newX, newY); 
   }
 
   function handlePinchEnd() {

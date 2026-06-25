@@ -92,18 +92,18 @@
     width: 95%;
     padding: 10px;
   }
-
   .navigator.collapsed {
     width: fit-content;
   }
-
   .nav-buttons {
     flex-wrap: wrap;
     gap: 10px;
   }
-
   .navigator-btn {
     padding: 0.2vh 3.5vw;
     font-size: 12px;
+  }
+  .display-btn{    
+    padding: 7.5px 8px;
   }
 }
