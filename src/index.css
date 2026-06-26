@@ -160,6 +160,14 @@ body::after {
 
 
 /* Custom */
+.green { 
+  color: var(--green); 
+}
+
+.fw-bold { 
+  font-weight: 700; 
+}
+
 .hidden {
   width: 0;
   height: 0;

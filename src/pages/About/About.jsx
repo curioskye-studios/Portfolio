@@ -31,7 +31,8 @@ export default function About() {
 
         <div className="about-body row-adaptable" data-aos="fade-up" data-aos-delay="200">        
           <p>
-            My name is <span className="green fw-bold">Dayna Clare</span>, a{' '}
+            My name is <span className="green fw-bold">Dayna Clare</span>, 
+            a very passionate and curious{' '}
             <span className="green fw-bold">UI/UX Designer</span> and{' '}
             <span className="green fw-bold">User-Centric Software Developer</span> working hard
             for the past 4 years. My gallery of work is represented as{' '}
@@ -46,38 +47,98 @@ export default function About() {
           </p>          
         </div>
 
-        <div className="about-logo" data-aos="fade-left" data-aos-delay="200">
+        <div className="about-logo" data-aos="fade-up" data-aos-delay="200">
           <img className="cloud-logo layer-2" src={logoLarge} />
           <img className="dashed-ring layer-1" src={borderImg}/>
         </div>
         
-        <div className='about-text-wrap' data-aos="fade-up" data-aos-delay="200">         
-          <div className='green-line' />
+        
+        <div className='about-container row-adaptable'>
+
+          <div className='about-text-wrap' data-aos="fade-left" data-aos-delay="200">
             
+            <div className='green-line' />
+            
+            <div className='about-text'>              
+              How is my Developer Insight helpful?  
+
+              <p className="about-info" id="insight">   
+              <br/>
+                <ul>
+                  <li>
+                    I know what's <span className="green fw-bold"> easy vs. hard to implement</span>, 
+                    so there's <span className="green fw-bold"> no beautiful but impractical</span> designs.
+                  </li>
+                  <li>
+                    I understand developer constraints, 
+                    so there's <span className="green fw-bold">less back and forth</span> on 
+                    <span className="green fw-bold"> design feasibility</span>.                 
+                  </li>
+                  <li>                    
+                    I can prototype with <span className="green fw-bold">real code</span>, 
+                    not just pretty slideshows.
+                  </li>
+                </ul>
+              </p>
+              
+            </div>    
+
+            <div className='green-line mobile-hidden' />      
+          </div>
+
+          <div className='separator' />
+
+          <div className='about-text-wrap' data-aos="fade-left" data-aos-delay="200"> 
+            
+            <div className='green-line mobile-hidden' />
+
             <div className='about-text'>
-              <p>
-                More concretely, I strive to learn everything I can to improve in the{' '}
-                <span className="green fw-bold">creation</span> of{' '}
-                <span className="green fw-bold">intuitive</span> and{' '}
-                <span className="green fw-bold">impactful user experiences</span>, using{' '}
-                <span className="green fw-bold">good UI/UX design</span> and{' '}
-                <span className="green fw-bold">software development principles</span>.
-              </p>
+              What guides my design process? 
 
-              <p>
-                I'm always up for the challenge to{' '}
-                <span className="green fw-bold">learn something new</span> to get the job done and{' '}
-                <span className="green fw-bold">produce the best results</span> for the user.
+              <p className="about-info">
+              <br/>
+                <ul>
+                  <li>
+                    I <span className="green fw-bold">empathize</span>. 
+                    Your pain points become mine to solve.
+                  </li>
+                  <li>                    
+                    I have <span className="green fw-bold">high standards</span>.
+                    I'm always testing my designs and looking for ways to improve it.
+                  </li>
+                  <li>
+                    I <span className="green fw-bold">communicate</span>.
+                    We have <span className="green fw-bold">transparent conversations </span> 
+                    to produce something we're both happy with.              
+                  </li>
+                  <li>                    
+                    I <span className="green fw-bold">stay curious</span>.
+                    I'm always <span className="green fw-bold">asking questions </span> 
+                    and exploring alternatives.
+                  </li>
+                </ul>
               </p>
+              
             </div>
-          
-          <div className='green-line' />
-        </div>
+            
+            <div className='green-line' />
+          </div>
 
-        <div className='pt-4'>    
+        </div>
+        
+        <div className='about-text-wrap'>          
+          <p className='ps-5 pe-5 pt-4 pb-4'>              
+            I'm always up for the challenge to{' '}
+            <span className="green fw-bold">learn something new</span> to get the job done and{' '}
+            <span className="green fw-bold">produce the best results</span> for the user.
+          </p>
+        </div>
+                   
+
+        <div className='pt-4 pb-4'>    
           <Link 
             data-aos="fade-up"
-            data-aos-delay="250"
+            data-aos-delay="200"
             to="https://www.linkedin.com/in/dayna-clare-itux" 
             className="btn-primary">
 
@@ -86,6 +147,7 @@ export default function About() {
             <TalkIcon />
           </Link>
         </div>
+
 
       </div>
 

@@ -36,22 +36,30 @@ export default function Home() {
           </p>
 
           <p className="home-sub" data-aos="fade-right" data-aos-delay="350">
-            I'm a very passionate and curious <span className="green">UI/UX Designer</span> and{' '}
-            <span className="green">User-Centric Software Developer</span>.
+            I'm a <span className="green">UI/UX Designer</span> with{' '}
+            <span className="green">Developer Insight</span>.
           </p>
 
           <p className="home-sub" data-aos="fade-right" data-aos-delay="450">
-            I sit at the intersection between <span className="green">technical skill</span> and{' '}
-            <span className="green">design</span>, striving to create{' '}
-            <span className="green">intuitive</span> and <span className="green">impactful</span>{' '}
-            user experiences.
+            That means my designs are more 
+            <span className="green"> intentional</span>,
+            <span className="green"> practical </span> and
+            <span className="green"> feasible</span>.
+            Just work that ships, informed by 
+            <span className="green"> real experience </span> 
+            building interfaces. 
           </p>
 
-          <ArrowButton 
-            linkPath="/gallery" className="home-cta"  
-            data-aos="fade-left" data-aos-delay="550"> 
-              Explore Featured Work 
-          </ArrowButton>
+          <div className="home-cta" data-aos="fade-up" data-aos-delay="550">            
+            <p className="home-sub fw bold">
+              Curious? Take a look!
+            </p>
+
+            <ArrowButton linkPath="/gallery" > 
+                Explore Featured Work 
+            </ArrowButton>
+          </div>
+
         </div>
 
 

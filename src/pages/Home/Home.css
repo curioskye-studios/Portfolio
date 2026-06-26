@@ -63,7 +63,11 @@
 }
 
 .home-cta {
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.home-cta p {
+  margin-left: 8px;
 }
 
 /* RIGHT SIDE — Hero with rotating dashed ring */
@@ -110,10 +114,13 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .home {
     padding-top: 0px;
     padding-bottom: 35px;
+  }
+  .home p {    
+    text-align: center;
   }
   .home-content {
     flex-direction: column;
@@ -128,12 +135,21 @@
     flex: none; order: -1; /* moves it above the text */ 
   }
   .dashed-ring { 
-    width: 80%; height: auto; 
+    width: 160px; 
+    height: auto; 
   }
   .cloud-logo {
-    width: 65%;
+    width: 50px;
     height: auto;
     margin-left: -7px;  
+  }
+  .home-cta {
+    margin-top: 30px;
+  }
+  
+  .home-cta p {
+    margin-left: 0px;
+    text-align: center;
   }
 }
 
