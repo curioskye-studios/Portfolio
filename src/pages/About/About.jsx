@@ -93,7 +93,7 @@ export default function About() {
             <div className='green-line mobile-hidden' />
 
             <div className='about-text'>
-              What guides my design process? 
+              What guides my Design Process? 
 
               <p className="about-info">
               <br/>
