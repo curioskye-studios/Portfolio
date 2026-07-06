@@ -59,11 +59,12 @@ export default function About() {
             
             <div className='green-line' />
             
-            <div className='about-text'>              
-              How is my Developer Insight helpful?  
+            <div className='about-text'>    
+              <div className='separator-small mobile-hidden' />
+              <h4 className="fw-bold"> How is my Developer Insight helpful? </h4>
 
-              <p className="about-info" id="insight">   
-              <br/>
+              <div className="about-info" id="insight">        
+                <div className='separator-small' />
                 <ul>
                   <li>
                     I know what's <span className="green fw-bold"> easy vs. hard to implement</span>, 
@@ -79,7 +80,7 @@ export default function About() {
                     not just pretty slideshows.
                   </li>
                 </ul>
-              </p>
+              </div>
               
             </div>    
 
@@ -93,10 +94,11 @@ export default function About() {
             <div className='green-line mobile-hidden' />
 
             <div className='about-text'>
-              What guides my Design Process? 
+              <div className='separator-small mobile-hidden' />
+              <h4 className="fw-bold"> What guides my Design Process? </h4>
 
-              <p className="about-info">
-              <br/>
+              <div className="about-info">                
+               <div className='separator-small' />
                 <ul>
                   <li>
                     I <span className="green fw-bold">empathize</span>. 
@@ -117,7 +119,7 @@ export default function About() {
                     and exploring alternatives.
                   </li>
                 </ul>
-              </p>
+              </div>
               
             </div>
             
@@ -129,8 +131,7 @@ export default function About() {
         <div className='about-text-wrap'>          
           <p className='ps-5 pe-5 pt-4 pb-4'>              
             I'm always up for the challenge to{' '}
-            <span className="green fw-bold">learn something new</span> to get the job done and{' '}
-            <span className="green fw-bold">produce the best results</span> for the user.
+            <span className="green fw-bold">learn something new</span> to get the job done.
           </p>
         </div>
                    
