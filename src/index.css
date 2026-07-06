@@ -50,6 +50,9 @@
 ::-webkit-scrollbar-track { background: rgba(213, 215, 215, 0.561); }
 ::-webkit-scrollbar-thumb { background: #363c4143; }
 
+html, body {
+  overflow-x: hidden;
+}
 
 /* Body */
 body {

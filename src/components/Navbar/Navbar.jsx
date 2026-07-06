@@ -38,7 +38,7 @@ export default function Navbar() {
               <div className="offcanvas-header">
                 <button 
                   type="button" 
-                  className="btn-close text-reset shadow-none" 
+                  className="btn-close text-reset shadow-none ms-auto" 
                   data-bs-dismiss="offcanvas"
                   aria-label="Close">
                 </button>
