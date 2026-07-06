@@ -61,23 +61,29 @@ export default function About() {
             
             <div className='about-text'>    
               <div className='separator-small mobile-hidden' />
-              <h4 className="fw-bold"> How is my Developer Insight helpful? </h4>
+              <h5 className="fw-bold"> How is my Developer Insight helpful? </h5>
 
               <div className="about-info" id="insight">        
                 <div className='separator-small' />
                 <ul>
                   <li>
+                    <p>
                     I know what's <span className="green fw-bold"> easy vs. hard to implement</span>, 
                     so there's <span className="green fw-bold"> no beautiful but impractical</span> designs.
+                    </p>                  
                   </li>
                   <li>
+                    <p>
                     I understand developer constraints, 
                     so there's <span className="green fw-bold">less back and forth</span> on 
-                    <span className="green fw-bold"> design feasibility</span>.                 
+                    <span className="green fw-bold"> design feasibility</span>.      
+                    </p>           
                   </li>
                   <li>                    
+                    <p>
                     I can prototype with <span className="green fw-bold">real code</span>, 
                     not just pretty slideshows.
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -95,28 +101,36 @@ export default function About() {
 
             <div className='about-text'>
               <div className='separator-small mobile-hidden' />
-              <h4 className="fw-bold"> What guides my Design Process? </h4>
+              <h5 className="fw-bold"> What guides my Design Process? </h5>
 
               <div className="about-info">                
                <div className='separator-small' />
                 <ul>
                   <li>
+                    <p>
                     I <span className="green fw-bold">empathize</span>. 
                     Your pain points become mine to solve.
+                    </p>
                   </li>
                   <li>                    
+                    <p>
                     I have <span className="green fw-bold">high standards</span>.
                     I'm always testing my designs and looking for ways to improve it.
+                    </p>
                   </li>
                   <li>
+                    <p>
                     I <span className="green fw-bold">communicate</span>.
                     We have <span className="green fw-bold">transparent conversations </span> 
-                    to produce something we're both happy with.              
+                    to produce something we're both happy with.        
+                    </p>      
                   </li>
                   <li>                    
+                    <p>
                     I <span className="green fw-bold">stay curious</span>.
                     I'm always <span className="green fw-bold">asking questions </span> 
                     and exploring alternatives.
+                    </p>
                   </li>
                 </ul>
               </div>
