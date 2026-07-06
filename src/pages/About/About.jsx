@@ -143,7 +143,7 @@ export default function About() {
         </div>
         
         <div className='about-text-wrap'>          
-          <p className='ps-5 pe-5 pt-4 pb-4'>              
+          <p className='about-cta-info ps-5 pe-5 pt-4 pb-4'>              
             I'm always up for the challenge to{' '}
             <span className="green fw-bold">learn something new</span> to get the job done.
           </p>
